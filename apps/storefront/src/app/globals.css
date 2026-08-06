@@ -1,0 +1,33 @@
+﻿
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paleta Principal AM Suplementos e Vestuario */
+    --am-navy: #0A192F;      /* Azul Marinho - Textos, Navbar, Cabeçalhos */
+    --am-royal: #1E40AF;     /* Azul Royal - Botões de destaque, Links, Ações */
+    --am-royal-hover: #1D4ED8;/* Azul Royal Destaque */
+    --am-baby-blue: #E0F2FE; /* Azul Bebê - Fundos de seções, Badges e Caixas */
+    --am-baby-light: #F0F9FF;/* Azul Bebê Suave - Fundo geral */
+  }
+
+  body {
+    background-color: var(--am-baby-light);
+    color: var(--am-navy);
+  }
+
+  /* Ajustes nos botões padrão do Medusa */
+  button[data-variant="secondary"], .btn-primary {
+    background-color: var(--am-royal) !important;
+    color: #ffffff !important;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  button[data-variant="secondary"]:hover, .btn-primary:hover {
+    background-color: var(--am-royal-hover) !important;
+  }
+}
+

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Camiseta Oversized Masculina",
+    "handle": "camiseta-oversized-masculina",
+    "description": "Camiseta estilo oversized 100% algodão premium.",
+    "category": "masculino",
+    "options": ["Tamanho", "Cor"],
+    "variants": [
+      {
+        "title": "P / Preto",
+        "options": { "Tamanho": "P", "Cor": "Preto" },
+        "sku": "CAM-OVER-P-PRETO",
+        "prices": [{ "amount": 8990, "currency_code": "brl" }],
+        "inventory_quantity": 15
+      },
+      {
+        "title": "M / Preto",
+        "options": { "Tamanho": "M", "Cor": "Preto" },
+        "sku": "CAM-OVER-M-PRETO",
+        "prices": [{ "amount": 8990, "currency_code": "brl" }],
+        "inventory_quantity": 20
+      },
+      {
+        "title": "G / Branco",
+        "options": { "Tamanho": "G", "Cor": "Branco" },
+        "sku": "CAM-OVER-G-BRANCO",
+        "prices": [{ "amount": 8990, "currency_code": "brl" }],
+        "inventory_quantity": 10
+      }
+    ]
+  }
+]

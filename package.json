@@ -1,0 +1,1 @@
+{"name":"minha-loja","private":true,"workspaces":["apps/*"],"scripts":{"start":"turbo dev"},"devDependencies":{"turbo":"^2.10.8"}}
