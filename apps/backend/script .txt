@@ -1,0 +1,15 @@
+# 1. Substitua pelo seu Token real da API do Render
+$Token = "rnd_7vZ73elmxwgJ060kotuvnhS2tG45"
+
+# 2. Configuração dos cabeçalhos técnicos de autenticação
+$Headers = @{
+    "Authorization" = "Bearer $Token"
+    "Accept"        = "application/json"
+    "Content-Type"  = "application/json"
+}
+
+# 3. Substitua pela sua URL completa da API (api.render.com/v1...)
+$DeployURL = "https://api.render.com/v1/services/srv-d9pvgv6gekts73c6k7h0/deploys"
+
+# 4. Executa o disparo do deploy na rota exata da API
+Invoke-RestMethod -Uri $DeployURL -Method Post -Headers $Headers -Body "{}"

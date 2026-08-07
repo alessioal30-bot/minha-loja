@@ -1,4 +1,4 @@
-﻿import { defineConfig } from '@medusajs/framework/utils';
+import { defineConfig } from '@medusajs/framework/utils';
 
 export default defineConfig({
   projectConfig: {
@@ -9,7 +9,7 @@ export default defineConfig({
       authCors: process.env.AUTH_CORS || 'http://localhost:7001',
       jwtSecret: process.env.JWT_SECRET || 'supersecret',
       cookieSecret: process.env.COOKIE_SECRET || 'supersecret',
-    },
+    }
   },
   admin: {
     disable: false,
