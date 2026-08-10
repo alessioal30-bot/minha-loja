@@ -3,8 +3,8 @@ services:
     name: apcm-whatsapp
     env: node
     rootDir: apps/backend
-    buildCommand: pnpm install && pnpm build
-    startCommand: pnpm start
+    buildCommand: pnpm install --prod --no-frozen-lockfile && npx medusa build
+    startCommand: npx medusa db:migrate && pnpm start
     envVars:
       - key: NODE_ENV
         value: production
