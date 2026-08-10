@@ -56,3 +56,6 @@ ehthumbs.db
 Thumbs.db
 **/.DS_Store
 .env*
+
+# Permitir a pasta compilada do backend no Render
+!apps/backend/.medusa/
