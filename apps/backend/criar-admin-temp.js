@@ -1,0 +1,1 @@
+const { createAdminUser } = require('@medusajs/medusa-cli/dist/user'); createAdminUser({ email: 'alessioal30@gmail.com', password: '10068900Aa#' }).then(() => console.log('Sucesso'am@DESKTOP-MSG6IK2:/mnt/c/Users/AM/Desktop/ZAP/minha-loja$ source apps/backend/.env)).catch(console.error);

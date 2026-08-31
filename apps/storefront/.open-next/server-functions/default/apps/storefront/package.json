@@ -53,9 +53,9 @@
     "postcss": "^8.4.8",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.0.23",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.2",
+    "wrangler": "4.125.0"
   },
-  "packageManager": "npm@11.17.0",
   "optionalDependencies": {
     "@next/swc-win32-x64-msvc": "^15.5.21"
   }

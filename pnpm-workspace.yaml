@@ -1,5 +1,6 @@
 packages:
-  - 'apps/*'
+  - apps/*
+
 allowBuilds:
   '@medusajs/telemetry': true
   '@swc/core': true
@@ -9,3 +10,13 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
   workerd: true
+
+onlyBuiltDependencies:
+  - '@medusajs/telemetry'
+  - '@swc/core'
+  - esbuild
+  - msgpackr-extract
+  - protobufjs
+  - sharp
+  - unrs-resolver
+  - workerd

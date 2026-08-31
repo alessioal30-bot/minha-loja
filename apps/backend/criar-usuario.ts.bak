@@ -1,0 +1,20 @@
+import { createUsersWorkflow } from "@medusajs/core-flows"
+import { MedusaContainer } from "@medusajs/framework/types"
+
+export default async function run({ container }: { container: MedusaContainer }) {
+  try {
+    await createUsersWorkflow(container).run({
+      input: {
+        users: [{
+          email: "alessioal30@gmail.com",
+          password: "10068900Aa#",
+          first_name: "Admin",
+          last_name: "APCM"
+        }]
+      }
+    });
+    console.log("🚀 USUARIO CRIADO COM SUCESSO!");
+  } catch (err: any) {
+    console.error("Erro ao criar:", err.message);
+  }
+}

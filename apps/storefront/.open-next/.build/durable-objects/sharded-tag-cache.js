@@ -1,19 +1,19 @@
 globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.0";globalThis.nextVersion = "15.5.21";
 
-// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20_cad49fab47d68b91e82956f639569eb8/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/sharded-tag-cache.js
+// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20.2_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1__02aab745665e01bf90011daa52357153/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/sharded-tag-cache.js
 import { DurableObject } from "cloudflare:workers";
 
-// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20_cad49fab47d68b91e82956f639569eb8/node_modules/@opennextjs/cloudflare/dist/api/cloudflare-context.js
+// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20.2_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1__02aab745665e01bf90011daa52357153/node_modules/@opennextjs/cloudflare/dist/api/cloudflare-context.js
 var cloudflareContextSymbol = Symbol.for("__cloudflare-context__");
 
-// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20_cad49fab47d68b91e82956f639569eb8/node_modules/@opennextjs/cloudflare/dist/api/overrides/internal.js
+// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20.2_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1__02aab745665e01bf90011daa52357153/node_modules/@opennextjs/cloudflare/dist/api/overrides/internal.js
 var debugCache = (name, ...args) => {
   if (process.env.NEXT_PRIVATE_DEBUG_CACHE) {
     console.log(`[${name}] `, ...args);
   }
 };
 
-// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20_cad49fab47d68b91e82956f639569eb8/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/sharded-tag-cache.js
+// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20.2_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1__02aab745665e01bf90011daa52357153/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/sharded-tag-cache.js
 var DOShardedTagCache = class extends DurableObject {
   sql;
   constructor(state, env) {

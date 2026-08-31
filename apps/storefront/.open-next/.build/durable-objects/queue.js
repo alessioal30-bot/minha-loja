@@ -1,6 +1,6 @@
 globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.0";globalThis.nextVersion = "15.5.21";
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@_0e5d37845d361bfef978de52ce923bf9/node_modules/@opennextjs/aws/dist/utils/error.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/error.js
 var IgnorableError = class extends Error {
   __openNextInternal = true;
   canIgnore = true;
@@ -36,7 +36,7 @@ function isOpenNextError(e) {
   }
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@_0e5d37845d361bfef978de52ce923bf9/node_modules/@opennextjs/aws/dist/adapters/logger.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/logger.js
 function debug(...args) {
   if (globalThis.openNextDebug) {
     console.log(...args);
@@ -86,7 +86,7 @@ function getOpenNextErrorLogLevel() {
   }
 }
 
-// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20_cad49fab47d68b91e82956f639569eb8/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/queue.js
+// ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20.2_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1__02aab745665e01bf90011daa52357153/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/queue.js
 import { DurableObject } from "cloudflare:workers";
 var DEFAULT_MAX_REVALIDATION = 5;
 var DEFAULT_REVALIDATION_TIMEOUT_MS = 1e4;
@@ -156,7 +156,7 @@ var DOQueueHandler = class extends DurableObject {
         method: "HEAD",
         headers: {
           // This is defined during build
-          "x-prerender-revalidate": "98f2aee410bd0a534543b20948051df8",
+          "x-prerender-revalidate": "c7cbe36df7fb0ea4c0ed1d2a3c7b9650",
           "x-isr": "1"
         },
         // This one is kind of problematic, it will always show the wall time of the revalidation to `this.revalidationTimeout`
@@ -180,7 +180,7 @@ var DOQueueHandler = class extends DurableObject {
           "INSERT OR REPLACE INTO sync (id, lastSuccess, buildId) VALUES (?, unixepoch(), ?)",
           // We cannot use the deduplication id because it's not unique per route - every time a route is revalidated, the deduplication id is different.
           `${host}${url}`,
-          "HhmvyBiZUdjPLpsV3-Uxp"
+          "nFC-4QEVrspC3Htotw1RF"
         );
       }
       this.routeInFailedState.delete(msg.MessageDeduplicationId);
@@ -232,7 +232,7 @@ var DOQueueHandler = class extends DurableObject {
     }
     this.routeInFailedState.set(msg.MessageDeduplicationId, updatedFailedState);
     if (!this.disableSQLite) {
-      this.sql.exec("INSERT OR REPLACE INTO failed_state (id, data, buildId) VALUES (?, ?, ?)", msg.MessageDeduplicationId, JSON.stringify(updatedFailedState), "HhmvyBiZUdjPLpsV3-Uxp");
+      this.sql.exec("INSERT OR REPLACE INTO failed_state (id, data, buildId) VALUES (?, ?, ?)", msg.MessageDeduplicationId, JSON.stringify(updatedFailedState), "nFC-4QEVrspC3Htotw1RF");
     }
     await this.addAlarm();
   }
@@ -256,8 +256,8 @@ var DOQueueHandler = class extends DurableObject {
       return;
     this.sql.exec("CREATE TABLE IF NOT EXISTS failed_state (id TEXT PRIMARY KEY, data TEXT, buildId TEXT)");
     this.sql.exec("CREATE TABLE IF NOT EXISTS sync (id TEXT PRIMARY KEY, lastSuccess INTEGER, buildId TEXT)");
-    this.sql.exec("DELETE FROM failed_state WHERE buildId != ?", "HhmvyBiZUdjPLpsV3-Uxp");
-    this.sql.exec("DELETE FROM sync WHERE buildId != ?", "HhmvyBiZUdjPLpsV3-Uxp");
+    this.sql.exec("DELETE FROM failed_state WHERE buildId != ?", "nFC-4QEVrspC3Htotw1RF");
+    this.sql.exec("DELETE FROM sync WHERE buildId != ?", "nFC-4QEVrspC3Htotw1RF");
     const failedStateCursor = this.sql.exec("SELECT * FROM failed_state");
     for (const row of failedStateCursor) {
       this.routeInFailedState.set(row.id, JSON.parse(row.data));

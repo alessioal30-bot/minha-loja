@@ -1,98 +1,85 @@
 import { MedusaContainer } from "@medusajs/framework/types"
 import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
 
-export default async function seedCategorias({ container }: { container: MedusaContainer }) {
+export default async function seedCategorias({
+  container,
+}: {
+  container: MedusaContainer
+}) {
   const logger = container.resolve(ContainerRegistrationKeys.LOGGER)
-  const remoteLink = container.resolve("remoteLink")
-  const query = container.resolve("query")
-
-  logger.info("Iniciando o mapeamento das categorias da loja...")
-
-  // Estrutura mapeada
-  const categoriasPrincipal = [
-    {
-      name: "Sa˙de",
-      handle: "saude",
-      is_active: true,
-      category_children: [
-        { name: "FarmacÍuticos", handle: "farmaceuticos", is_active: true },
-        { name: "Cuidados Di·rios", handle: "cuidados-diarios", is_active: true },
-        { name: "Bem-estar e Imunidade", handle: "bem-estar-imunidade", is_active: true },
-        { name: "Sa˙de Preventiva", handle: "saude-preventiva", is_active: true },
-      ],
-    },
-    {
-      name: "Beleza",
-      handle: "beleza",
-      is_active: true,
-      category_children: [
-        { name: "CosmÈticos", handle: "cosmeticos", is_active: true },
-        { name: "Skincare", handle: "skincare", is_active: true },
-        { name: "Maquiagem", handle: "maquiagem", is_active: true },
-        { name: "Cuidados Capilares", handle: "cuidados-capilares", is_active: true },
-        { name: "Perfumaria", handle: "perfumaria", is_active: true },
-      ],
-    },
-    {
-      name: "Bem-estar",
-      handle: "bem-estar",
-      is_active: true,
-      category_children: [
-        { name: "NutriÁ„o Alimentar", handle: "nutricao-alimentar", is_active: true },
-        { name: "SuplementaÁ„o Esportiva", handle: "suplementacao-esportiva", is_active: true },
-        { name: "AlimentaÁ„o Saud·vel", handle: "alimentacao-saudavel", is_active: true },
-        { name: "Vitaminas e Minerais", handle: "vitaminas-minerais", is_active: true },
-        { name: "Ch·s e Infusıes", handle: "chas-infusoes", is_active: true },
-      ],
-    },
-    {
-      name: "Estilo",
-      handle: "estilo",
-      is_active: true,
-      category_children: [
-        { name: "Ecossistema Moda", handle: "ecossistema-moda", is_active: true },
-        { name: "Vestu·rio Masculino", handle: "vestuario-masculino", is_active: true },
-        { name: "Vestu·rio Feminino", handle: "vestuario-feminino", is_active: true },
-        { name: "Moda Conforto & Loungewear", handle: "moda-conforto-loungewear", is_active: true },
-        { name: "AcessÛrios & Detalhes", handle: "acessorios-detalhes", is_active: true },
-      ],
-    },
-  ]
-
-  // LÛgica para injetar no Medusa (via Product Module Service)
   const productModuleService = container.resolve("product")
 
-  for (const catData of categoriasPrincipal) {
-    const { category_children, ...parentData } = catData
+  logger.info("üå≥ Iniciando cria√ß√£o da √°rvore de categorias...")
 
-    // Cria ou busca a categoria pai
+  // ... (Mantenha o seu array de categorias id√™ntico aqui)
+
+  for (const categoria of categorias) {
     let parentCategory
-    const existingParent = await productModuleService.listProductCategories({ handle: parentData.handle })
-    
+
+    const existingParent =
+      await productModuleService.listProductCategories({
+        handle: categoria.handle,
+      })
+
     if (existingParent.length > 0) {
       parentCategory = existingParent[0]
-      logger.info(`Categoria pai j· existe: ${parentData.name}`)
+      logger.info(`Categoria j√° existe: ${categoria.name}`)
     } else {
-      parentCategory = await productModuleService.createProductCategories(parentData)
-      logger.info(`Categoria pai criada: ${parentData.name}`)
+      // Ajuste v2: createProductCategories aceita um array ou objeto √∫nico, mas o retorno correto no m√≥dulo de produtos vem do banco
+      const created = await productModuleService.createProductCategories({
+        name: categoria.name,
+        handle: categoria.handle,
+        is_active: true,
+      })
+      // Na v2, alguns m√©todos retornam um array de itens criados ou o objeto direto dependendo do wrapper. Garanta a leitura do ID:
+      parentCategory = Array.isArray(created) ? created[0] : created
+      logger.info(`Categoria criada: ${categoria.name}`)
     }
 
-    // Cria as subcategorias vinculadas
-    if (category_children && category_children.length > 0) {
-      for (const childData of category_children) {
-        const existingChild = await productModuleService.listProductCategories({ handle: childData.handle })
-        if (existingChild.length === 0) {
-          await productModuleService.createProductCategories({
-            ...childData,
-            parent_category_id: parentCategory.id,
-          })
-          logger.info(` -> Subcategoria criada: ${childData.name} (sob ${parentData.name})`)
-        } else {
-          logger.info(` -> Subcategoria j· existe: ${childData.name}`)
+    for (const subcategoria of categoria.children) {
+      let childCategory
+
+      const existingChild =
+        await productModuleService.listProductCategories({
+          handle: subcategoria.handle,
+        })
+
+      if (existingChild.length > 0) {
+        childCategory = existingChild[0]
+        logger.info(`  ‚Ü≥ Subcategoria j√° existe: ${subcategoria.name}`)
+      } else {
+        const createdChild = await productModuleService.createProductCategories({
+          name: subcategoria.name,
+          handle: subcategoria.handle,
+          is_active: true,
+          parent_category_id: parentCategory.id, // Corrigido o autocomplete que estava cortado
+        })
+        childCategory = Array.isArray(createdChild) ? createdChild[0] : createdChild
+        logger.info(`  ‚Ü≥ Subcategoria criada: ${subcategoria.name}`)
+      }
+
+      if (subcategoria.children) {
+        for (const subsubcategoria of subcategoria.children) {
+          const existingSub =
+            await productModuleService.listProductCategories({
+              handle: subsubcategoria.handle,
+            })
+
+          if (existingSub.length === 0) {
+            await productModuleService.createProductCategories({
+              name: subsubcategoria.name,
+              handle: subsubcategoria.handle,
+              is_active: true,
+              parent_category_id: childCategory.id,
+            })
+            logger.info(`      ‚Ü≥ Subcategoria criada: ${subsubcategoria.name}`)
+          } else {
+            logger.info(`      ‚Ü≥ Subcategoria j√° existe: ${subsubcategoria.name}`)
+          }
         }
       }
     }
   }
 
-  logger.info("Mapeamento de categorias concluÌdo com sucesso!")
+  logger.info("üå≥ √Årvore de categorias criada com sucesso!")
 }

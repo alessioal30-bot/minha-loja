@@ -13,10 +13,14 @@
     "medusa"
   ],
   "scripts": {
+    "dev": "medusa develop",
     "build": "medusa build",
     "start": "medusa start",
-    "dev": "medusa develop",
     "lint": "medusa lint",
+    "estoque": "medusa exec ./popular-estoque.js",
+    "setup-categorias": "medusa exec ./setup-completo.js",
+    "seed:cat": "medusa exec ./src/scripts/seed-categorias.js",
+    "vincular": "medusa exec ./src/scripts/vincular-produtos.js",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
@@ -44,7 +48,7 @@
     "@types/jest": "^29.5.13",
     "@types/node": "^20.12.11",
     "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.2.25",
+    "@types/react-dom": "^18.3.2",
     "jest": "^29.7.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
@@ -57,5 +61,5 @@
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "npm@11.17.0"
+  "packageManager": "pnpm@9.1.4"
 }

@@ -1,0 +1,129 @@
+========================================
+ LEVANTAMENTO - MINHA LOJA
+ Wed Aug 26 08:22:14 -03 2026
+========================================
+
+=== SISTEMA / WSL ===
+Linux DESKTOP-MSG6IK2 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+
+PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+
+=== NODE / PNPM / NPM ===
+v22.22.1
+10.17.1
+11.17.0
+
+=== PROJETO ===
+/mnt/c/Users/AM/Desktop/ZAP/minha-loja
+
+.
+./.vercel
+./apps
+./apps/.wrangler
+./apps/backend
+./apps/storefront
+
+=== BACKEND ===
+package.json encontrado
+  "name": "@dtc/backend",
+  "version": "0.0.1",
+    "dev": "medusa develop",
+    "build": "medusa build",
+    "start": "medusa start",
+
+=== MEDUSA ===
+Medusa CLI version: 2.18.0
+Medusa version: 2.18.0
+  Note: this is the Medusa version for the site at: /mnt/c/Users/AM/Desktop/ZAP/minha-loja/apps/backend
+
+=== FRONTEND ===
+package.json encontrado
+  "name": "@dtc/storefront",
+  "version": "1.0.3",
+    "dev": "next dev --turbopack -p 8000",
+    "build": "next build",
+    "start": "next start -p 8000",
+
+=== PORTAS ===
+LISTEN 0      200        127.0.0.1:5432       0.0.0.0:*                                               
+LISTEN 0      511                *:8000             *:*    users:(("next-server (v1",pid=17376,fd=24))
+LISTEN 0      511                *:9000             *:*    users:(("node",pid=18262,fd=30))           
+
+=== PROCESSOS IMPORTANTES ===
+postgres   15526  0.0  0.8 225004 31640 ?        Ss   Aug25   0:45 /usr/lib/postgresql/18/bin/postgres -D /var/lib/postgresql/18/main -c config_file=/etc/postgresql/18/main/postgresql.conf
+postgres   15527  0.0  0.3 225140 13128 ?        Ss   Aug25   0:02 postgres: 18/main: io worker 0
+postgres   15528  0.0  0.1 225140  6088 ?        Ss   Aug25   0:00 postgres: 18/main: io worker 1
+postgres   15529  0.0  0.1 225140  6044 ?        Ss   Aug25   0:00 postgres: 18/main: io worker 2
+postgres   15530  0.0  0.8 225648 31888 ?        Ss   Aug25   0:14 postgres: 18/main: checkpointer 
+postgres   15531  0.0  0.2 225140  8972 ?        Ss   Aug25   0:02 postgres: 18/main: background writer 
+postgres   15533  0.0  0.2 225140 10044 ?        Ss   Aug25   0:02 postgres: 18/main: walwriter 
+postgres   15534  0.0  0.2 226596  9252 ?        Ss   Aug25   0:03 postgres: 18/main: autovacuum launcher 
+postgres   15535  0.0  0.2 226596  8428 ?        Ss   Aug25   0:05 postgres: 18/main: logical replication launcher 
+am         17146  0.0  0.1  21112  5768 ?        Ss   Aug25   0:11 tmux new-session -d -s medusa_loja -n Backend
+am         17299  1.7  1.0 1295056 39880 pts/2   Sl+  Aug25  11:44 cloudflared tunnel run minha-loja-backend
+am         17305  0.0  2.9 1372276 114984 pts/3  Sl+  Aug25   0:19 node /usr/bin/pnpm run dev
+am         17342  0.0  0.0   2892  2000 pts/3    S+   Aug25   0:00 sh -c next dev --turbopack -p 8000
+am         17344  0.0  2.5 11573764 96948 pts/3  Sl+  Aug25   0:18 node /mnt/c/Users/AM/Desktop/ZAP/minha-loja/apps/storefront/node_modules/.bin/../next/dist/bin/next dev --turbopack -p 8000
+am         17368  0.0  0.1  21112  6972 pts/6    S+   Aug25   0:00 tmux attach -t medusa_loja
+am         17376  0.9 11.8 35640180 458352 pts/3 Sl+  Aug25   6:22 next-server (v15.5.21)
+am         18150  0.0  3.1 1311820 122888 pts/0  Sl+  Aug25   0:08 node /usr/bin/pnpm dev
+am         18161  0.0  0.0   2892  2008 pts/0    S+   Aug25   0:00 sh -c medusa develop
+am         18162  0.3  4.4 2486420 173872 pts/0  Sl+  Aug25   2:04 node /mnt/c/Users/AM/Desktop/ZAP/minha-loja/apps/backend/node_modules/.bin/../@medusajs/cli/cli.js develop
+am         18262  1.9 11.3 13227124 438764 pts/0 Sl+  Aug25  11:21 /usr/bin/node /mnt/c/Users/AM/Desktop/ZAP/minha-loja/node_modules/.pnpm/@medusajs+cli@2.18.0_@types+node@20.19.43/node_modules/@medusajs/cli/cli.js start --types
+postgres   18399  0.0  0.5 227328 21584 ?        Ss   Aug25   0:00 postgres: 18/main: postgres medusa_loja 127.0.0.1(51502) idle
+postgres   18401  0.0  0.6 227928 24884 ?        Ss   Aug25   0:01 postgres: 18/main: postgres medusa_loja 127.0.0.1(37116) idle
+am         18457  0.7  0.8 1130368 31012 pts/0   Sl+  Aug25   3:54 /mnt/c/Users/AM/Desktop/ZAP/minha-loja/node_modules/.pnpm/@esbuild+linux-x64@0.21.5/node_modules/@esbuild/linux-x64/bin/esbuild --service=0.21.5 --ping
+am         21839 77.1  1.5 1033852 59524 ?       Dsl  08:41   0:01 /usr/bin/node /mnt/c/Users/AM/Desktop/ZAP/minha-loja/node_modules/.pnpm/@medusajs+telemetry@2.18.0/node_modules/@medusajs/telemetry/dist/util/send.js
+
+=== POSTGRESQL ===
+/var/run/postgresql:5432 - accepting connections
+
+=== CLOUDFLARED ===
+/usr/local/bin/cloudflared
+cloudflared version 2026.8.2 (built 2026-08-14-12:17 UTC)
+
+=== CLOUDFLARED PROCESSO ===
+am         17299  1.7  1.0 1295056 39880 pts/2   Sl+  Aug25  11:44 cloudflared tunnel run minha-loja-backend
+
+=== BACKEND LOCAL ===
+localhost:9000/app -> HTTP 200
+172.20.222.233:9000/app -> HTTP 200
+
+=== FRONTEND LOCAL ===
+localhost:8000 -> HTTP 500
+
+=== ENV FRONTEND (SEGURA) ===
+NEXT_PUBLIC_MEDUSA_BACKEND_URL=https://api.apcmcomercioesrvltda.com.br
+NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=[OCULTO]
+NEXT_PUBLIC_DEFAULT_REGION=br
+NEXT_PUBLIC_FORCE_US_REGION=false
+
+=== ENV BACKEND (SEGURA) ===
+DATABASE_URL=postgresql://postgres:123456@127.0.0.1:5432/medusa_loja
+DATABASE_DIRECT_URL=postgresql://postgres:123456@127.0.0.1:5432/medusa_loja
+PORT=9000
+STORE_CORS=https://apcmcomercioesrvltda.com.br,https://www.apcmcomercioesrvltda.com.br,https://api.apcmcomercioesrvltda.com.br,http://localhost:8000
+ADMIN_CORS=https://apcmcomercioesrvltda.com.br,https://www.apcmcomercioesrvltda.com.br,https://api.apcmcomercioesrvltda.com.br,http://localhost:9000
+
+=== MEDUSA CONFIG ===
+import { defineConfig } from "@medusajs/utils"
+export default defineConfig({
+    databaseUrl: process.env.DATABASE_URL,
+    redisUrl: process.env.REDIS_URL,
+      adminCors: process.env.ADMIN_CORS || 'http://localhost:7001',
+  admin: {
+
+=== CONECTIVIDADE API PÚBLICA ===
+API configurada: https://api.apcmcomercioesrvltda.com.br
+API -> HTTP 400
+
+========================================
+ FIM DO LEVANTAMENTO
+========================================
