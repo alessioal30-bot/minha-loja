@@ -52,7 +52,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/error.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/error.js
 function isOpenNextError(e) {
   try {
     return "__openNextInternal" in e;
@@ -61,11 +61,11 @@ function isOpenNextError(e) {
   }
 }
 var init_error = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/error.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/error.js"() {
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/logger.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/adapters/logger.js
 function debug(...args) {
   if (globalThis.openNextDebug) {
     console.log(...args);
@@ -108,7 +108,7 @@ function getOpenNextErrorLogLevel() {
 }
 var DOWNPLAYED_ERROR_LOGS, isDownplayedErrorLog;
 var init_logger = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/logger.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/adapters/logger.js"() {
     init_error();
     DOWNPLAYED_ERROR_LOGS = [
       {
@@ -370,7 +370,7 @@ var require_dist = __commonJS({
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/http/util.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/http/util.js
 function parseSetCookieHeader(cookies) {
   if (!cookies) {
     return [];
@@ -396,22 +396,22 @@ function getQueryFromIterator(it) {
   return query;
 }
 var init_util = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/http/util.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/http/util.js"() {
     init_logger();
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/converters/utils.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/converters/utils.js
 function getQueryFromSearchParams(searchParams) {
   return getQueryFromIterator(searchParams.entries());
 }
 var init_utils = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/converters/utils.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/converters/utils.js"() {
     init_util();
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/converters/edge.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/converters/edge.js
 var edge_exports = {};
 __export(edge_exports, {
   default: () => edge_default
@@ -419,7 +419,7 @@ __export(edge_exports, {
 import { Buffer as Buffer2 } from "node:buffer";
 var import_cookie, NULL_BODY_STATUSES, converter, edge_default;
 var init_edge = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/converters/edge.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/converters/edge.js"() {
     import_cookie = __toESM(require_dist(), 1);
     init_util();
     init_utils();
@@ -501,14 +501,14 @@ var init_edge = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/wrappers/cloudflare-edge.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/wrappers/cloudflare-edge.js
 var cloudflare_edge_exports = {};
 __export(cloudflare_edge_exports, {
   default: () => cloudflare_edge_default
 });
 var cfPropNameMapping, handler, cloudflare_edge_default;
 var init_cloudflare_edge = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/wrappers/cloudflare-edge.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/wrappers/cloudflare-edge.js"() {
     cfPropNameMapping = {
       // The city name is percent-encoded.
       // See https://github.com/vercel/vercel/blob/4cb6143/packages/functions/src/headers.ts#L94C19-L94C37
@@ -549,7 +549,7 @@ var init_cloudflare_edge = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/originResolver/pattern-env.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/originResolver/pattern-env.js
 var pattern_env_exports = {};
 __export(pattern_env_exports, {
   default: () => pattern_env_default
@@ -578,7 +578,7 @@ function initializeOnce() {
 }
 var cachedOrigins, cachedPatterns, initialized, envLoader, pattern_env_default;
 var init_pattern_env = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/originResolver/pattern-env.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/originResolver/pattern-env.js"() {
     init_logger();
     cachedPatterns = [];
     initialized = false;
@@ -614,14 +614,14 @@ var init_pattern_env = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/assetResolver/dummy.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/assetResolver/dummy.js
 var dummy_exports = {};
 __export(dummy_exports, {
   default: () => dummy_default
 });
 var resolver, dummy_default;
 var init_dummy = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/assetResolver/dummy.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/assetResolver/dummy.js"() {
     resolver = {
       name: "dummy"
     };
@@ -629,7 +629,7 @@ var init_dummy = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/stream.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/stream.js
 import { ReadableStream } from "node:stream/web";
 function toReadableStream(value, isBase64) {
   return new ReadableStream({
@@ -657,18 +657,18 @@ function emptyReadableStream() {
 }
 var maybeSomethingBuffer;
 var init_stream = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/stream.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/stream.js"() {
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/proxyExternalRequest/fetch.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/proxyExternalRequest/fetch.js
 var fetch_exports = {};
 __export(fetch_exports, {
   default: () => fetch_default
 });
 var fetchProxy, fetch_default;
 var init_fetch = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/overrides/proxyExternalRequest/fetch.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/overrides/proxyExternalRequest/fetch.js"() {
     init_stream();
     fetchProxy = {
       name: "fetch-proxy",
@@ -3010,12 +3010,12 @@ Learn More: https://nextjs.org/docs/messages/node-module-in-edge-runtime`;
       bm("\x1B[38;2;173;127;168m", "\x1B[39m"), bm("\x1B[36m", "\x1B[39m");
       let bs = bm("\x1B[37m", "\x1B[39m");
       bm("\x1B[90m", "\x1B[39m"), bm("\x1B[40m", "\x1B[49m"), bm("\x1B[41m", "\x1B[49m"), bm("\x1B[42m", "\x1B[49m"), bm("\x1B[43m", "\x1B[49m"), bm("\x1B[44m", "\x1B[49m"), bm("\x1B[45m", "\x1B[49m"), bm("\x1B[46m", "\x1B[49m"), bm("\x1B[47m", "\x1B[49m"), bs(bn("\u25CB")), bo(bn("\u2A2F")), bq(bn("\u26A0")), bs(bn(" ")), bp(bn("\u2713")), br(bn("\xBB")), new aU(1e4, (a10) => a10.length), /* @__PURE__ */ new WeakMap();
-      let bt = "https://api.apcmcomercioesrvltda.com.br", bu = { regionMap: /* @__PURE__ */ new Map(), regionMapUpdated: Date.now() };
+      let bt = "http://localhost:9000", bu = { regionMap: /* @__PURE__ */ new Map(), regionMapUpdated: Date.now() };
       async function bv(a10) {
         let { regionMap: b2, regionMapUpdated: c2 } = bu;
         if (!bt) throw Error("Middleware.ts: Error fetching regions. Did you set up regions in your Medusa Admin and define a NEXT_PUBLIC_MEDUSA_BACKEND_URL environment variable.");
         if (!b2.keys().next().value || c2 < Date.now() - 36e5) {
-          let b3 = await fetch(`${bt}/store/regions`, { method: "GET", headers: { "x-publishable-api-key": "pk_c4a568bb1f65394812ad347e6d09017035582d5b1f4b90be6cec831bef93faa5" }, next: { revalidate: 3600, tags: [`regions-${a10}`] }, cache: "force-cache" });
+          let b3 = await fetch(`${bt}/store/regions`, { method: "GET", headers: { "x-publishable-api-key": "pk_340f111e2a11ab970aabc1875f31854420bb585c84d91e413ab6e3b33868b9fd" }, next: { revalidate: 3600, tags: [`regions-${a10}`] }, cache: "force-cache" });
           if (!b3.ok) throw Error(`Backend returned ${b3.status}`);
           let { regions: c3 } = await b3.json();
           if (!c3?.length) return /* @__PURE__ */ new Map();
@@ -3319,7 +3319,7 @@ Learn More: https://nextjs.org/docs/messages/node-module-in-edge-runtime`;
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/edgeFunctionHandler.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/edgeFunctionHandler.js
 var edgeFunctionHandler_exports = {};
 __export(edgeFunctionHandler_exports, {
   default: () => edgeFunctionHandler
@@ -3354,7 +3354,7 @@ async function edgeFunctionHandler(request) {
   return response;
 }
 var init_edgeFunctionHandler = __esm({
-  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/edgeFunctionHandler.js"() {
+  "../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/edgeFunctionHandler.js"() {
     globalThis._ENTRIES = {};
     globalThis.self = globalThis;
     globalThis._ROUTES = [{ "name": "src/middleware", "page": "/", "regex": ["^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!api|_next\\/static|_next\\/image|favicon.ico|images|assets|png|svg|jpg|jpeg|gif|webp).*))(\\.json|\\.rsc|\\.segments\\/.+\\.segment\\.rsc)?[\\/#\\?]?$"] }];
@@ -3363,10 +3363,10 @@ var init_edgeFunctionHandler = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/promise.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/promise.js
 init_logger();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/requestCache.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/requestCache.js
 var RequestCache = class {
   _caches = /* @__PURE__ */ new Map();
   /**
@@ -3384,7 +3384,7 @@ var RequestCache = class {
   }
 };
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/promise.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/promise.js
 var DetachedPromise = class {
   resolve;
   reject;
@@ -3465,13 +3465,13 @@ function runWithOpenNextRequestContext({ isISRRevalidation, waitUntil, requestId
   });
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/middleware.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/adapters/middleware.js
 init_logger();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/createGenericHandler.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/createGenericHandler.js
 init_logger();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/resolve.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/resolve.js
 async function resolveConverter(converter2) {
   if (typeof converter2 === "function") {
     return converter2();
@@ -3508,7 +3508,7 @@ async function resolveProxyRequest(proxyRequest) {
   return m_1.default;
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/createGenericHandler.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/createGenericHandler.js
 async function createGenericHandler(handler3) {
   const config = await import("./open-next.config.mjs").then((m) => m.default);
   globalThis.openNextConfig = config;
@@ -3520,11 +3520,11 @@ async function createGenericHandler(handler3) {
   return wrapper(handler3.handler, converter2);
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/util.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/util.js
 import crypto2 from "node:crypto";
 import { parse as parseQs, stringify as stringifyQs } from "node:querystring";
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/config/index.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/adapters/config/index.js
 init_logger();
 import path from "node:path";
 globalThis.__dirname ??= "";
@@ -3532,29 +3532,29 @@ var NEXT_DIR = path.join(__dirname, ".next");
 var OPEN_NEXT_DIR = path.join(__dirname, ".open-next");
 debug({ NEXT_DIR, OPEN_NEXT_DIR });
 var NextConfig = { "env": {}, "webpack": null, "eslint": { "ignoreDuringBuilds": true }, "typescript": { "ignoreBuildErrors": true, "tsconfigPath": "tsconfig.json" }, "typedRoutes": false, "distDir": ".next", "cleanDistDir": true, "assetPrefix": "", "cacheMaxMemorySize": 52428800, "configOrigin": "next.config.js", "useFileSystemPublicRoutes": true, "generateEtags": true, "pageExtensions": ["tsx", "ts", "jsx", "js"], "poweredByHeader": true, "compress": true, "images": { "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840], "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384], "path": "/_next/image", "loader": "default", "loaderFile": "", "domains": [], "disableStaticImages": false, "minimumCacheTTL": 60, "formats": ["image/webp"], "maximumResponseBody": 5e7, "dangerouslyAllowSVG": false, "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;", "contentDispositionType": "attachment", "remotePatterns": [{ "protocol": "http", "hostname": "localhost" }, { "protocol": "https", "hostname": "*.s3.*.amazonaws.com" }, { "protocol": "https", "hostname": "*.s3.amazonaws.com" }], "unoptimized": true }, "devIndicators": { "position": "bottom-left" }, "onDemandEntries": { "maxInactiveAge": 6e4, "pagesBufferLength": 5 }, "amp": { "canonicalBase": "" }, "basePath": "", "sassOptions": {}, "trailingSlash": false, "i18n": null, "productionBrowserSourceMaps": false, "excludeDefaultMomentLocales": true, "serverRuntimeConfig": {}, "publicRuntimeConfig": {}, "reactProductionProfiling": false, "reactStrictMode": true, "reactMaxHeadersLength": 6e3, "httpAgentOptions": { "keepAlive": true }, "logging": { "fetches": { "fullUrl": true } }, "compiler": {}, "expireTime": 31536e3, "staticPageGenerationTimeout": 60, "output": "standalone", "modularizeImports": { "@mui/icons-material": { "transform": "@mui/icons-material/{{member}}" }, "lodash": { "transform": "lodash/{{member}}" } }, "outputFileTracingRoot": "/mnt/c/Users/AM/Desktop/ZAP/minha-loja", "experimental": { "useSkewCookie": false, "cacheLife": { "default": { "stale": 300, "revalidate": 900, "expire": 4294967294 }, "seconds": { "stale": 30, "revalidate": 1, "expire": 60 }, "minutes": { "stale": 300, "revalidate": 60, "expire": 3600 }, "hours": { "stale": 300, "revalidate": 3600, "expire": 86400 }, "days": { "stale": 300, "revalidate": 86400, "expire": 604800 }, "weeks": { "stale": 300, "revalidate": 604800, "expire": 2592e3 }, "max": { "stale": 300, "revalidate": 2592e3, "expire": 4294967294 } }, "cacheHandlers": {}, "cssChunking": true, "multiZoneDraftMode": false, "appNavFailHandling": false, "prerenderEarlyExit": true, "serverMinification": true, "serverSourceMaps": false, "linkNoTouchStart": false, "caseSensitiveRoutes": false, "clientSegmentCache": false, "clientParamParsing": false, "dynamicOnHover": false, "preloadEntriesOnStart": true, "clientRouterFilter": true, "clientRouterFilterRedirects": false, "fetchCacheKeyPrefix": "", "middlewarePrefetch": "flexible", "optimisticClientCache": true, "manualClientBasePath": false, "cpus": 3, "memoryBasedWorkersCount": false, "imgOptConcurrency": null, "imgOptTimeoutInSeconds": 7, "imgOptMaxInputPixels": 268402689, "imgOptSequentialRead": null, "isrFlushToDisk": true, "workerThreads": false, "optimizeCss": false, "nextScriptWorkers": false, "scrollRestoration": false, "externalDir": false, "disableOptimizedLoading": false, "gzipSize": true, "craCompat": false, "esmExternals": true, "fullySpecified": false, "swcTraceProfiling": false, "forceSwcTransforms": false, "largePageDataBytes": 128e3, "typedEnv": false, "parallelServerCompiles": false, "parallelServerBuildTraces": false, "ppr": false, "authInterrupts": false, "webpackMemoryOptimizations": false, "optimizeServerReact": true, "viewTransition": false, "routerBFCache": false, "removeUncaughtErrorAndRejectionListeners": false, "validateRSCRequestHeaders": false, "staleTimes": { "dynamic": 0, "static": 300 }, "serverComponentsHmrCache": true, "staticGenerationMaxConcurrency": 8, "staticGenerationMinPagesPerWorker": 25, "cacheComponents": false, "inlineCss": false, "useCache": false, "globalNotFound": false, "devtoolSegmentExplorer": true, "browserDebugInfoInTerminal": false, "optimizeRouterScrolling": false, "middlewareClientMaxBodySize": 10485760, "optimizePackageImports": ["lucide-react", "date-fns", "lodash-es", "ramda", "antd", "react-bootstrap", "ahooks", "@ant-design/icons", "@headlessui/react", "@headlessui-float/react", "@heroicons/react/20/solid", "@heroicons/react/24/solid", "@heroicons/react/24/outline", "@visx/visx", "@tremor/react", "rxjs", "@mui/material", "@mui/icons-material", "recharts", "react-use", "effect", "@effect/schema", "@effect/platform", "@effect/platform-node", "@effect/platform-browser", "@effect/platform-bun", "@effect/sql", "@effect/sql-mssql", "@effect/sql-mysql2", "@effect/sql-pg", "@effect/sql-sqlite-node", "@effect/sql-sqlite-bun", "@effect/sql-sqlite-wasm", "@effect/sql-sqlite-react-native", "@effect/rpc", "@effect/rpc-http", "@effect/typeclass", "@effect/experimental", "@effect/opentelemetry", "@material-ui/core", "@material-ui/icons", "@tabler/icons-react", "mui-core", "react-icons/ai", "react-icons/bi", "react-icons/bs", "react-icons/cg", "react-icons/ci", "react-icons/di", "react-icons/fa", "react-icons/fa6", "react-icons/fc", "react-icons/fi", "react-icons/gi", "react-icons/go", "react-icons/gr", "react-icons/hi", "react-icons/hi2", "react-icons/im", "react-icons/io", "react-icons/io5", "react-icons/lia", "react-icons/lib", "react-icons/lu", "react-icons/md", "react-icons/pi", "react-icons/ri", "react-icons/rx", "react-icons/si", "react-icons/sl", "react-icons/tb", "react-icons/tfi", "react-icons/ti", "react-icons/vsc", "react-icons/wi"], "trustHostHeader": false, "isExperimentalCompile": false }, "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight", "bundlePagesRouterDependencies": false, "configFileName": "next.config.js", "turbopack": { "root": "/mnt/c/Users/AM/Desktop/ZAP/minha-loja" } };
-var BuildId = "nFC-4QEVrspC3Htotw1RF";
-var RoutesManifest = { "basePath": "", "rewrites": { "beforeFiles": [], "afterFiles": [], "fallback": [] }, "redirects": [{ "source": "/:path+/", "destination": "/:path+", "internal": true, "statusCode": 308, "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$" }], "routes": { "static": [{ "page": "/_not-found", "regex": "^/_not\\-found(?:/)?$", "routeKeys": {}, "namedRegex": "^/_not\\-found(?:/)?$" }, { "page": "/opengraph-image.jpg", "regex": "^/opengraph\\-image\\.jpg(?:/)?$", "routeKeys": {}, "namedRegex": "^/opengraph\\-image\\.jpg(?:/)?$" }, { "page": "/twitter-image.jpg", "regex": "^/twitter\\-image\\.jpg(?:/)?$", "routeKeys": {}, "namedRegex": "^/twitter\\-image\\.jpg(?:/)?$" }], "dynamic": [{ "page": "/[countryCode]", "regex": "^/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/account", "regex": "^/([^/]+?)/account(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account(?:/)?$" }, { "page": "/[countryCode]/account/addresses", "regex": "^/([^/]+?)/account/addresses(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/addresses(?:/)?$" }, { "page": "/[countryCode]/account/orders", "regex": "^/([^/]+?)/account/orders(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/orders(?:/)?$" }, { "page": "/[countryCode]/account/orders/details/[id]", "regex": "^/([^/]+?)/account/orders/details/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/orders/details/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/account/profile", "regex": "^/([^/]+?)/account/profile(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/profile(?:/)?$" }, { "page": "/[countryCode]/cart", "regex": "^/([^/]+?)/cart(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/cart(?:/)?$" }, { "page": "/[countryCode]/categories/[...category]", "regex": "^/([^/]+?)/categories/(.+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPcategory": "nxtPcategory" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/categories/(?<nxtPcategory>.+?)(?:/)?$" }, { "page": "/[countryCode]/checkout", "regex": "^/([^/]+?)/checkout(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/checkout(?:/)?$" }, { "page": "/[countryCode]/collections/[handle]", "regex": "^/([^/]+?)/collections/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPhandle": "nxtPhandle" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/collections/(?<nxtPhandle>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/order/[id]/confirmed", "regex": "^/([^/]+?)/order/([^/]+?)/confirmed(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/confirmed(?:/)?$" }, { "page": "/[countryCode]/order/[id]/transfer/[token]", "regex": "^/([^/]+?)/order/([^/]+?)/transfer/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid", "nxtPtoken": "nxtPtoken" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/transfer/(?<nxtPtoken>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/order/[id]/transfer/[token]/accept", "regex": "^/([^/]+?)/order/([^/]+?)/transfer/([^/]+?)/accept(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid", "nxtPtoken": "nxtPtoken" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/transfer/(?<nxtPtoken>[^/]+?)/accept(?:/)?$" }, { "page": "/[countryCode]/order/[id]/transfer/[token]/decline", "regex": "^/([^/]+?)/order/([^/]+?)/transfer/([^/]+?)/decline(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid", "nxtPtoken": "nxtPtoken" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/transfer/(?<nxtPtoken>[^/]+?)/decline(?:/)?$" }, { "page": "/[countryCode]/products/[handle]", "regex": "^/([^/]+?)/products/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPhandle": "nxtPhandle" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/products/(?<nxtPhandle>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/store", "regex": "^/([^/]+?)/store(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/store(?:/)?$" }, { "page": "/[countryCode]/store/farmaceuticos", "regex": "^/([^/]+?)/store/farmaceuticos(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/store/farmaceuticos(?:/)?$" }, { "page": "/[countryCode]/verify-account", "regex": "^/([^/]+?)/verify\\-account(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/verify\\-account(?:/)?$" }], "data": { "static": [], "dynamic": [] } }, "locales": [] };
+var BuildId = "ue7IyXYxJ4Bn0UqHM3HQT";
+var RoutesManifest = { "basePath": "", "rewrites": { "beforeFiles": [], "afterFiles": [], "fallback": [] }, "redirects": [{ "source": "/:path+/", "destination": "/:path+", "internal": true, "statusCode": 308, "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$" }], "routes": { "static": [{ "page": "/_not-found", "regex": "^/_not\\-found(?:/)?$", "routeKeys": {}, "namedRegex": "^/_not\\-found(?:/)?$" }, { "page": "/opengraph-image.jpg", "regex": "^/opengraph\\-image\\.jpg(?:/)?$", "routeKeys": {}, "namedRegex": "^/opengraph\\-image\\.jpg(?:/)?$" }, { "page": "/twitter-image.jpg", "regex": "^/twitter\\-image\\.jpg(?:/)?$", "routeKeys": {}, "namedRegex": "^/twitter\\-image\\.jpg(?:/)?$" }], "dynamic": [{ "page": "/[countryCode]", "regex": "^/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/account", "regex": "^/([^/]+?)/account(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account(?:/)?$" }, { "page": "/[countryCode]/account/addresses", "regex": "^/([^/]+?)/account/addresses(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/addresses(?:/)?$" }, { "page": "/[countryCode]/account/orders", "regex": "^/([^/]+?)/account/orders(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/orders(?:/)?$" }, { "page": "/[countryCode]/account/orders/details/[id]", "regex": "^/([^/]+?)/account/orders/details/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/orders/details/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/account/profile", "regex": "^/([^/]+?)/account/profile(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/account/profile(?:/)?$" }, { "page": "/[countryCode]/cart", "regex": "^/([^/]+?)/cart(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/cart(?:/)?$" }, { "page": "/[countryCode]/categories/[...category]", "regex": "^/([^/]+?)/categories/(.+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPcategory": "nxtPcategory" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/categories/(?<nxtPcategory>.+?)(?:/)?$" }, { "page": "/[countryCode]/checkout", "regex": "^/([^/]+?)/checkout(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/checkout(?:/)?$" }, { "page": "/[countryCode]/collections/[handle]", "regex": "^/([^/]+?)/collections/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPhandle": "nxtPhandle" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/collections/(?<nxtPhandle>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/order/[id]/confirmed", "regex": "^/([^/]+?)/order/([^/]+?)/confirmed(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/confirmed(?:/)?$" }, { "page": "/[countryCode]/order/[id]/transfer/[token]", "regex": "^/([^/]+?)/order/([^/]+?)/transfer/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid", "nxtPtoken": "nxtPtoken" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/transfer/(?<nxtPtoken>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/order/[id]/transfer/[token]/accept", "regex": "^/([^/]+?)/order/([^/]+?)/transfer/([^/]+?)/accept(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid", "nxtPtoken": "nxtPtoken" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/transfer/(?<nxtPtoken>[^/]+?)/accept(?:/)?$" }, { "page": "/[countryCode]/order/[id]/transfer/[token]/decline", "regex": "^/([^/]+?)/order/([^/]+?)/transfer/([^/]+?)/decline(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPid": "nxtPid", "nxtPtoken": "nxtPtoken" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/order/(?<nxtPid>[^/]+?)/transfer/(?<nxtPtoken>[^/]+?)/decline(?:/)?$" }, { "page": "/[countryCode]/products/[handle]", "regex": "^/([^/]+?)/products/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode", "nxtPhandle": "nxtPhandle" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/products/(?<nxtPhandle>[^/]+?)(?:/)?$" }, { "page": "/[countryCode]/store", "regex": "^/([^/]+?)/store(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/store(?:/)?$" }, { "page": "/[countryCode]/store/cosmeticos", "regex": "^/([^/]+?)/store/cosmeticos(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/store/cosmeticos(?:/)?$" }, { "page": "/[countryCode]/store/farmaceuticos", "regex": "^/([^/]+?)/store/farmaceuticos(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/store/farmaceuticos(?:/)?$" }, { "page": "/[countryCode]/verify-account", "regex": "^/([^/]+?)/verify\\-account(?:/)?$", "routeKeys": { "nxtPcountryCode": "nxtPcountryCode" }, "namedRegex": "^/(?<nxtPcountryCode>[^/]+?)/verify\\-account(?:/)?$" }], "data": { "static": [], "dynamic": [] } }, "locales": [] };
 var ConfigHeaders = [];
-var PrerenderManifest = { "version": 4, "routes": { "/opengraph-image.jpg": { "initialHeaders": { "cache-control": "public, immutable, no-transform, max-age=31536000", "content-type": "image/jpeg", "x-next-cache-tags": "_N_T_/layout,_N_T_/opengraph-image.jpg/layout,_N_T_/opengraph-image.jpg/route,_N_T_/opengraph-image.jpg" }, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/opengraph-image.jpg", "dataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/_not-found": { "initialStatus": 404, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/_not-found", "dataRoute": "/_not-found.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/twitter-image.jpg": { "initialHeaders": { "cache-control": "public, immutable, no-transform, max-age=31536000", "content-type": "image/jpeg", "x-next-cache-tags": "_N_T_/layout,_N_T_/twitter-image.jpg/layout,_N_T_/twitter-image.jpg/route,_N_T_/twitter-image.jpg" }, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/twitter-image.jpg", "dataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "dynamicRoutes": { "/[countryCode]/collections/[handle]": { "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "routeRegex": "^/([^/]+?)/collections/([^/]+?)(?:/)?$", "dataRoute": "/[countryCode]/collections/[handle].rsc", "fallback": null, "dataRouteRegex": "^/([^/]+?)/collections/([^/]+?)\\.rsc$", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "notFoundRoutes": [], "preview": { "previewModeId": "c7cbe36df7fb0ea4c0ed1d2a3c7b9650", "previewModeSigningKey": "f9111e02e86a6347230cbaa36e399d64f54ac894c525e193fb92256ba6a40b76", "previewModeEncryptionKey": "90aa5fe8c4ff6efb8e4d3b570cc7fc50087411b8b3253f8e7d130e77ffcfcb64" } };
-var MiddlewareManifest = { "version": 3, "middleware": { "/": { "files": ["server/edge-runtime-webpack.js", "server/src/middleware.js"], "name": "src/middleware", "page": "/", "matchers": [{ "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!api|_next\\/static|_next\\/image|favicon.ico|images|assets|png|svg|jpg|jpeg|gif|webp).*))(\\.json|\\.rsc|\\.segments\\/.+\\.segment\\.rsc)?[\\/#\\?]?$", "originalSource": "/((?!api|_next/static|_next/image|favicon.ico|images|assets|png|svg|jpg|jpeg|gif|webp).*)" }], "wasm": [], "assets": [], "env": { "__NEXT_BUILD_ID": "nFC-4QEVrspC3Htotw1RF", "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "wesdr7oj7TSiH3YX+CP9O1hvJqE01PJ6gY6OsR48dr0=", "__NEXT_PREVIEW_MODE_ID": "c7cbe36df7fb0ea4c0ed1d2a3c7b9650", "__NEXT_PREVIEW_MODE_SIGNING_KEY": "f9111e02e86a6347230cbaa36e399d64f54ac894c525e193fb92256ba6a40b76", "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "90aa5fe8c4ff6efb8e4d3b570cc7fc50087411b8b3253f8e7d130e77ffcfcb64" } } }, "functions": {}, "sortedMiddleware": ["/"] };
-var AppPathRoutesManifest = { "/_not-found/page": "/_not-found", "/twitter-image.jpg/route": "/twitter-image.jpg", "/opengraph-image.jpg/route": "/opengraph-image.jpg", "/[countryCode]/(checkout)/checkout/page": "/[countryCode]/checkout", "/[countryCode]/(main)/order/[id]/transfer/[token]/decline/page": "/[countryCode]/order/[id]/transfer/[token]/decline", "/[countryCode]/(main)/order/[id]/transfer/[token]/accept/page": "/[countryCode]/order/[id]/transfer/[token]/accept", "/[countryCode]/(main)/order/[id]/transfer/[token]/page": "/[countryCode]/order/[id]/transfer/[token]", "/[countryCode]/(main)/cart/page": "/[countryCode]/cart", "/[countryCode]/(main)/collections/[handle]/page": "/[countryCode]/collections/[handle]", "/[countryCode]/(main)/order/[id]/confirmed/page": "/[countryCode]/order/[id]/confirmed", "/[countryCode]/(main)/categories/[...category]/page": "/[countryCode]/categories/[...category]", "/[countryCode]/(main)/page": "/[countryCode]", "/[countryCode]/(main)/store/page": "/[countryCode]/store", "/[countryCode]/(main)/products/[handle]/page": "/[countryCode]/products/[handle]", "/[countryCode]/(main)/verify-account/page": "/[countryCode]/verify-account", "/[countryCode]/(main)/store/farmaceuticos/page": "/[countryCode]/store/farmaceuticos", "/[countryCode]/(main)/account/@login/page": "/[countryCode]/account", "/[countryCode]/(main)/account/@dashboard/orders/details/[id]/page": "/[countryCode]/account/orders/details/[id]", "/[countryCode]/(main)/account/@dashboard/page": "/[countryCode]/account", "/[countryCode]/(main)/account/@dashboard/profile/page": "/[countryCode]/account/profile", "/[countryCode]/(main)/account/@dashboard/orders/page": "/[countryCode]/account/orders", "/[countryCode]/(main)/account/@dashboard/addresses/page": "/[countryCode]/account/addresses" };
+var PrerenderManifest = { "version": 4, "routes": { "/twitter-image.jpg": { "initialHeaders": { "cache-control": "public, immutable, no-transform, max-age=31536000", "content-type": "image/jpeg", "x-next-cache-tags": "_N_T_/layout,_N_T_/twitter-image.jpg/layout,_N_T_/twitter-image.jpg/route,_N_T_/twitter-image.jpg" }, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/twitter-image.jpg", "dataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/opengraph-image.jpg": { "initialHeaders": { "cache-control": "public, immutable, no-transform, max-age=31536000", "content-type": "image/jpeg", "x-next-cache-tags": "_N_T_/layout,_N_T_/opengraph-image.jpg/layout,_N_T_/opengraph-image.jpg/route,_N_T_/opengraph-image.jpg" }, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/opengraph-image.jpg", "dataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/_not-found": { "initialStatus": 404, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/_not-found", "dataRoute": "/_not-found.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "dynamicRoutes": { "/[countryCode]/collections/[handle]": { "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "routeRegex": "^/([^/]+?)/collections/([^/]+?)(?:/)?$", "dataRoute": "/[countryCode]/collections/[handle].rsc", "fallback": null, "dataRouteRegex": "^/([^/]+?)/collections/([^/]+?)\\.rsc$", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "notFoundRoutes": [], "preview": { "previewModeId": "fc72159d617a043c3923b85208c48c97", "previewModeSigningKey": "b232599dcbba774bfa1b748e3af74657c234ab7f1c3d1a03c078c04e0921bf44", "previewModeEncryptionKey": "784238e3eee730c8422aa9107e827642e5df67e1b45bb0b526125ca1365f00fd" } };
+var MiddlewareManifest = { "version": 3, "middleware": { "/": { "files": ["server/edge-runtime-webpack.js", "server/src/middleware.js"], "name": "src/middleware", "page": "/", "matchers": [{ "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!api|_next\\/static|_next\\/image|favicon.ico|images|assets|png|svg|jpg|jpeg|gif|webp).*))(\\.json|\\.rsc|\\.segments\\/.+\\.segment\\.rsc)?[\\/#\\?]?$", "originalSource": "/((?!api|_next/static|_next/image|favicon.ico|images|assets|png|svg|jpg|jpeg|gif|webp).*)" }], "wasm": [], "assets": [], "env": { "__NEXT_BUILD_ID": "ue7IyXYxJ4Bn0UqHM3HQT", "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "4f3yE8UI0dM1+0d5V+MD8WQcNtLPAfTgmytu7eJQq2E=", "__NEXT_PREVIEW_MODE_ID": "fc72159d617a043c3923b85208c48c97", "__NEXT_PREVIEW_MODE_SIGNING_KEY": "b232599dcbba774bfa1b748e3af74657c234ab7f1c3d1a03c078c04e0921bf44", "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "784238e3eee730c8422aa9107e827642e5df67e1b45bb0b526125ca1365f00fd" } } }, "functions": {}, "sortedMiddleware": ["/"] };
+var AppPathRoutesManifest = { "/_not-found/page": "/_not-found", "/twitter-image.jpg/route": "/twitter-image.jpg", "/opengraph-image.jpg/route": "/opengraph-image.jpg", "/[countryCode]/(main)/collections/[handle]/page": "/[countryCode]/collections/[handle]", "/[countryCode]/(main)/order/[id]/transfer/[token]/page": "/[countryCode]/order/[id]/transfer/[token]", "/[countryCode]/(main)/order/[id]/transfer/[token]/accept/page": "/[countryCode]/order/[id]/transfer/[token]/accept", "/[countryCode]/(main)/order/[id]/transfer/[token]/decline/page": "/[countryCode]/order/[id]/transfer/[token]/decline", "/[countryCode]/(checkout)/checkout/page": "/[countryCode]/checkout", "/[countryCode]/(main)/categories/[...category]/page": "/[countryCode]/categories/[...category]", "/[countryCode]/(main)/cart/page": "/[countryCode]/cart", "/[countryCode]/(main)/page": "/[countryCode]", "/[countryCode]/(main)/verify-account/page": "/[countryCode]/verify-account", "/[countryCode]/(main)/store/page": "/[countryCode]/store", "/[countryCode]/(main)/order/[id]/confirmed/page": "/[countryCode]/order/[id]/confirmed", "/[countryCode]/(main)/products/[handle]/page": "/[countryCode]/products/[handle]", "/[countryCode]/(main)/store/farmaceuticos/page": "/[countryCode]/store/farmaceuticos", "/[countryCode]/(main)/store/cosmeticos/page": "/[countryCode]/store/cosmeticos", "/[countryCode]/(main)/account/@dashboard/orders/details/[id]/page": "/[countryCode]/account/orders/details/[id]", "/[countryCode]/(main)/account/@dashboard/page": "/[countryCode]/account", "/[countryCode]/(main)/account/@dashboard/orders/page": "/[countryCode]/account/orders", "/[countryCode]/(main)/account/@dashboard/profile/page": "/[countryCode]/account/profile", "/[countryCode]/(main)/account/@dashboard/addresses/page": "/[countryCode]/account/addresses", "/[countryCode]/(main)/account/@login/page": "/[countryCode]/account" };
 var FunctionsConfigManifest = { "version": 1, "functions": {} };
 var PagesManifest = { "/_app": "pages/_app.js", "/_error": "pages/_error.js", "/_document": "pages/_document.js", "/404": "pages/404.html" };
 process.env.NEXT_BUILD_ID = BuildId;
 process.env.OPEN_NEXT_BUILD_ID = NextConfig.deploymentId ?? BuildId;
 process.env.NEXT_PREVIEW_MODE_ID = PrerenderManifest?.preview?.previewModeId;
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/http/openNextResponse.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/http/openNextResponse.js
 init_logger();
 init_util();
 import { Transform } from "node:stream";
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/util.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/util.js
 init_util();
 init_logger();
 import { ReadableStream as ReadableStream2 } from "node:stream/web";
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/binary.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/binary.js
 var commonBinaryMimeTypes = /* @__PURE__ */ new Set([
   "application/octet-stream",
   // Docs
@@ -3622,11 +3622,11 @@ function isBinaryContentType(contentType) {
   return commonBinaryMimeTypes.has(value);
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/i18n/index.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/i18n/index.js
 init_stream();
 init_logger();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/i18n/accept-header.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/i18n/accept-header.js
 function parse(raw, preferences, options) {
   const lowers = /* @__PURE__ */ new Map();
   const header = raw.replace(/[ \t]/g, "");
@@ -3726,7 +3726,7 @@ function acceptLanguage(header = "", preferences) {
   })[0] || void 0;
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/i18n/index.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/i18n/index.js
 function isLocalizedPath(path3) {
   return NextConfig.i18n?.locales.includes(path3.split("/")[1].toLowerCase()) ?? false;
 }
@@ -3824,7 +3824,7 @@ function handleLocaleRedirect(internalEvent) {
   return false;
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/queue.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/queue.js
 function generateShardId(rawPath, maxConcurrency, prefix) {
   let a = cyrb128(rawPath);
   let t = a += 1831565813;
@@ -3858,7 +3858,7 @@ function cyrb128(str) {
   return h1 >>> 0;
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/util.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/util.js
 function isExternal(url, host) {
   if (!url)
     return false;
@@ -3973,17 +3973,17 @@ function normalizeLocationHeader(location, baseUrl, encodeQuery = false) {
   return href;
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routingHandler.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routingHandler.js
 init_logger();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/cacheInterceptor.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/cacheInterceptor.js
 import { createHash } from "node:crypto";
 init_stream();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/cache.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/cache.js
 init_logger();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/semver.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/semver.js
 function compareSemver(v1, operator, v2) {
   let versionDiff = 0;
   if (v1 === "latest") {
@@ -4024,7 +4024,7 @@ function compareSemver(v1, operator, v2) {
   }
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/cache.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/cache.js
 async function isStale(key, tags, lastModified) {
   if (!compareSemver(globalThis.nextVersion, ">=", "16.0.0")) {
     return false;
@@ -4068,7 +4068,7 @@ function getTagsFromValue(value) {
   }
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/cacheInterceptor.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/cacheInterceptor.js
 init_logger();
 var CACHE_ONE_YEAR = 60 * 60 * 24 * 365;
 var CACHE_ONE_MONTH = 60 * 60 * 24 * 30;
@@ -4659,18 +4659,18 @@ function pathToRegexp(path3, keys, options) {
   return stringToRegexp(path3, keys, options);
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/normalize-path.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/normalize-path.js
 import path2 from "node:path";
 function normalizeRepeatedSlashes(url) {
   const urlNoQuery = url.host + url.pathname;
   return `${url.protocol}//${urlNoQuery.replace(/\\/g, "/").replace(/\/\/+/g, "/")}${url.search}`;
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/matcher.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/matcher.js
 init_stream();
 init_logger();
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/routeMatcher.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/routeMatcher.js
 var optionalLocalePrefixRegex = `^/(?:${RoutesManifest.locales.map((locale) => `${locale}/?`).join("|")})?`;
 var optionalBasepathPrefixRegex = RoutesManifest.basePath ? `^${RoutesManifest.basePath}/?` : "^/";
 var optionalPrefix = optionalLocalePrefixRegex.replace("^/", optionalBasepathPrefixRegex);
@@ -4720,7 +4720,7 @@ function getStaticAPIRoutes() {
   return [...pagesStaticAPIRoutes, ...appPathsStaticAPIRoutes];
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/matcher.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/matcher.js
 var routeHasMatcher = (headers, cookies, query) => (redirect) => {
   switch (redirect.type) {
     case "header":
@@ -5012,7 +5012,7 @@ function handleFallbackFalse(internalEvent, prerenderManifest) {
   };
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routing/middleware.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routing/middleware.js
 init_stream();
 init_utils();
 var middlewareManifest = MiddlewareManifest;
@@ -5130,7 +5130,7 @@ async function handleMiddleware(internalEvent, initialSearch, middlewareLoader =
   };
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/core/routingHandler.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/core/routingHandler.js
 var MIDDLEWARE_HEADER_PREFIX = "x-middleware-response-";
 var MIDDLEWARE_HEADER_PREFIX_LEN = MIDDLEWARE_HEADER_PREFIX.length;
 var INTERNAL_HEADER_PREFIX = "x-opennext-";
@@ -5315,7 +5315,7 @@ function isInternalResult(eventOrResult) {
   return eventOrResult != null && "statusCode" in eventOrResult;
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/middleware.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/adapters/middleware.js
 globalThis.internalFetch = fetch;
 globalThis.__openNextAls = new AsyncLocalStorage();
 var defaultHandler = async (internalEvent, options) => {

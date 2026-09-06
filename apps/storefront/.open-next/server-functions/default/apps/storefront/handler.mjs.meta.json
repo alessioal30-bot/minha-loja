@@ -3247,7 +3247,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/load-manifest.external.js": {
-      "bytes": 762595,
+      "bytes": 834260,
       "imports": [
         {
           "path": "path",
@@ -3478,7 +3478,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/composable-cache.cjs": {
-      "bytes": 11270,
+      "bytes": 11366,
       "imports": [
         {
           "path": "node:stream/web",
@@ -3489,7 +3489,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/cache.cjs": {
-      "bytes": 21873,
+      "bytes": 21985,
       "imports": [],
       "format": "cjs"
     },
@@ -3656,13 +3656,8 @@
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/168.js": {
-      "bytes": 15461,
-      "imports": [],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/196.js": {
-      "bytes": 18429,
+    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/127.js": {
+      "bytes": 15155,
       "imports": [],
       "format": "cjs"
     },
@@ -3679,11 +3674,6 @@
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/chunks/369.js": {
       "bytes": 141180,
-      "imports": [],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/405.js": {
-      "bytes": 35007,
       "imports": [],
       "format": "cjs"
     },
@@ -3712,6 +3702,11 @@
       "imports": [],
       "format": "cjs"
     },
+    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/49.js": {
+      "bytes": 34987,
+      "imports": [],
+      "format": "cjs"
+    },
     ".open-next/server-functions/default/apps/storefront/.next/server/chunks/494.js": {
       "bytes": 11639,
       "imports": [],
@@ -3737,6 +3732,16 @@
       "imports": [],
       "format": "cjs"
     },
+    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/745.js": {
+      "bytes": 18429,
+      "imports": [],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/809.js": {
+      "bytes": 11472,
+      "imports": [],
+      "format": "cjs"
+    },
     ".open-next/server-functions/default/apps/storefront/.next/server/chunks/823.js": {
       "bytes": 279187,
       "imports": [],
@@ -3747,13 +3752,8 @@
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/apps/storefront/.next/server/chunks/881.js": {
-      "bytes": 11472,
-      "imports": [],
-      "format": "cjs"
-    },
     ".open-next/server-functions/default/apps/storefront/.next/server/webpack-runtime.js": {
-      "bytes": 2689,
+      "bytes": 2687,
       "imports": [
         {
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/106.js",
@@ -3761,14 +3761,9 @@
           "original": "./chunks/106.js"
         },
         {
-          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/168.js",
+          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/127.js",
           "kind": "require-call",
-          "original": "./chunks/168.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/196.js",
-          "kind": "require-call",
-          "original": "./chunks/196.js"
+          "original": "./chunks/127.js"
         },
         {
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/215.js",
@@ -3779,11 +3774,6 @@
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/369.js",
           "kind": "require-call",
           "original": "./chunks/369.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/405.js",
-          "kind": "require-call",
-          "original": "./chunks/405.js"
         },
         {
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/437.js",
@@ -3811,6 +3801,11 @@
           "original": "./chunks/487.js"
         },
         {
+          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/49.js",
+          "kind": "require-call",
+          "original": "./chunks/49.js"
+        },
+        {
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/494.js",
           "kind": "require-call",
           "original": "./chunks/494.js"
@@ -3836,6 +3831,16 @@
           "original": "./chunks/741.js"
         },
         {
+          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/745.js",
+          "kind": "require-call",
+          "original": "./chunks/745.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/809.js",
+          "kind": "require-call",
+          "original": "./chunks/809.js"
+        },
+        {
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/823.js",
           "kind": "require-call",
           "original": "./chunks/823.js"
@@ -3844,17 +3849,12 @@
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/848.js",
           "kind": "require-call",
           "original": "./chunks/848.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/apps/storefront/.next/server/chunks/881.js",
-          "kind": "require-call",
-          "original": "./chunks/881.js"
         }
       ],
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/orders/details/[id]/page.js": {
-      "bytes": 31750,
+      "bytes": 31749,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -3920,7 +3920,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/transfer/[token]/decline/page.js": {
-      "bytes": 28044,
+      "bytes": 28043,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -3986,7 +3986,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/transfer/[token]/accept/page.js": {
-      "bytes": 28038,
+      "bytes": 28037,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4052,7 +4052,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/addresses/page.js": {
-      "bytes": 43109,
+      "bytes": 43106,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4118,7 +4118,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/transfer/[token]/page.js": {
-      "bytes": 242548,
+      "bytes": 242527,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4250,7 +4250,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/orders/page.js": {
-      "bytes": 31284,
+      "bytes": 31283,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4316,7 +4316,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/categories/[...category]/page.js": {
-      "bytes": 21727,
+      "bytes": 22194,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4382,7 +4382,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/collections/[handle]/page.js": {
-      "bytes": 21413,
+      "bytes": 21713,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4448,7 +4448,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/confirmed/page.js": {
-      "bytes": 55793,
+      "bytes": 55792,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4514,7 +4514,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/farmaceuticos/page.js": {
-      "bytes": 18758,
+      "bytes": 21389,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4580,7 +4580,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/page.js": {
-      "bytes": 17168,
+      "bytes": 17167,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4646,7 +4646,73 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/products/[handle]/page.js": {
-      "bytes": 49613,
+      "bytes": 49612,
+      "imports": [
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
+          "kind": "require-call",
+          "original": "next/dist/shared/lib/router/utils/app-paths"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/after-task-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/after-task-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js",
+          "kind": "require-call",
+          "original": "next/dist/compiled/next-server/app-page.runtime.prod.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/action-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/action-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/is-bot.js",
+          "kind": "require-call",
+          "original": "next/dist/shared/lib/router/utils/is-bot"
+        },
+        {
+          "path": "util",
+          "kind": "require-call",
+          "external": true
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/work-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/work-async-storage.external.js"
+        },
+        {
+          "path": "path",
+          "kind": "require-call",
+          "external": true
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/dynamic-access-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/dynamic-access-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/work-unit-async-storage.external.js",
+          "kind": "require-call",
+          "original": "next/dist/server/app-render/work-unit-async-storage.external.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
+          "kind": "require-call",
+          "original": "next/dist/shared/lib/no-fallback-error.external"
+        },
+        {
+          "path": ".open-next/server-functions/default/apps/storefront/.next/server/webpack-runtime.js",
+          "kind": "require-call",
+          "original": "../../../../../webpack-runtime.js"
+        }
+      ],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/cosmeticos/page.js": {
+      "bytes": 21345,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4712,7 +4778,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/verify-account/page.js": {
-      "bytes": 20857,
+      "bytes": 20856,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4778,7 +4844,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@login/page.js": {
-      "bytes": 17158,
+      "bytes": 17157,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4844,7 +4910,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(checkout)/checkout/page.js": {
-      "bytes": 129706,
+      "bytes": 129705,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4910,7 +4976,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/page.js": {
-      "bytes": 19585,
+      "bytes": 19554,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -4976,7 +5042,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/cart/page.js": {
-      "bytes": 29746,
+      "bytes": 29745,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -5209,7 +5275,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/page.js": {
-      "bytes": 1178739,
+      "bytes": 1178859,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/router/utils/app-paths.js",
@@ -5737,7 +5803,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/require.js": {
-      "bytes": 22014,
+      "bytes": 22319,
       "imports": [
         {
           "path": "path",
@@ -5848,6 +5914,11 @@
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/products/[handle]/page.js",
           "kind": "require-call",
           "original": "/mnt/c/Users/AM/Desktop/ZAP/minha-loja/apps/storefront/.open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/products/[handle]/page.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/cosmeticos/page.js",
+          "kind": "require-call",
+          "original": "/mnt/c/Users/AM/Desktop/ZAP/minha-loja/apps/storefront/.open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/cosmeticos/page.js"
         },
         {
           "path": ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/verify-account/page.js",
@@ -6834,7 +6905,7 @@
       "format": "esm"
     },
     ".open-next/server-functions/default/apps/storefront/index.mjs": {
-      "bytes": 98859,
+      "bytes": 100104,
       "imports": [
         {
           "path": "node:module",
@@ -7065,6 +7136,16 @@
         },
         {
           "path": "@builder.io/partytown/integration",
+          "kind": "require-call",
+          "external": true
+        },
+        {
+          "path": "util",
+          "kind": "require-call",
+          "external": true
+        },
+        {
+          "path": "path",
           "kind": "require-call",
           "external": true
         },
@@ -7516,13 +7597,13 @@
           "bytesInOutput": 926
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/dynamic-rendering.js": {
-          "bytesInOutput": 17587
+          "bytesInOutput": 17585
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/node-environment-extensions/utils.js": {
           "bytesInOutput": 3689
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/node-environment-extensions/random.js": {
-          "bytesInOutput": 766
+          "bytesInOutput": 764
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/node-environment-extensions/date.js": {
           "bytesInOutput": 1323
@@ -7543,7 +7624,7 @@
           "bytesInOutput": 3503
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/path-to-regexp/index.js": {
-          "bytesInOutput": 7502
+          "bytesInOutput": 7496
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/lib/route-pattern-normalizer.js": {
           "bytesInOutput": 1838
@@ -7564,7 +7645,7 @@
           "bytesInOutput": 438
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/constants.js": {
-          "bytesInOutput": 9494
+          "bytesInOutput": 9492
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/lib/find-pages-dir.js": {
           "bytesInOutput": 1264
@@ -7579,13 +7660,13 @@
           "bytesInOutput": 9449
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/lib/trace/constants.js": {
-          "bytesInOutput": 6894
+          "bytesInOutput": 6870
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/is-thenable.js": {
           "bytesInOutput": 546
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/@opentelemetry/api/index.js": {
-          "bytesInOutput": 28785
+          "bytesInOutput": 28779
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/lib/trace/tracer.js": {
           "bytesInOutput": 5383
@@ -7597,7 +7678,7 @@
           "bytesInOutput": 3950
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/client/components/redirect-status-code.js": {
-          "bytesInOutput": 1053
+          "bytesInOutput": 1051
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/api-utils/get-cookie-parser.js": {
           "bytesInOutput": 650
@@ -7801,10 +7882,10 @@
           "bytesInOutput": 1900
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/superstruct/index.cjs": {
-          "bytesInOutput": 12523
+          "bytesInOutput": 12497
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/types.js": {
-          "bytesInOutput": 1978
+          "bytesInOutput": 1976
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/parse-and-validate-flight-router-state.js": {
           "bytesInOutput": 1351
@@ -7864,7 +7945,7 @@
           "bytesInOutput": 780
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/lib/page-types.js": {
-          "bytesInOutput": 543
+          "bytesInOutput": 541
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/shared/lib/page-path/remove-page-path-tail.js": {
           "bytesInOutput": 775
@@ -7900,7 +7981,7 @@
           "bytesInOutput": 1367
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/route-kind.js": {
-          "bytesInOutput": 616
+          "bytesInOutput": 614
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/route-matchers/app-page-route-matcher.js": {
           "bytesInOutput": 660
@@ -8014,7 +8095,7 @@
           "bytesInOutput": 1029
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/web/globals.js": {
-          "bytesInOutput": 1920
+          "bytesInOutput": 2991
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/web/spec-extension/adapters/request-cookies.js": {
           "bytesInOutput": 4691
@@ -8026,7 +8107,7 @@
           "bytesInOutput": 4162
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/p-queue/index.js": {
-          "bytesInOutput": 9903
+          "bytesInOutput": 9865
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/lib/incremental-cache/tags-manifest.external.js": {
           "bytesInOutput": 768
@@ -8077,7 +8158,7 @@
           "bytesInOutput": 10136
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/lib/fallback.js": {
-          "bytesInOutput": 1959
+          "bytesInOutput": 1957
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/normalizers/request/segment-prefix-rsc.js": {
           "bytesInOutput": 941
@@ -8104,7 +8185,7 @@
           "bytesInOutput": 706
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/load-manifest.external.js": {
-          "bytesInOutput": 702898
+          "bytesInOutput": 770385
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/action-async-storage-instance.js": {
           "bytesInOutput": 621
@@ -8131,7 +8212,7 @@
           "bytesInOutput": 439
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/jsonwebtoken/index.js": {
-          "bytesInOutput": 126062
+          "bytesInOutput": 125778
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/cache-signal.js": {
           "bytesInOutput": 2432
@@ -8143,7 +8224,7 @@
           "bytesInOutput": 849
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/response-cache/types.js": {
-          "bytesInOutput": 1135
+          "bytesInOutput": 1131
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/lib/incremental-cache/memory-cache.external.js": {
           "bytesInOutput": 1361
@@ -8152,13 +8233,13 @@
           "bytesInOutput": 1393
         },
         ".open-next/server-functions/default/apps/storefront/composable-cache.cjs": {
-          "bytesInOutput": 6645
+          "bytesInOutput": 6651
         },
         ".open-next/server-functions/default/apps/storefront/cache.cjs": {
           "bytesInOutput": 13457
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js": {
-          "bytesInOutput": 562030
+          "bytesInOutput": 561907
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/app-render/dynamic-access-async-storage-instance.js": {
           "bytesInOutput": 658
@@ -8167,40 +8248,37 @@
           "bytesInOutput": 636
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/106.js": {
-          "bytesInOutput": 8318
+          "bytesInOutput": 8310
         },
-        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/168.js": {
-          "bytesInOutput": 16072
-        },
-        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/196.js": {
-          "bytesInOutput": 18749
+        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/127.js": {
+          "bytesInOutput": 15752
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/215.js": {
-          "bytesInOutput": 85731
+          "bytesInOutput": 85639
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/369.js": {
-          "bytesInOutput": 146638
-        },
-        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/405.js": {
-          "bytesInOutput": 35953
+          "bytesInOutput": 146494
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/437.js": {
-          "bytesInOutput": 26114
+          "bytesInOutput": 26117
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/447.js": {
-          "bytesInOutput": 17484
+          "bytesInOutput": 17474
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/482.js": {
-          "bytesInOutput": 153721
+          "bytesInOutput": 153694
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/486.js": {
-          "bytesInOutput": 131886
+          "bytesInOutput": 131769
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/487.js": {
-          "bytesInOutput": 346156
+          "bytesInOutput": 345789
+        },
+        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/49.js": {
+          "bytesInOutput": 35933
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/494.js": {
-          "bytesInOutput": 11924
+          "bytesInOutput": 11922
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/497.js": {
           "bytesInOutput": 646
@@ -8209,85 +8287,91 @@
           "bytesInOutput": 22758
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/686.js": {
-          "bytesInOutput": 45364
+          "bytesInOutput": 45352
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/chunks/741.js": {
-          "bytesInOutput": 32021
+          "bytesInOutput": 32007
         },
-        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/823.js": {
-          "bytesInOutput": 295334
+        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/745.js": {
+          "bytesInOutput": 18748
         },
-        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/848.js": {
-          "bytesInOutput": 10676
-        },
-        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/881.js": {
+        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/809.js": {
           "bytesInOutput": 11791
         },
+        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/823.js": {
+          "bytesInOutput": 295199
+        },
+        ".open-next/server-functions/default/apps/storefront/.next/server/chunks/848.js": {
+          "bytesInOutput": 10668
+        },
         ".open-next/server-functions/default/apps/storefront/.next/server/webpack-runtime.js": {
-          "bytesInOutput": 2430
+          "bytesInOutput": 2429
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/orders/details/[id]/page.js": {
-          "bytesInOutput": 32205
+          "bytesInOutput": 32204
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/transfer/[token]/decline/page.js": {
-          "bytesInOutput": 28334
+          "bytesInOutput": 28333
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/transfer/[token]/accept/page.js": {
-          "bytesInOutput": 28327
+          "bytesInOutput": 28326
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/addresses/page.js": {
-          "bytesInOutput": 44000
+          "bytesInOutput": 43993
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/transfer/[token]/page.js": {
-          "bytesInOutput": 255017
+          "bytesInOutput": 254917
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/profile/page.js": {
-          "bytesInOutput": 42792
+          "bytesInOutput": 42790
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/orders/page.js": {
-          "bytesInOutput": 31825
+          "bytesInOutput": 31824
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/categories/[...category]/page.js": {
-          "bytesInOutput": 22077
+          "bytesInOutput": 22556
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/collections/[handle]/page.js": {
-          "bytesInOutput": 21740
+          "bytesInOutput": 22055
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/order/[id]/confirmed/page.js": {
-          "bytesInOutput": 56796
+          "bytesInOutput": 56783
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/farmaceuticos/page.js": {
-          "bytesInOutput": 18962
+          "bytesInOutput": 21694
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@dashboard/page.js": {
-          "bytesInOutput": 17349
+          "bytesInOutput": 17348
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/products/[handle]/page.js": {
-          "bytesInOutput": 50647
+          "bytesInOutput": 50640
+        },
+        ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/cosmeticos/page.js": {
+          "bytesInOutput": 21647
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/verify-account/page.js": {
-          "bytesInOutput": 21102
+          "bytesInOutput": 21101
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/account/@login/page.js": {
-          "bytesInOutput": 17335
+          "bytesInOutput": 17334
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(checkout)/checkout/page.js": {
-          "bytesInOutput": 134424
+          "bytesInOutput": 134396
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/store/page.js": {
-          "bytesInOutput": 19795
+          "bytesInOutput": 19759
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/cart/page.js": {
-          "bytesInOutput": 30073
+          "bytesInOutput": 30070
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js": {
-          "bytesInOutput": 171768
+          "bytesInOutput": 171706
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/opengraph-image.jpg/route.js": {
           "bytesInOutput": 319512
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/[countryCode]/(main)/page.js": {
-          "bytesInOutput": 1241618
+          "bytesInOutput": 1241176
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/app/twitter-image.jpg/route.js": {
           "bytesInOutput": 319498
@@ -8317,7 +8401,7 @@
           "bytesInOutput": 455
         },
         ".open-next/server-functions/default/node_modules/.pnpm/react-dom@19.0.5_react@19.0.5/node_modules/react-dom/cjs/react-dom-server.edge.production.js": {
-          "bytesInOutput": 160418
+          "bytesInOutput": 160443
         },
         ".open-next/server-functions/default/node_modules/.pnpm/react-dom@19.0.5_react@19.0.5/node_modules/react-dom/server.edge.js": {
           "bytesInOutput": 495
@@ -8326,25 +8410,25 @@
           "bytesInOutput": 151
         },
         ".open-next/server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_@babel+core@7.29.7_react@19.0.5/node_modules/styled-jsx/dist/index/index.js": {
-          "bytesInOutput": 11536
+          "bytesInOutput": 11532
         },
         ".open-next/server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_@babel+core@7.29.7_react@19.0.5/node_modules/styled-jsx/index.js": {
           "bytesInOutput": 224
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/next-server/pages.runtime.prod.js": {
-          "bytesInOutput": 137454
+          "bytesInOutput": 137450
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/pages/_document.js": {
           "bytesInOutput": 471
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/pages/_error.js": {
-          "bytesInOutput": 83276
+          "bytesInOutput": 83200
         },
         ".open-next/server-functions/default/apps/storefront/.next/server/pages/_app.js": {
-          "bytesInOutput": 3599
+          "bytesInOutput": 3597
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/require.js": {
-          "bytesInOutput": 15457
+          "bytesInOutput": 15575
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/lib/wait.js": {
           "bytesInOutput": 461
@@ -8368,7 +8452,7 @@
           "bytesInOutput": 187
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/bytes/index.js": {
-          "bytesInOutput": 1697
+          "bytesInOutput": 1695
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/server/body-streams.js": {
           "bytesInOutput": 2309
@@ -8440,7 +8524,7 @@
           "bytesInOutput": 2261
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/compiled/@mswjs/interceptors/ClientRequest/index.js": {
-          "bytesInOutput": 36871
+          "bytesInOutput": 36771
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5/node_modules/next/dist/experimental/testmode/httpget.js": {
           "bytesInOutput": 847
@@ -8455,10 +8539,10 @@
           "bytesInOutput": 5090
         },
         ".open-next/server-functions/default/apps/storefront/index.mjs": {
-          "bytesInOutput": 66143
+          "bytesInOutput": 66629
         }
       },
-      "bytes": 6937426
+      "bytes": 7029012
     }
   }
 }

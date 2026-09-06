@@ -16,7 +16,7 @@ var define_IMAGES_QUALITIES_default = [75];
 // <define:__IMAGES_REMOTE_PATTERNS__>
 var define_IMAGES_REMOTE_PATTERNS_default = [{ protocol: "http", hostname: "^(?:^(?:localhost)$)$", pathname: "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$" }, { protocol: "https", hostname: "^(?:(?!\\.)(?=.)[^/]*?\\.s3\\.[^/]*?\\.amazonaws\\.com)$", pathname: "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$" }, { protocol: "https", hostname: "^(?:(?!\\.)(?=.)[^/]*?\\.s3\\.amazonaws\\.com\\/?)$", pathname: "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$" }];
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/error.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/error.js
 function isOpenNextError(e) {
   try {
     return "__openNextInternal" in e;
@@ -25,7 +25,7 @@ function isOpenNextError(e) {
   }
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/logger.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/adapters/logger.js
 function debug(...args) {
   if (globalThis.openNextDebug) {
     console.log(...args);

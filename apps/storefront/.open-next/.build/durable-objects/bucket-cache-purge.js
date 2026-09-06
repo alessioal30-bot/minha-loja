@@ -3,7 +3,7 @@ globalThis.openNextDebug = false;globalThis.openNextVersion = "4.1.0";globalThis
 // ../../node_modules/.pnpm/@opennextjs+cloudflare@1.20.2_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1__02aab745665e01bf90011daa52357153/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/bucket-cache-purge.js
 import { DurableObject } from "cloudflare:workers";
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/utils/error.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/utils/error.js
 function isOpenNextError(e) {
   try {
     return "__openNextInternal" in e;
@@ -12,7 +12,7 @@ function isOpenNextError(e) {
   }
 }
 
-// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@opentelemetry+api@1.9.1_react-dom@19.0.5_react@19.0.5__react@19.0.5_/node_modules/@opennextjs/aws/dist/adapters/logger.js
+// ../../node_modules/.pnpm/@opennextjs+aws@4.1.0_next@15.5.21_@babel+core@7.29.7_@opentelemetry+api@1.9.1_react-do_9220970892c7870b244311c1c0e27faf/node_modules/@opennextjs/aws/dist/adapters/logger.js
 function debug(...args) {
   if (globalThis.openNextDebug) {
     console.log(...args);
