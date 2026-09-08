@@ -154,5 +154,7 @@ The storefront is configured via environment variables in `apps/storefront/.env.
 
 ## Resources
 
+# Build final com as chaves corretas da API
+
 - [Medusa Documentation](https://docs.medusajs.com)
 - [Medusa Cloud](https://cloud.medusajs.com)
