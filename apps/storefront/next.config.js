@@ -11,6 +11,16 @@ const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
 const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
+  // Redireciona a raiz que está dando erro diretamente para a sua loja ativa
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/store',
+        permanent: true,
+      },
+    ]
+  },
   logging: {
     fetches: {
       fullUrl: true,
@@ -48,7 +58,6 @@ const nextConfig = {
         : []),
     ],
   },
-  // Sem bloco experimental aqui para evitar conflitos no Next.js 15
 }
 
 module.exports = nextConfig
