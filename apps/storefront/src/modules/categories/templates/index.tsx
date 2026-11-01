@@ -76,7 +76,10 @@ export default async function CategoryTemplate({
         {category.category_children && (
           <div className="mb-10"><h2 className="text-xl-semi mb-5">Explore {category.name}</h2>
             <ul className="grid grid-cols-1 gap-2">
-              {category.category_children?.map((c) => (
+              {category.category_children?.filter((c) => {
+                const visibility = c as typeof c & { is_active?: boolean; is_internal?: boolean }
+                return visibility.is_active !== false && visibility.is_internal !== true
+              }).map((c) => (
                 <li key={c.id}>
                   <InteractiveLink href={`/categories/${[...parents].reverse().map(p => p.handle).concat(category.handle,c.handle).join("/")}`}>
                     {c.name}
