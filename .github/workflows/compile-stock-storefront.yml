@@ -18,6 +18,8 @@ jobs:
       NEXT_PUBLIC_MEDUSA_BACKEND_URL: https://api.apcmcomercioesrvltda.com.br
       NEXT_PUBLIC_BASE_URL: https://www.apcmcomercioesrvltda.com.br
       NEXT_PUBLIC_DEFAULT_REGION: br
+      NEXT_PUBLIC_MERCADO_PAGO_PUBLIC_KEY: 'APP_USR-9229851f-e05b-4a78-92cb-33fff8c10bbb'
+      NEXT_PUBLIC_MERCADO_PAGO_CARD_ENABLED: 'true'
       NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY: pk_eadccf8cff659758102f496b64945df9632099b46ee69328ef78917ff1c2641b
     steps:
       - uses: actions/checkout@v4
