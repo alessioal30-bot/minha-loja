@@ -1,6 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react"
 import { Button, clx } from "@modules/common/components/ui"
-import React, { Fragment, useMemo } from "react"
+import React, { Fragment, useEffect, useMemo, useRef } from "react"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
 import ChevronDown from "@modules/common/icons/chevron-down"
@@ -35,6 +35,29 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   optionsDisabled,
 }) => {
   const { state, open, close } = useToggleState()
+  const mobileBarRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const root = document.documentElement
+    const updateHeight = () => {
+      const height = show ? mobileBarRef.current?.getBoundingClientRect().height ?? 0 : 0
+      if (height > 0) {
+        root.style.setProperty("--mobile-product-actions-height", `${Math.ceil(height)}px`)
+      } else {
+        root.style.removeProperty("--mobile-product-actions-height")
+      }
+    }
+    updateHeight()
+    const observer = new ResizeObserver(updateHeight)
+    if (mobileBarRef.current) observer.observe(mobileBarRef.current)
+    window.addEventListener("resize", updateHeight)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener("resize", updateHeight)
+      root.style.removeProperty("--mobile-product-actions-height")
+    }
+  }, [show])
+
 
   const price = getProductPrice({
     product: product,
@@ -71,6 +94,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
         >
           <div
             className="bg-white flex flex-col gap-y-3 justify-center items-center text-large-regular p-4 h-full w-full border-t border-gray-200"
+            ref={mobileBarRef}
             data-testid="mobile-actions"
           >
             <div className="flex items-center gap-x-2">

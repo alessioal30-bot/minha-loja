@@ -110,3 +110,11 @@
     @apply text-[32px] leading-[44px] font-semibold;
   }
 }
+
+/* Keep the WhatsApp assistant recognizable without covering purchase controls. */
+.am-whatsapp-assistant > svg { animation: am-whatsapp-float 3s ease-in-out infinite; }
+.am-whatsapp-assistant-wave { transform-box: view-box; transform-origin: 48px 42px; animation: am-whatsapp-wave 6s ease-in-out infinite; }
+.am-whatsapp-assistant:focus-visible { outline: 3px solid #14532d; outline-offset: 4px; }
+@keyframes am-whatsapp-float { 0%, 100% { transform: translateY(1px); } 50% { transform: translateY(-2px); } }
+@keyframes am-whatsapp-wave { 0%, 55%, 100% { transform: rotate(0deg); } 65%, 85% { transform: rotate(-16deg); } 75%, 95% { transform: rotate(10deg); } }
+@media (prefers-reduced-motion: reduce) { .am-whatsapp-assistant > svg, .am-whatsapp-assistant-wave { animation: none; } }

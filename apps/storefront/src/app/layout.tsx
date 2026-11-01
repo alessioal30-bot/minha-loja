@@ -16,15 +16,19 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar com a loja pelo WhatsApp"
+          title="Atendimento pelo WhatsApp"
+          className="am-whatsapp-assistant"
           style={{
             position: "fixed",
             right: 18,
-            bottom: "max(20px, env(safe-area-inset-bottom))",
+            bottom: "calc(max(20px, env(safe-area-inset-bottom, 0px)) + var(--mobile-product-actions-height, 0px))",
             zIndex: 50,
             display: "inline-flex",
             alignItems: "center",
-            gap: 8,
-            padding: "12px 16px",
+            width: 56,
+            height: 56,
+            justifyContent: "center",
+            padding: 4,
             borderRadius: 999,
             backgroundColor: "#15803d",
             color: "#ffffff",
@@ -33,10 +37,22 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             boxShadow: "0 4px 14px rgba(0, 0, 0, 0.2)",
           }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z" />
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M32 10V6" stroke="white" strokeWidth="3" strokeLinecap="round" />
+            <circle cx="32" cy="5" r="3" fill="#fef08a" />
+            <rect x="15" y="11" width="34" height="25" rx="10" fill="white" />
+            <circle cx="25" cy="23" r="3" fill="#14532d" />
+            <circle cx="39" cy="23" r="3" fill="#14532d" />
+            <path d="M26 29Q32 34 38 29" stroke="#15803d" strokeWidth="2.5" strokeLinecap="round" />
+            <path d="M17 41L12 48M25 54L23 59M39 54L41 59" stroke="white" strokeWidth="4" strokeLinecap="round" />
+            <rect x="20" y="39" width="24" height="17" rx="7" fill="white" />
+            <path d="M38 47a6 6 0 0 1-8.7 5.3L26 53l.8-3.2A6 6 0 1 1 38 47Z" fill="#15803d" />
+            <path d="M29.5 44.5c.5 3 2.2 4.6 5 5" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <g className="am-whatsapp-assistant-wave">
+              <path d="M47 43Q57 35 54 26" stroke="white" strokeWidth="4" strokeLinecap="round" />
+              <circle cx="54" cy="25" r="3.5" fill="#fef08a" />
+            </g>
           </svg>
-          WhatsApp
         </a>
       </body>
     </html>
