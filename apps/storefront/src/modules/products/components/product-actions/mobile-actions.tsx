@@ -1,6 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react"
 import { Button, clx } from "@modules/common/components/ui"
-import React, { Fragment, useEffect, useMemo, useRef } from "react"
+import React, { Fragment, useCallback, useMemo, useRef } from "react"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
 import ChevronDown from "@modules/common/icons/chevron-down"
@@ -35,12 +35,17 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   optionsDisabled,
 }) => {
   const { state, open, close } = useToggleState()
-  const mobileBarRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
+  const resizeObserverRef = useRef<ResizeObserver | null>(null)
+  const mobileBarRef = useCallback((node: HTMLDivElement | null) => {
+    resizeObserverRef.current?.disconnect()
+    resizeObserverRef.current = null
     const root = document.documentElement
+    if (!node) {
+      root.style.removeProperty("--mobile-product-actions-height")
+      return
+    }
     const updateHeight = () => {
-      const height = show ? mobileBarRef.current?.getBoundingClientRect().height ?? 0 : 0
+      const height = node.getBoundingClientRect().height
       if (height > 0) {
         root.style.setProperty("--mobile-product-actions-height", `${Math.ceil(height)}px`)
       } else {
@@ -49,15 +54,9 @@ const MobileActions: React.FC<MobileActionsProps> = ({
     }
     updateHeight()
     const observer = new ResizeObserver(updateHeight)
-    if (mobileBarRef.current) observer.observe(mobileBarRef.current)
-    window.addEventListener("resize", updateHeight)
-    return () => {
-      observer.disconnect()
-      window.removeEventListener("resize", updateHeight)
-      root.style.removeProperty("--mobile-product-actions-height")
-    }
-  }, [show])
-
+    observer.observe(node)
+    resizeObserverRef.current = observer
+  }, [])
 
   const price = getProductPrice({
     product: product,
