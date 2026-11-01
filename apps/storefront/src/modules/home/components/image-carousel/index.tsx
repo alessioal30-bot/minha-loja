@@ -3,30 +3,186 @@
 import { useEffect, useRef, useState } from "react"
 
 const images = [
-  "/images/carousel/look_net_379_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_381_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_382_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_383_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_384_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_385_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_386_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_387_3_quadrado_loja.jpg",
-  "/images/carousel/look_net_388_3_quadrado_loja.jpg",
-  "/images/carousel/polo-masculina-20261022-01.webp",
-  "/images/carousel/polo-feminina-20261022-01.webp",
-  "/images/carousel/look_local_05_3_quadrado_loja.webp",
-  "/images/carousel/polo-masculina-20261022-02.webp",
-  "/images/carousel/look_local_25_3_quadrado_loja.webp",
-  "/images/carousel/polo-feminina-20261022-02.webp",
-  "/images/carousel/look_local_38_3_quadrado_loja.webp",
-  "/images/carousel/look_local_40_3_quadrado_loja.webp",
-  "/images/carousel/look_local_42_3_quadrado_loja.webp",
-  "/images/carousel/polo-feminina-20261022-03.webp",
-  "/images/carousel/look_local_47_3_quadrado_loja.webp",
-  "/images/carousel/look_local_52_3_quadrado_loja.webp",
-  "/images/carousel/look_local_53_3_quadrado_loja.webp",
-  "/images/carousel/polo-feminina-20261022-04.webp",
-  "/images/carousel/look_net_761_3_quadrado_loja.webp",
+  {
+    "src": "/images/carousel-misto-20261101/01-roupa.jpg",
+    "alt": "Moda masculina",
+    "href": "/br/categories/ecossistema-moda/masculino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/02-suplemento.jpg",
+    "alt": "Creatina Max Titanium 300 g",
+    "href": "/br/products/creatina-max-titanium-300g",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/03-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/04-roupa.jpg",
+    "alt": "Moda feminina",
+    "href": "/br/categories/ecossistema-moda/feminino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/05-suplemento.jpg",
+    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
+    "href": "/br/products/meta-68bluu7aj",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/06-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/07-roupa.jpg",
+    "alt": "Moda masculina",
+    "href": "/br/categories/ecossistema-moda/masculino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/08-suplemento.jpg",
+    "alt": "Creatina Max Titanium 300 g",
+    "href": "/br/products/creatina-max-titanium-300g",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/09-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/10-roupa.jpg",
+    "alt": "Moda feminina",
+    "href": "/br/categories/ecossistema-moda/feminino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/11-suplemento.jpg",
+    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
+    "href": "/br/products/meta-68bluu7aj",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/12-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/13-roupa.jpg",
+    "alt": "Moda masculina",
+    "href": "/br/categories/ecossistema-moda/masculino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/14-suplemento.jpg",
+    "alt": "Creatina Max Titanium 300 g",
+    "href": "/br/products/creatina-max-titanium-300g",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/15-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/16-roupa.jpg",
+    "alt": "Moda feminina",
+    "href": "/br/categories/ecossistema-moda/feminino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/17-suplemento.jpg",
+    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
+    "href": "/br/products/meta-68bluu7aj",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/18-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/19-roupa.jpg",
+    "alt": "Moda masculina",
+    "href": "/br/categories/ecossistema-moda/masculino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/20-suplemento.jpg",
+    "alt": "Creatina Max Titanium 300 g",
+    "href": "/br/products/creatina-max-titanium-300g",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/21-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/22-roupa.jpg",
+    "alt": "Moda feminina",
+    "href": "/br/categories/ecossistema-moda/feminino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/23-suplemento.jpg",
+    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
+    "href": "/br/products/meta-68bluu7aj",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/24-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/25-roupa.jpg",
+    "alt": "Moda masculina",
+    "href": "/br/categories/ecossistema-moda/masculino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/26-suplemento.jpg",
+    "alt": "Creatina Max Titanium 300 g",
+    "href": "/br/products/creatina-max-titanium-300g",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/27-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/28-roupa.jpg",
+    "alt": "Moda feminina",
+    "href": "/br/categories/ecossistema-moda/feminino",
+    "kind": "roupa"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/29-suplemento.jpg",
+    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
+    "href": "/br/products/meta-68bluu7aj",
+    "kind": "suplemento"
+  },
+  {
+    "src": "/images/carousel-misto-20261101/30-cosmetico.jpg",
+    "alt": "Base Mary Kay TimeWise 3D Matte",
+    "href": "/br/products/base-mary-kay-timewise-3d-matte",
+    "kind": "cosmetico"
+  }
 ]
 
 export default function ImageCarousel() {
@@ -82,7 +238,7 @@ export default function ImageCarousel() {
   }
 
   return (
-    <section className="w-full bg-white py-10">
+    <section id="carrossel-produtos" className="w-full bg-white py-10">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between mb-6">
           <div>
@@ -91,7 +247,7 @@ export default function ImageCarousel() {
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-[#0A192F]">
-              Confira nossas novidades
+              Moda, suplementos e cosméticos
             </h2>
           </div>
 
@@ -126,19 +282,21 @@ export default function ImageCarousel() {
             msOverflowStyle: "none",
           }}
         >
-          {images.map((src, index) => (
-            <div
-              key={src}
+          {images.map((image, index) => (
+            <a
+              href={image.href}
+              key={`${index}-${image.src}`}
               data-carousel-card
+              data-carousel-kind={image.kind}
               className="shrink-0 snap-start w-[72vw] sm:w-[42vw] md:w-[28vw] lg:w-[22vw] xl:w-[20vw] aspect-square overflow-hidden rounded-xl bg-neutral-100"
             >
               <img
-                src={src}
-                alt={`Produto em destaque ${index + 1}`}
-                className="w-full h-full object-cover"
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-contain"
                 loading={index < 4 ? "eager" : "lazy"}
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>
