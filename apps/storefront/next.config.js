@@ -11,16 +11,6 @@ const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
 const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
-  // Redireciona a raiz que está dando erro diretamente para a sua loja ativa
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/store',
-        permanent: true,
-      },
-    ]
-  },
   logging: {
     fetches: {
       fullUrl: true,
@@ -58,6 +48,14 @@ const nextConfig = {
         : []),
     ],
   },
+  // Sem bloco experimental aqui para evitar conflitos no Next.js 15
 }
 
+nextConfig.experimental = { ...(nextConfig.experimental || {}), cpus: 1, webpackMemoryOptimizations: true }
+nextConfig.experimental = { ...(nextConfig.experimental || {}), cpus: 1, webpackMemoryOptimizations: true, webpackBuildWorker: true };
 module.exports = nextConfig
+module.exports = { ...module.exports, outputFileTracingRoot: require("node:path").resolve(__dirname, "../.."), experimental: { ...module.exports.experimental, cpus: 1, webpackMemoryOptimizations: true } };
+
+module.exports = { ...module.exports, staticPageGenerationTimeout: 180, experimental: { ...module.exports.experimental, staticGenerationMaxConcurrency: 1 } };
+
+module.exports = {...module.exports, outputFileTracingRoot: require("node:path").resolve(__dirname, "../.."), experimental: {...module.exports.experimental, cpus: 1, webpackMemoryOptimizations: true, staticGenerationMaxConcurrency: 1}, staticPageGenerationTimeout: 180};

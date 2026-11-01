@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import repeat from "@lib/util/repeat"
 import { HttpTypes } from "@medusajs/types"
@@ -33,7 +33,7 @@ const ItemsPreviewTemplate = ({ cart }: ItemsTemplateProps) => {
                   return (
                     <Item
                       key={item.id}
-                      item={item.name}
+                      item={item}
                       type="preview"
                       currencyCode={cart.currency_code}
                     />

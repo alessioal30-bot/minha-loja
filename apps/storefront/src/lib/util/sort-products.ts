@@ -23,7 +23,7 @@ export function sortProducts(
       if (product.variants && product.variants.length > 0) {
         product._minPrice = Math.min(
           ...product.variants.map(
-            (variant) => variant?.calculated_price?.calculated_amount || 0
+            (variant) => variant?.calculated_price?.calculated_amount ?? Infinity
           )
         )
       } else {
@@ -33,7 +33,7 @@ export function sortProducts(
 
     // Sort products based on the precomputed minimum prices
     sortedProducts.sort((a, b) => {
-      const diff = a._minPrice! - b._minPrice!
+      if (a._minPrice === Infinity) return b._minPrice === Infinity ? 0 : 1; if (b._minPrice === Infinity) return -1; const diff = a._minPrice! - b._minPrice!
       return sortBy === "price_asc" ? diff : -diff
     })
   }

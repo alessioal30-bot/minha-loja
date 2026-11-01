@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { Table, Text, clx } from "@modules/common/components/ui"
 import { updateLineItem } from "@lib/data/cart"
@@ -107,7 +107,7 @@ const Item = ({ item, type = "full", currencyCode }: ItemProps) => {
       {type === "full" && (
         <Table.Cell className="hidden small:table-cell">
           <LineItemUnitPrice
-            item={item.name}
+            item={item}
             style="tight"
             currencyCode={currencyCode}
           />
@@ -124,14 +124,14 @@ const Item = ({ item, type = "full", currencyCode }: ItemProps) => {
             <span className="flex gap-x-1 ">
               <Text className="text-ui-fg-muted">{item.quantity}x </Text>
               <LineItemUnitPrice
-                item={item.name}
+                item={item}
                 style="tight"
                 currencyCode={currencyCode}
               />
             </span>
           )}
           <LineItemPrice
-            item={item.name}
+            item={item}
             style="tight"
             currencyCode={currencyCode}
           />

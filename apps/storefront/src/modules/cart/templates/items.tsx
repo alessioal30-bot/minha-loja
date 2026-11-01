@@ -1,4 +1,4 @@
-﻿import repeat from "@lib/util/repeat"
+import repeat from "@lib/util/repeat"
 import { HttpTypes } from "@medusajs/types"
 import { Heading, Table } from "@modules/common/components/ui"
 
@@ -14,16 +14,16 @@ const ItemsTemplate = ({ cart }: ItemsTemplateProps) => {
   return (
     <div>
       <div className="pb-3 flex items-center">
-        <Heading className="text-[2rem] leading-[2.75rem]">Cart</Heading>
+        <Heading className="text-[2rem] leading-[2.75rem]">Carrinho</Heading>
       </div>
       <Table>
         <Table.Header className="border-t-0">
           <Table.Row className="text-ui-fg-subtle txt-medium-plus">
             <Table.HeaderCell className="!pl-0">Item</Table.HeaderCell>
             <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell>Quantity</Table.HeaderCell>
+            <Table.HeaderCell>Quantidade</Table.HeaderCell>
             <Table.HeaderCell className="hidden small:table-cell">
-              Price
+              Preço
             </Table.HeaderCell>
             <Table.HeaderCell className="!pr-0 text-right">
               Total
@@ -40,7 +40,7 @@ const ItemsTemplate = ({ cart }: ItemsTemplateProps) => {
                   return (
                     <Item
                       key={item.id}
-                      item={item.name}
+                      item={item}
                       currencyCode={cart?.currency_code}
                     />
                   )

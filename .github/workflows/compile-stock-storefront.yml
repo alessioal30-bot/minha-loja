@@ -1,0 +1,54 @@
+name: Compilar vitrine com estoque automático
+on:
+  push:
+    branches: [codex/estoque-automatico-20261031]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: storefront-stock-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+      NEXT_TELEMETRY_DISABLED: '1'
+      NEXT_PUBLIC_MEDUSA_BACKEND_URL: https://api.apcmcomercioesrvltda.com.br
+      NEXT_PUBLIC_BASE_URL: https://www.apcmcomercioesrvltda.com.br
+      NEXT_PUBLIC_DEFAULT_REGION: br
+      NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY: pk_340f111e2a11ab970aabc1875f31854420bb585c84d91e413ab6e3b33868b9fd
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.1.4
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.20.0'
+      - name: Instalar dependências do storefront
+        run: pnpm --filter @dtc/storefront... install --frozen-lockfile --ignore-scripts
+      - name: Testar disponibilidade e paginação
+        run: node .github/scripts/test-stock-display.cjs
+      - name: Compilar sem publicar
+        run: pnpm --filter @dtc/storefront run build
+      - name: Preparar pacote Linux
+        run: |
+          test -f apps/storefront/.next/standalone/apps/storefront/server.js
+          cp -a apps/storefront/.next/static apps/storefront/.next/standalone/apps/storefront/.next/static
+          mkdir -p build-output
+          tar -czf build-output/storefront-linux-x64.tar.gz -C apps/storefront/.next/standalone .
+          bytes=$(stat -c%s build-output/storefront-linux-x64.tar.gz)
+          test "$bytes" -le 104857600
+          sha256sum build-output/storefront-linux-x64.tar.gz > build-output/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: storefront-linux-x64-${{ github.sha }}
+          path: build-output/
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error

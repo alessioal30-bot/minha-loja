@@ -1,4 +1,4 @@
-﻿import repeat from "@lib/util/repeat"
+import repeat from "@lib/util/repeat"
 import { HttpTypes } from "@medusajs/types"
 import { Table } from "@modules/common/components/ui"
 
@@ -27,7 +27,7 @@ const Items = ({ order }: ItemsProps) => {
                   return (
                     <Item
                       key={item.id}
-                      item={item.name}
+                      item={item}
                       currencyCode={order.currency_code}
                     />
                   )

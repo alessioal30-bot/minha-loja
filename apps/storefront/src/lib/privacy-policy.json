@@ -1,0 +1,42 @@
+{
+  "title": "Política de Privacidade",
+  "updated": "3 de outubro de 2026",
+  "brand": "AM Suplementos e Vestuário",
+  "email": "apcm@apcmcomercioesrvltda.com.br",
+  "intro": "Esta política explica como a AM Suplementos e Vestuário trata dados pessoais no site apcmcomercioesrvltda.com.br, no cadastro, nas compras e no atendimento. Para dúvidas ou solicitações sobre seus dados, entre em contato pelo e-mail indicado nesta página.",
+  "sections": [
+    {
+      "title": "1. Quem é responsável e como falar conosco",
+      "paragraphs": ["A AM Suplementos e Vestuário é responsável pelas decisões sobre o tratamento dos dados usados na operação desta loja. O canal de atendimento para assuntos de privacidade é apcm@apcmcomercioesrvltda.com.br. Informe o assunto da solicitação e o e-mail associado à sua conta ou pedido. Não envie sua senha ou dados completos de cartão."]
+    },
+    {
+      "title": "2. Dados utilizados pela loja",
+      "paragraphs": ["Os dados utilizados dependem das funcionalidades que você acessa. Navegar pelo catálogo não exige criar uma conta. Campos obrigatórios de cadastro ou compra são identificados nos respectivos formulários; sem as informações necessárias, determinadas operações podem não ser concluídas."],
+      "items": ["Cadastro e conta: nome, sobrenome, e-mail, telefone quando informado e credenciais de autenticação.", "Carrinho e compras: produtos escolhidos, quantidades, valores, dados de contato, endereços de entrega e cobrança e informações relativas ao pedido e ao pagamento, quando houver compra.", "Atendimento: informações que você fornece ao conversar conosco por e-mail ou pelos canais de contato da loja.", "Funcionamento e segurança: endereço IP, data e hora de acesso, endereço solicitado, informações do navegador e registros técnicos necessários para operar o site e investigar falhas ou acessos indevidos."]
+    },
+    {
+      "title": "3. Finalidades e fundamentos do tratamento",
+      "paragraphs": ["Utilizamos os dados para administrar sua conta, manter o carrinho, atender solicitações, processar compras, comunicar informações sobre pedidos e viabilizar entregas. Também podemos tratar dados para cumprir obrigações legais e fiscais, exercer direitos e proteger a loja e seus usuários contra fraude ou acesso indevido.", "Conforme a finalidade, o tratamento se fundamenta na execução de contrato ou de procedimentos solicitados antes da compra, no cumprimento de obrigação legal, no exercício regular de direitos ou em interesses legítimos avaliados conforme a legislação. Quando uma atividade depender de consentimento, ele deve ser específico e pode ser revogado. Esta política não transforma a simples navegação em autorização para qualquer uso dos seus dados."]
+    },
+    {
+      "title": "4. Cookies e funcionamento do site",
+      "paragraphs": ["A loja usa cookies para autenticar a conta, identificar o carrinho, guardar temporariamente informações de cadastro e manter preferências e identificadores técnicos de funcionamento. Os cookies de autenticação e carrinho têm duração configurada de até sete dias; o cadastro pendente pode permanecer por até um dia. Eles podem ser removidos antes, ao sair da conta ou concluir determinadas operações.", "Você pode apagar cookies ou configurar seu navegador para restringi-los. Bloquear os cookies necessários pode impedir o login, a manutenção do carrinho ou outras funções. Serviços de proteção, como a Cloudflare, também processam dados técnicos de conexão para disponibilizar e proteger o site."]
+    },
+    {
+      "title": "5. Compartilhamento e serviços externos",
+      "paragraphs": ["Dados necessários à operação podem ser tratados por prestadores de hospedagem e infraestrutura, como Oracle e Cloudflare, e pelo serviço Zoho utilizado no atendimento por e-mail. Quando houver uma compra, as informações necessárias também poderão ser compartilhadas com os serviços de pagamento e entrega envolvidos naquele pedido. Informações podem ser fornecidas a autoridades quando houver obrigação legal ou determinação válida.", "Ao abrir um serviço externo por um link da loja, como WhatsApp, você também estará sujeito à política de privacidade desse serviço. Prestadores podem processar dados em outros países; as transferências devem observar os requisitos da legislação brasileira aplicáveis ao caso. O compartilhamento deve se limitar ao necessário para a finalidade correspondente."]
+    },
+    {
+      "title": "6. Conservação e segurança",
+      "paragraphs": ["Os dados são mantidos enquanto necessários para as finalidades descritas, incluindo atendimento, execução de pedidos, obrigações legais e exercício de direitos. O período pode variar conforme o tipo de informação e a obrigação aplicável. Uma solicitação de exclusão será analisada considerando as hipóteses legais de conservação, inclusive em registros e cópias de segurança.", "Empregamos medidas de proteção como HTTPS, autenticação, controles de acesso e restrições de rede. Essas medidas reduzem riscos, mas não eliminam todas as possibilidades de incidente. Proteja sua senha e nos avise pelo canal de privacidade se identificar uso indevido de sua conta."]
+    },
+    {
+      "title": "7. Seus direitos e como exercê-los",
+      "paragraphs": ["Nos termos da LGPD e conforme as condições aplicáveis, você pode solicitar confirmação do tratamento e acesso aos dados, correção, informação sobre compartilhamento, portabilidade, anonimização, bloqueio ou eliminação de dados inadequados, desnecessários ou tratados irregularmente. Também pode pedir a eliminação de dados tratados com consentimento, revogar esse consentimento e exercer oposição nas hipóteses legais ou solicitar revisão de decisões exclusivamente automatizadas que afetem seus interesses.", "Envie sua solicitação para apcm@apcmcomercioesrvltda.com.br. Podemos pedir informações proporcionais para confirmar sua identidade e evitar entregar dados a terceiros. Informaremos o resultado ou os motivos que impeçam o atendimento, observando os prazos legais aplicáveis. Caso o atendimento não resolva sua solicitação, você pode recorrer à ANPD e aos órgãos competentes de defesa do consumidor."]
+    },
+    {
+      "title": "8. Atualizações desta política",
+      "paragraphs": ["Esta política pode ser atualizada quando houver mudanças na operação da loja ou nos requisitos aplicáveis. A data da versão está indicada no início da página. Mudanças que exijam nova informação ou consentimento serão tratadas conforme a legislação; publicar uma atualização não substitui consentimento quando ele for necessário."]
+    }
+  ]
+}

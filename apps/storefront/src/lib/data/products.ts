@@ -3,6 +3,7 @@
 import { sdk } from "@lib/config"
 import { OptionValueIds } from "@lib/util/product-option-filters"
 import { sortProducts } from "@lib/util/sort-products"
+import { availableProductsFirst } from "@lib/util/product-stock"
 import { HttpTypes } from "@medusajs/types"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getAuthHeaders, getCacheOptions } from "./cookies"
@@ -74,7 +75,7 @@ export const listProducts = async ({
           ...queryParams,
         },
         headers,
-        next,
+        next: { ...next, revalidate: 30 },
         cache: "force-cache",
       }
     )
@@ -93,7 +94,7 @@ export const listProducts = async ({
 }
 
 /**
- * This will fetch 100 products to the Next.js cache and sort them based on the sortBy parameter.
+ * Fetch all matching pages before ordering so sold-out products stay after available products.
  * It will then return the paginated products based on the page and limit parameters.
  */
 export const listProductsWithSort = async ({
@@ -118,34 +119,36 @@ export const listProductsWithSort = async ({
     new Set((optionValueIds || []).filter(Boolean))
   )
 
-  const {
-    response: { products },
-  } = await listProducts({
-    pageParam: 0,
-    queryParams: {
-      ...queryParams,
-      ...(optionFilters.length ? { option_value_id: optionFilters } : {}),
-      limit: 100,
-    },
-    countryCode,
-  })
+  const products: HttpTypes.StoreProduct[] = []
+  let batchPage = 1
+  let total = 0
+  do {
+    const batch = await listProducts({
+      pageParam: batchPage,
+      queryParams: {
+        ...queryParams,
+        ...(optionFilters.length ? { option_value_id: optionFilters } : {}),
+        limit: 100,
+        fields: "id,title,handle,thumbnail,images,created_at,*variants.calculated_price,+variants.inventory_quantity,variants.manage_inventory,variants.allow_backorder",
+      },
+      countryCode,
+    })
+    total = batch.response.count
+    if (!batch.response.products.length && products.length < total) {
+      throw new Error("Não foi possível carregar o catálogo completo")
+    }
+    products.push(...batch.response.products)
+    batchPage += 1
+  } while (products.length < total)
 
-  const sortedProducts = sortProducts(products, sortBy)
-
-  const pageParam = (page - 1) * limit
-
-  const filteredCount = products.length
-
-  const nextPage = filteredCount > pageParam + limit ? pageParam + limit : null
-
-  const paginatedProducts = sortedProducts.slice(pageParam, pageParam + limit)
-
+  const uniqueProducts = Array.from(new Map(products.map((product) => [product.id, product])).values())
+  const sortedProducts = availableProductsFirst(sortProducts(uniqueProducts, sortBy))
+  const currentPage = Math.max(page, 1)
+  const offset = (currentPage - 1) * limit
+  const count = sortedProducts.length
   return {
-    response: {
-      products: paginatedProducts,
-      count: filteredCount,
-    },
-    nextPage,
+    response: { products: sortedProducts.slice(offset, offset + limit), count },
+    nextPage: count > offset + limit ? currentPage + 1 : null,
     queryParams,
   }
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import { isManual, isStripeLike } from "@lib/constants"
-import { placeOrder } from "@lib/data/cart"
+import { placeOrder, confirmMercadoPagoOrder } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
@@ -24,9 +24,13 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
     !cart.email ||
     (cart.shipping_methods?.length ?? 0) < 1
 
-  const paymentSession = cart.payment_collection?.payment_sessions?.[0]
+  const paymentSession = cart.payment_collection?.payment_sessions?.find(
+    session => !["canceled", "error"].includes(session.status)
+  )
 
   switch (true) {
+    case paymentSession?.provider_id === "pp_mercadopago_mercadopago":
+      return <MercadoPagoPaymentButton notReady={notReady} data-testid={dataTestId} />
     case isStripeLike(paymentSession?.provider_id):
       return (
         <StripePaymentButton
@@ -141,7 +145,7 @@ const StripePaymentButton = ({
         isLoading={submitting}
         data-testid={dataTestId}
       >
-        Place order
+        Finalizar pedido
       </Button>
       <ErrorMessage
         error={errorMessage}
@@ -180,7 +184,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         size="large"
         data-testid="submit-order-button"
       >
-        Place order
+        Finalizar pedido
       </Button>
       <ErrorMessage
         error={errorMessage}
@@ -188,6 +192,28 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
       />
     </>
   )
+}
+
+const MercadoPagoPaymentButton = ({ notReady, "data-testid": testId }: { notReady: boolean; "data-testid": string }) => {
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const complete = async () => {
+    if (submitting) return
+    setSubmitting(true)
+    setError(null)
+    try {
+      const result = await confirmMercadoPagoOrder()
+      if (result?.error) setError(result.error)
+    } catch (err) {
+      setError("Não foi possível verificar o pagamento agora. Tente novamente em instantes.")
+    } finally { setSubmitting(false) }
+  }
+  return <>
+    <Button disabled={notReady || submitting} isLoading={submitting} onClick={complete} data-testid={testId}>
+      Confirmar pagamento e finalizar pedido
+    </Button>
+    <ErrorMessage error={error} data-testid="mercadopago-payment-error" />
+  </>
 }
 
 export default PaymentButton

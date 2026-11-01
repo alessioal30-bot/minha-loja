@@ -19,8 +19,18 @@ type Props = {
   >
 }
 
+export const dynamic = "force-dynamic"
+
 export async function generateStaticParams() {
-  const product_categories = await listCategories()
+  if (process.env.STOREFRONT_BUILD_ON_DEMAND === "1") return []
+
+  // Local navigation does not need to enumerate every category and region.
+  if (process.env.NODE_ENV === "development") return []
+
+  const product_categories = await listCategories({
+    fields: "id,handle,*parent_category,*parent_category.parent_category",
+    include_ancestors_tree: true,
+  })
 
   if (!product_categories) {
     return []
@@ -30,41 +40,36 @@ export async function generateStaticParams() {
     regions?.map((r) => r.countries?.map((c) => c.iso_2)).flat()
   )
 
-  const categoryHandles = product_categories.map(
-    (category: HttpTypes.StoreProductCategory) => category.handle
+  const categoryPaths = product_categories.map(
+    (category: HttpTypes.StoreProductCategory) => {
+      const path: string[] = [category.handle]
+      let parent = category.parent_category
+
+      while (parent) {
+        path.unshift(parent.handle)
+        parent = parent.parent_category
+      }
+
+      return path
+    }
   )
 
-  const staticParams = countryCodes
+  return countryCodes
     ?.map((countryCode: string | undefined) =>
-      categoryHandles.map((handle: string) => ({
+      categoryPaths.map((category) => ({
         countryCode,
-        category: [handle],
+        category,
       }))
     )
     .flat()
-
-  return staticParams
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
-  try {
-    const productCategory = await getCategoryByHandle(params.category)
-
-    const title = productCategory.name + " | Medusa Store"
-
-    const description = productCategory.description ?? `${title} category.`
-
-    return {
-      title: `${title} | Medusa Store`,
-      description,
-      alternates: {
-        canonical: `${params.category.join("/")}`,
-      },
-    }
-  } catch {
-    notFound()
-  }
+  const productCategory = await getCategoryByHandle(params.category)
+  if (!productCategory) return { title: "Categoria não encontrada" }
+  const title = productCategory.name + " | AM Suplementos e Vestuário"
+  return { title, description: productCategory.description ?? title, alternates: { canonical: "/"+params.countryCode+"/categories/"+params.category.join("/") } }
 }
 
 export default async function CategoryPage(props: Props) {
@@ -89,3 +94,4 @@ export default async function CategoryPage(props: Props) {
     />
   )
 }
+

@@ -27,7 +27,7 @@ export default async function PaginatedProducts({
   sortBy?: SortOptions
   page: number
   collectionId?: string
-  categoryId?: string
+  categoryId?: string | string[]
   productsIds?: string[]
   countryCode: string
   optionValueIds?: OptionValueIds
@@ -41,7 +41,7 @@ export default async function PaginatedProducts({
   }
 
   if (categoryId) {
-    queryParams["category_id"] = [categoryId]
+    queryParams["category_id"] = Array.isArray(categoryId) ? categoryId : [categoryId]
   }
 
   if (productsIds) {
@@ -52,21 +52,9 @@ export default async function PaginatedProducts({
     queryParams["order"] = "created_at"
   }
 
-  const region = await getRegion(countryCode)
-
-  if (!region) {
-    return null
-  }
-
-  const {
-    response: { products, count },
-  } = await listProductsWithSort({
-    page,
-    queryParams,
-    sortBy,
-    countryCode,
-    optionValueIds,
-  })
+  const [region, result] = await Promise.all([getRegion(countryCode), listProductsWithSort({ page, queryParams, sortBy, countryCode, optionValueIds })]);
+  if (!region) return null;
+  const { response: { products, count } } = result
 
   const totalPages = Math.ceil(count / PRODUCT_LIMIT)
 
@@ -94,3 +82,6 @@ export default async function PaginatedProducts({
     </>
   )
 }
+
+
+

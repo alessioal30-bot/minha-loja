@@ -10,7 +10,11 @@ type Props = {
   searchParams: Promise<{ v_id?: string }>
 }
 
+export const dynamic = "force-dynamic"
+
 export async function generateStaticParams() {
+  if (process.env.STOREFRONT_BUILD_ON_DEMAND === "1") return []
+
   try {
     const countryCodes = await listRegions().then((regions) =>
       regions?.map((r) => r.countries?.map((c) => c.iso_2)).flat()
@@ -20,7 +24,7 @@ export async function generateStaticParams() {
       return []
     }
 
-    const promises = countryCodes.map(async (country) => {
+    const promises = countryCodes.filter((country) => country === "br").map(async (country) => {
       const { response } = await listProducts({
         countryCode: country,
         queryParams: { limit: 100, fields: "handle" },
@@ -114,11 +118,11 @@ export default async function ProductPage(props: Props) {
     queryParams: { handle: params.handle },
   }).then(({ response }) => response.products[0])
 
-  const images = getImagesForVariant(pricedProduct, selectedVariantId)
-
   if (!pricedProduct) {
     notFound()
   }
+
+  const images = getImagesForVariant(pricedProduct, selectedVariantId)
 
   return (
     <ProductTemplate

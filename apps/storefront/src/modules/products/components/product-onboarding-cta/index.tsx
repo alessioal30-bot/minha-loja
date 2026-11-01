@@ -17,7 +17,7 @@ async function ProductOnboardingCta() {
           Your demo product was successfully created! 🎉
         </Text>
         <Text className="text-ui-fg-subtle text-small-regular">
-          You can now continue setting up your store in the admin.
+          Você pode continuar a configuração da loja no painel administrativo.
         </Text>
         <a href="http://localhost:7001/a/orders?onboarding_step=create_order_nextjs">
           <Button className="w-full">Continue setup in admin</Button>

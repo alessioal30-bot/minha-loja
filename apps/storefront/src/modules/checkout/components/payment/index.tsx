@@ -1,4 +1,5 @@
 "use client"
+import MercadoPagoCard from "../mercadopago-card"
 import { RadioGroup } from "@headlessui/react"
 import { isStripeLike, paymentInfoMap } from "@lib/constants"
 import { initiatePaymentSession } from "@lib/data/cart"
@@ -27,7 +28,9 @@ const Payment = ({
   availablePaymentMethods: { id: string }[]
 }) => {
   const activeSession = cart.payment_collection?.payment_sessions?.find(
-    (paymentSession) => paymentSession.status === "pending"
+    (paymentSession) => paymentSession.status === "pending" ||
+      (paymentSession.provider_id === "pp_mercadopago_mercadopago" &&
+        ["captured", "authorized", "requires_more"].includes(paymentSession.status))
   )
 
   const [isLoading, setIsLoading] = useState(false)
@@ -37,6 +40,15 @@ const Payment = ({
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(
     activeSession?.provider_id ?? ""
   )
+
+  const [mpMethod, setMpMethod] = useState<"pix" | "card">(
+    activeSession?.data?.payment_method_type === "credit_card" || activeSession?.data?.payment_method_type === "debit_card" ? "card" : "pix"
+  )
+  const isMercadoPago = selectedPaymentMethod === "pp_mercadopago_mercadopago"
+  const cardAvailable = process.env.NEXT_PUBLIC_MERCADO_PAGO_CARD_ENABLED === "true"
+  const existingMpCard = activeSession?.provider_id === "pp_mercadopago_mercadopago" &&
+    ["credit_card", "debit_card"].includes(String(activeSession?.data?.payment_method_type))
+  const lockedMpPayment = existingMpCard && ["captured", "authorized", "pending"].includes(activeSession!.status)
 
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -78,17 +90,22 @@ const Payment = ({
   }
 
   const handleSubmit = async () => {
+    if (isMercadoPago && mpMethod === "card" && !existingMpCard) return
     setIsLoading(true)
     try {
       const shouldInputCard =
         isStripeLike(selectedPaymentMethod) && !activeSession
 
       const checkActiveSession =
-        activeSession?.provider_id === selectedPaymentMethod
+        activeSession?.provider_id === selectedPaymentMethod &&
+        (!isMercadoPago || (mpMethod === "pix" ? activeSession.data?.payment_method_id === "pix" : existingMpCard))
 
       if (!checkActiveSession) {
         await initiatePaymentSession(cart, {
           provider_id: selectedPaymentMethod,
+          data: selectedPaymentMethod === "pp_mercadopago_mercadopago"
+            ? { payer_email: cart.email }
+            : {},
         })
       }
 
@@ -124,7 +141,7 @@ const Payment = ({
             }
           )}
         >
-          Payment
+          Pagamento
           {!isOpen && paymentReady && <CheckCircleSolid />}
         </Heading>
         {!isOpen && paymentReady && (
@@ -134,7 +151,7 @@ const Payment = ({
               className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               data-testid="edit-payment-button"
             >
-              Edit
+              Editar
             </button>
           </Text>
         )}
@@ -168,13 +185,31 @@ const Payment = ({
                   </div>
                 ))}
               </RadioGroup>
+              {isMercadoPago && (
+                <div className="my-4">
+                  <fieldset disabled={lockedMpPayment}>
+                    <legend className="mb-2 font-medium">Como deseja pagar?</legend>
+                    <label className="mr-6"><input type="radio" name="mp-method" checked={mpMethod === "pix"}
+                      onChange={() => setMpMethod("pix")} /> PIX</label>
+                    {cardAvailable && <label><input type="radio" name="mp-method" checked={mpMethod === "card"}
+                      onChange={() => setMpMethod("card")} /> Cartão</label>}
+                  </fieldset>
+                  {mpMethod === "card" && cardAvailable && !existingMpCard && isOpen && (
+                    <MercadoPagoCard cart={cart} onCompleted={() => {
+                      router.refresh()
+                      router.push(pathname + "?" + createQueryString("step", "review"), { scroll: false })
+                    }} />
+                  )}
+                  {existingMpCard && <p className="mt-3 text-sm">Pagamento enviado ao Mercado Pago. Confira o resultado na revisão do pedido.</p>}
+                </div>
+              )}
             </>
           )}
 
           {paidByGiftcard && (
             <div className="flex flex-col w-1/3">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                Payment method
+                Forma de pagamento
               </Text>
               <Text
                 className="txt-medium text-ui-fg-subtle"
@@ -192,7 +227,7 @@ const Payment = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className={isMercadoPago && mpMethod === "card" && !existingMpCard ? "hidden" : "mt-6"}
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={
@@ -203,7 +238,7 @@ const Payment = ({
           >
             {!activeSession && isStripeLike(selectedPaymentMethod)
               ? " Enter card details"
-              : "Continue to review"}
+              : "Revisar pedido"}
           </Button>
         </div>
 
@@ -212,7 +247,7 @@ const Payment = ({
             <div className="flex items-start gap-x-1 w-full">
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment method
+                  Forma de pagamento
                 </Text>
                 <Text
                   className="txt-medium text-ui-fg-subtle"
@@ -224,7 +259,7 @@ const Payment = ({
               </div>
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment details
+                  Detalhes do pagamento
                 </Text>
                 <div
                   className="flex gap-2 txt-medium text-ui-fg-subtle items-center"
@@ -238,7 +273,7 @@ const Payment = ({
                   <Text>
                     {isStripeLike(selectedPaymentMethod) && cardBrand
                       ? cardBrand
-                      : "Another step will appear"}
+                      : "Confira o pagamento na etapa de revisão"}
                   </Text>
                 </div>
               </div>
@@ -246,7 +281,7 @@ const Payment = ({
           ) : paidByGiftcard ? (
             <div className="flex flex-col w-1/3">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                Payment method
+                Forma de pagamento
               </Text>
               <Text
                 className="txt-medium text-ui-fg-subtle"

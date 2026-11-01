@@ -30,9 +30,9 @@ const ProfilePassword: React.FC<MyInformationProps> = ({ customer: _customer }) 
       className="w-full"
     >
       <AccountInfo
-        label="Password"
+        label="Senha"
         currentInfo={
-          <span>The password is not shown for security reasons</span>
+          <span>A senha não é exibida por segurança</span>
         }
         isSuccess={successState}
         isError={false}
@@ -56,7 +56,7 @@ const ProfilePassword: React.FC<MyInformationProps> = ({ customer: _customer }) 
             data-testid="new-password-input"
           />
           <Input
-            label="Confirm password"
+            label="Confirmar senha"
             type="password"
             name="confirm_password"
             required

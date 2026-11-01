@@ -1,112 +1,123 @@
-﻿import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import { ChevronDown } from "lucide-react"
 
+const menuItemClass =
+  "block px-4 py-2 text-sm text-black hover:bg-gray-100 hover:text-black transition-colors"
+
 export default async function Nav() {
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 px-6 mx-auto border-b duration-200 bg-neutral-950 border-neutral-800 text-white">
+      <header className="relative h-16 px-6 mx-auto border-b duration-200 bg-white border-gray-200 text-black">
         <nav className="content-container flex items-center justify-between w-full h-full text-sm">
-          
-          {/* Menu Lateral Mobile */}
+
           <div className="h-full flex items-center lg:hidden">
             <SideMenu />
           </div>
 
-          {/* Logo / Nome da Loja */}
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="text-lg font-bold uppercase tracking-widest hover:text-neutral-300 transition-colors"
+              className="text-black text-lg font-bold uppercase tracking-widest hover:text-black transition-colors"
               data-testid="nav-store-link"
             >
-              Sua Loja
+              <img src="/logo.webp" alt="AM Suplementos e Vestuário" width={48} height={48} className="h-12 w-12 object-contain" />
             </LocalizedClientLink>
           </div>
 
-          {/* Menu Desktop com Dropdowns Organizados */}
           <div className="hidden lg:flex items-center h-full space-x-8">
-            
-            {/* 1. Farmacêuticos */}
+
+            {/* Farmacêuticos */}
             <div className="relative h-full flex items-center group/dropdown cursor-pointer">
-              <span className="flex items-center gap-1 text-neutral-300 hover:text-white transition-colors py-2">
-                Farmacêuticos <ChevronDown className="w-4 h-4 opacity-70" />
+              <span className="flex items-center gap-1 text-black hover:text-black transition-colors py-2">
+                Farmacêuticos
+                <ChevronDown className="w-4 h-4 opacity-70" />
               </span>
-              <div className="absolute top-full left-0 w-56 bg-neutral-900 border border-neutral-800 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
-                <div className="px-4 py-3 text-xs text-amber-400 font-medium tracking-wider uppercase bg-amber-500/10 border-b border-neutral-800">
-                  ⚠️ Em Construção
+
+              <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
+                <div className="px-4 py-3 text-xs text-amber-900 font-medium tracking-wider uppercase bg-amber-50 border-b border-gray-200">
+                  Em manutenção
                 </div>
-                <span className="block px-4 py-2.5 text-sm text-neutral-400 hover:bg-neutral-800 hover:text-white transition-colors cursor-not-allowed">
-                  Manipulação (Em Breve)
-                </span>
-                <span className="block px-4 py-2.5 text-sm text-neutral-400 hover:bg-neutral-800 hover:text-white transition-colors cursor-not-allowed">
-                  Fitoterápicos (Em Breve)
-                </span>
-              </div>
-            </div>
 
-            {/* 2. Cosméticos */}
-            <div className="relative h-full flex items-center group/dropdown cursor-pointer">
-              <span className="flex items-center gap-1 text-neutral-300 hover:text-white transition-colors py-2">
-                Cosméticos <ChevronDown className="w-4 h-4 opacity-70" />
-              </span>
-              <div className="absolute top-full left-0 w-56 bg-neutral-900 border border-neutral-800 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
-                <LocalizedClientLink href="/store?category=skincare" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Skincare & Rosto
+                <LocalizedClientLink href="/categories/farmaceuticos/medicamentos" className={menuItemClass}>
+                  Medicamentos
                 </LocalizedClientLink>
-                <LocalizedClientLink href="/store?category=cabelos" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Cuidados para Cabelos
+                <LocalizedClientLink href="/categories/farmaceuticos/suprimentos" className={menuItemClass}>
+                  Suprimentos
                 </LocalizedClientLink>
-                <LocalizedClientLink href="/store?category=corpo" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Corpo & Banho
+                <LocalizedClientLink href="/categories/farmaceuticos/primeiros-socorros" className={menuItemClass}>
+                  Primeiros Socorros
                 </LocalizedClientLink>
               </div>
             </div>
 
-            {/* 3. Nutrição Alimentar */}
+            {/* Cosméticos */}
             <div className="relative h-full flex items-center group/dropdown cursor-pointer">
-              <span className="flex items-center gap-1 text-neutral-300 hover:text-white transition-colors py-2">
-                Nutrição Alimentar <ChevronDown className="w-4 h-4 opacity-70" />
+              <span className="flex items-center gap-1 text-black hover:text-black transition-colors py-2">
+                Cosméticos
+                <ChevronDown className="w-4 h-4 opacity-70" />
               </span>
-              <div className="absolute top-full left-0 w-56 bg-neutral-900 border border-neutral-800 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
-                <LocalizedClientLink href="/store?category=suplementos" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Suplementos & Vitaminas
+
+              <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
+                <LocalizedClientLink href="/categories/cosmeticos/cosmeticos-rosto" className={menuItemClass}>
+                  Rosto
                 </LocalizedClientLink>
-                <LocalizedClientLink href="/store?category=funcionais" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
+                <LocalizedClientLink href="/categories/cosmeticos/cosmeticos-corpo" className={menuItemClass}>
+                  Corpo
+                </LocalizedClientLink>
+                <LocalizedClientLink href="/categories/cosmeticos/cuidados-capilares" className={menuItemClass}>
+                  Cabelos
+                </LocalizedClientLink>
+              </div>
+            </div>
+
+            {/* Nutrição Alimentar */}
+            <div className="relative h-full flex items-center group/dropdown cursor-pointer">
+              <span className="flex items-center gap-1 text-black hover:text-black transition-colors py-2">
+                Nutrição Alimentar
+                <ChevronDown className="w-4 h-4 opacity-70" />
+              </span>
+
+              <div className="absolute top-full left-0 w-80 bg-white border border-gray-200 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
+                <LocalizedClientLink href="/categories/nutricao-alimentar/whey-protein" className={menuItemClass}>
+                  Suplementos
+                </LocalizedClientLink>
+                <LocalizedClientLink href="/categories/nutricao-alimentar/alimentos-funcionais" className={menuItemClass}>
                   Alimentos Funcionais
                 </LocalizedClientLink>
-                <LocalizedClientLink href="/store?category=organicos" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Orgânicos & Naturais
+                <LocalizedClientLink href="/categories/nutricao-alimentar/alimentos-in-natura" className={menuItemClass}>
+                  Alimentos in natura
+                </LocalizedClientLink>
+                <LocalizedClientLink href="/categories/nutricao-alimentar/alimentos-processados-e-ultraprocessados" className={menuItemClass}>
+                  Alimentos Processados e Ultraprocessados
                 </LocalizedClientLink>
               </div>
             </div>
 
-            {/* 4. Ecossistema Moda */}
+            {/* Ecossistema Moda */}
             <div className="relative h-full flex items-center group/dropdown cursor-pointer">
-              <span className="flex items-center gap-1 text-neutral-300 hover:text-white transition-colors py-2">
-                Ecossistema Moda <ChevronDown className="w-4 h-4 opacity-70" />
+              <span className="flex items-center gap-1 text-black hover:text-black transition-colors py-2">
+                Ecossistema Moda
+                <ChevronDown className="w-4 h-4 opacity-70" />
               </span>
-              <div className="absolute top-full left-0 w-56 bg-neutral-900 border border-neutral-800 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
-                <LocalizedClientLink href="/store?category=alfaiataria" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Alfaiataria
+
+              <div className="absolute top-full left-0 w-64 bg-white border border-gray-200 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 py-2">
+                <LocalizedClientLink href="/categories/ecossistema-moda/masculino" className={menuItemClass}>
+                  Moda masculina
                 </LocalizedClientLink>
-                <LocalizedClientLink href="/store?category=camisaria" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Camisaria Fina
-                </LocalizedClientLink>
-                <LocalizedClientLink href="/store?category=acessorios" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                  Acessórios & Sapatos
+                <LocalizedClientLink href="/categories/ecossistema-moda/feminino" className={menuItemClass}>
+                  Moda feminina
                 </LocalizedClientLink>
               </div>
             </div>
 
           </div>
 
-          {/* Ações da Direita */}
           <div className="flex items-center gap-x-6 h-full">
             <div className="hidden sm:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
-                className="hover:text-neutral-300 transition-colors"
+                className="hover:text-black transition-colors"
                 href="/account"
                 data-testid="nav-account-link"
               >
@@ -121,4 +132,6 @@ export default async function Nav() {
     </div>
   )
 }
+
+
 

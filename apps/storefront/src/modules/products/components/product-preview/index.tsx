@@ -4,6 +4,7 @@ import { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
+import { isProductSoldOut } from "@lib/util/product-stock"
 
 export default async function ProductPreview({
   product,
@@ -27,6 +28,8 @@ export default async function ProductPreview({
     product,
   })
 
+  const soldOut = isProductSoldOut(product)
+
   return (
     <LocalizedClientLink href={`/products/${product.handle}`} className="group">
       <div data-testid="product-wrapper">
@@ -39,9 +42,10 @@ export default async function ProductPreview({
         <div className="flex txt-compact-medium mt-4 justify-between">
           <Text className="text-ui-fg-subtle" data-testid="product-title">
             {product.title}
+            {soldOut && <span className="block font-semibold text-red-700" data-testid="product-sold-out">ESGOTADO</span>}
           </Text>
           <div className="flex items-center gap-x-2">
-            {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
+            {!soldOut && cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
         </div>
       </div>

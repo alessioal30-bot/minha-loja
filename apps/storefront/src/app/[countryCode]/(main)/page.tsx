@@ -1,12 +1,12 @@
-﻿import { Metadata } from "next"
+import { Metadata } from "next"
 
-import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
+import ImageCarousel from "@modules/home/components/image-carousel"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
 export const metadata: Metadata = {
-  title: "Sua Loja | Azul Collection",
+  title: "AM Suplementos e Vestuário",
   description: "Explore nossa coleção exclusiva com elegância e sofisticação.",
 }
 
@@ -16,10 +16,7 @@ export default async function Home(props: {
   const params = await props.params
   const { countryCode } = params
 
-  const region = await getRegion(countryCode)
-  const { collections } = await listCollections({
-    fields: "id, handle, title",
-  })
+  const [region, { collections }] = await Promise.all([getRegion(countryCode), listCollections({ fields: "id, handle, title" })])
 
   if (!collections || !region) {
     return null
@@ -30,30 +27,23 @@ export default async function Home(props: {
       <section className="relative w-full h-[550px] flex items-center justify-start bg-[#0A192F] text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/banner-dia-dos-pais.jpg" 
+            src="/images/banner-dia-dos-pais.webp" fetchPriority="high" decoding="async" 
             alt="Especial" 
             className="w-full h-full object-cover opacity-40"
           />
         </div>
-        <div className="relative z-10 max-w-2xl px-6 md:px-16">
-          <span className="text-[#BFDBFE] font-medium tracking-widest text-xs uppercase mb-3 block">
-            Coleção Exclusiva
-          </span>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-            Elegância em Tons de Azul
-          </h1>
-          <p className="text-base md:text-lg text-neutral-200 mb-8 leading-relaxed">
-            Descubra peças selecionadas que unem sofisticação, conforto e um design atemporal.
-          </p>
-          <a 
-            href={"/" + countryCode + "/store"} 
-            className="inline-block bg-[#1D4ED8] text-white font-medium py-3 px-8 rounded-md hover:bg-blue-700 transition-colors duration-200 shadow-lg"
-          >
-            Explorar Coleção
-          </a>
-        </div>
+        <a
+          href={"/" + countryCode + "/store"}
+          aria-label="Explorar coleção Elegância em Tons de Azul"
+          className="absolute inset-0 z-10"
+        />
       </section>
 
+      <section className="w-full bg-white" data-banner-id="schalk-crosby"><img src="/images/campanha-schalk-crosby-8990-20261026/06-montagem-cinco-modelos.png" alt="SCHALK + CROSBY: 3 camisetas básicas por R$ 149,90. Avulsa R$ 79,90. Combine cores, tamanhos e marcas, masculinas e femininas." loading="lazy" decoding="async" className="block w-full h-auto" /></section>
+
+      <section className="w-full bg-white"><img src="/images/banner-mary-kay-novo.png" alt="Mary Kay - Amanda Cordeiro - WhatsApp +55 84 9989-3205" loading="lazy" decoding="async" className="block w-full h-auto" /></section>
+
+      <section className="w-full bg-white"><img src="/images/banner-nutricao-alimentar.png" alt="Nutricao Alimentar - AM Suplementos e Vestuario" loading="lazy" decoding="async" className="block w-full h-auto" /></section>
       <div className="py-16 max-w-7xl mx-auto px-6 md:px-8 bg-white">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#0A192F]">
@@ -67,16 +57,30 @@ export default async function Home(props: {
           </a>
         </div>
         
-        <div className="flex overflow-x-auto gap-x-6 pb-6 pt-2 no-scrollbar snap-x snap-mandatory">
-          <div className="w-full">
-            <ul className="flex gap-x-6">
-              <FeaturedProducts collections={collections} region={region} />
-            </ul>
+        <img
+          src="/images/creatina-max-camiseta-120-reais.webp" loading="lazy" decoding="async"
+          alt="Oferta: 2 creatinas Max de 300 g cada por R$ 120,00 e ganhe uma camiseta. Peça pelo WhatsApp (84) 9613-0844."
+          width={1254}
+          height={1254}
+          className="block w-full max-w-2xl h-auto mx-auto"
+        />
+
+        <section className="mt-12" data-campaign-gallery="schalk-crosby-individuais" aria-label="Campanhas individuais de camisetas básicas">
+          <h3 className="text-xl md:text-2xl font-bold text-[#0A192F]">Monte seu trio de básicas</h3>
+          <p className="mt-2 mb-5 text-sm text-gray-600">3 por R$ 149,90. Misture cores, tamanhos, marcas, masculinas e femininas. Deslize para ver todas as opções.</p>
+          <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4">
+            <a href={"/" + countryCode + "/products/moda-masculina-camiseta-basica"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-20261024/01-basica-vinho-feed.jpg" alt="Básica vinho — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
+            <a href={"/" + countryCode + "/products/moda-masculina-camiseta-basica"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-20261024/02-basica-branca-feed.jpg" alt="Básica branca — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
+            <a href={"/" + countryCode + "/products/moda-feminina-camiseta-basica"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-20261024/03-basica-amarela-feminina-feed.jpg" alt="Básica amarela feminina — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
+            <a href={"/" + countryCode + "/products/meta-camiseta-basica-crosby-masculina-preto"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-8990-20261026/04-crosby-preta-feed.jpg" alt="Crosby preta — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
+            <a href={"/" + countryCode + "/products/moda-feminina-camiseta-basica"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-8990-20261026/05-crosby-feminina-coral-feed.jpg" alt="Crosby feminina coral — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
           </div>
-        </div>
+        </section>
       </div>
 
       <Hero />
+      <ImageCarousel />
     </>
   )
 }
+

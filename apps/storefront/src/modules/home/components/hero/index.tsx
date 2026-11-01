@@ -1,49 +1,19 @@
-import { Button, Heading } from "@medusajs/ui"
 import { ArrowRight } from "lucide-react"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 const Hero = () => {
   return (
     <div className="flex flex-col">
-      {/* Hero Principal */}
-      <div className="relative h-[85vh] w-full border-b border-ui-border-base bg-neutral-950 flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center z-0 opacity-90"
-          style={{ backgroundImage: "url('/banner-dia-dos-pais.jpg')" }}
+      {/* Oferta Mary Kay */}
+      <section className="bg-white px-6 py-12 md:px-8" aria-label="Oferta Mary Kay TimeWise 3D">
+        <img
+          src="/images/mary-kay-timewise-3d-oferta.webp" loading="lazy" decoding="async"
+          alt="Sua base favorita está aqui: Mary Kay TimeWise 3D, 30 variantes disponíveis, R$ 84,90 cada. Atendimento pelo WhatsApp +55 84 99989-3205."
+          width={1122}
+          height={1402}
+          className="block w-full max-w-2xl h-auto mx-auto"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
-
-        <div className="relative z-20 container mx-auto px-6 sm:px-12 flex flex-col justify-center items-start text-left text-white gap-6 max-w-4xl">
-          <span className="text-xs uppercase tracking-[0.3em] bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/20">
-            Especial Dia dos Pais
-          </span>
-
-          <Heading
-            level="h1"
-            className="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight"
-          >
-            Celebre os <span className="font-bold italic">Laços</span>
-          </Heading>
-
-          <p className="text-base sm:text-lg max-w-xl text-neutral-300 font-light leading-relaxed">
-            Presenteie quem sempre esteve ao seu lado com elegância, conforto e
-            sofisticação incomparáveis.
-          </p>
-
-          <div className="flex flex-wrap gap-4 pt-2">
-            <LocalizedClientLink href="/store">
-              <Button
-                variant="secondary"
-                size="large"
-                className="bg-white text-black hover:bg-neutral-200 font-medium px-8 py-4 rounded-none"
-              >
-                Explorar Coleção Dia dos Pais
-              </Button>
-            </LocalizedClientLink>
-          </div>
-        </div>
-      </div>
-
+      </section>
       {/* Seção das 4 Categorias em Destaque */}
       <section className="py-20 px-6 bg-neutral-900 text-white">
         <div className="container mx-auto max-w-7xl">
@@ -68,14 +38,14 @@ const Hero = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Categoria 1 */}
             <LocalizedClientLink
-              href="/store?category=farmaceuticos"
+              href="/categories/farmaceuticos"
               className="group relative h-[420px] overflow-hidden bg-neutral-800 flex items-end p-6"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800')",
+                    "url('/images/farmaceuticos-luvas-mascaras.webp')",
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
@@ -95,7 +65,7 @@ const Hero = () => {
 
             {/* Categoria 2 */}
             <LocalizedClientLink
-              href="/store?category=cosmeticos"
+              href="/categories/cosmeticos"
               className="group relative h-[420px] overflow-hidden bg-neutral-800 flex items-end p-6"
             >
               <div
@@ -122,14 +92,14 @@ const Hero = () => {
 
             {/* Categoria 3 */}
             <LocalizedClientLink
-              href="/store?category=nutricao-alimentar"
+              href="/categories/nutricao-alimentar"
               className="group relative h-[420px] overflow-hidden bg-neutral-800 flex items-end p-6"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800')",
+                    "url('/images/nutricao-comida-suplementos-vitaminas.webp')",
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
@@ -149,7 +119,7 @@ const Hero = () => {
 
             {/* Categoria 4 */}
             <LocalizedClientLink
-              href="/store?category=ecossistema-moda"
+              href="/categories/ecossistema-moda"
               className="group relative h-[420px] overflow-hidden bg-neutral-800 flex items-end p-6"
             >
               <div

@@ -237,6 +237,15 @@ export async function setShippingMethod({
     .catch(medusaError)
 }
 
+function buildMercadoPagoDescription(items: NonNullable<HttpTypes.StoreCart["items"]>) {
+  const description = items.map((item) => {
+    const title = String(item.product_title || item.title || "Produto AM")
+      .replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim()
+    return `${item.quantity}x ${title}`
+  }).join("; ")
+  return Array.from(description).slice(0, 150).join("")
+}
+
 export async function initiatePaymentSession(
   cart: HttpTypes.StoreCart,
   data: HttpTypes.StoreInitializePaymentSession
@@ -245,8 +254,16 @@ export async function initiatePaymentSession(
     ...(await getAuthHeaders()),
   }
 
+  let requestData = data
+  if (data.provider_id === "pp_mercadopago_mercadopago") {
+    const cartId = await getCartId()
+    if (!cartId || cartId !== cart.id) throw new Error("Carrinho de pagamento inválido")
+    const trustedCart = await retrieveCart(cartId)
+    if (!trustedCart?.items?.length) throw new Error("Carrinho sem produtos para pagamento")
+    requestData = { ...data, data: { ...data.data, description: buildMercadoPagoDescription(trustedCart.items) } }
+  }
   return sdk.store.payment
-    .initiatePaymentSession(cart, data, {}, headers)
+    .initiatePaymentSession(cart, requestData, {}, headers)
     .then(async (resp) => {
       const cartCacheTag = await getCacheTag("carts")
       revalidateTag(cartCacheTag)
@@ -391,6 +408,32 @@ export async function setAddresses(currentState: unknown, formData: FormData) {
  * @param cartId - optional - The ID of the cart to place an order for.
  * @returns The cart object if the order was successful, or null if not.
  */
+/** Retorna falhas esperadas como dados; redirecionamento fica fora do catch. */
+export async function confirmMercadoPagoOrder() {
+  const id = await getCartId()
+  if (!id) return { error: "Seu carrinho não foi encontrado. Volte ao carrinho e tente novamente." }
+  const headers = { ...(await getAuthHeaders()) }
+  let response
+  try {
+    response = await sdk.store.cart.complete(id, {}, headers)
+  } catch (error) {
+    const message = error instanceof Error ? error.message : ""
+    if (/was not authorized with the provider|payment.*not authorized|payment.*pending|pagamento.*(pendente|não confirmado)/i.test(message)) {
+      return { error: "O pagamento ainda não foi confirmado. Se você já pagou, aguarde a aprovação e tente novamente." }
+    }
+    console.error("Falha ao confirmar pedido Mercado Pago", error instanceof Error ? error.name : "UnknownError")
+    return { error: "Não foi possível verificar o pagamento agora. Tente novamente em instantes." }
+  }
+  if (response.type !== "order") {
+    return { error: "Não foi possível concluir o pedido. Confira os dados de entrega e o pagamento antes de tentar novamente." }
+  }
+  const countryCode = response.order.shipping_address?.country_code?.toLowerCase() || "br"
+  revalidateTag(await getCacheTag("carts"))
+  revalidateTag(await getCacheTag("orders"))
+  await removeCartId()
+  redirect(`/${countryCode}/order/${response.order.id}/confirmed`)
+}
+
 export async function placeOrder(cartId?: string) {
   const id = cartId || (await getCartId())
 

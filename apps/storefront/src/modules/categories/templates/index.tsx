@@ -1,4 +1,5 @@
-import { notFound } from "next/navigation"
+import { getCategoryBranchIds } from "@lib/data/categories"
+﻿import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
@@ -10,7 +11,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import { HttpTypes } from "@medusajs/types"
 import { OptionValueIds } from "@lib/util/product-option-filters"
 
-export default function CategoryTemplate({
+export default async function CategoryTemplate({
   category,
   sortBy,
   page,
@@ -38,6 +39,7 @@ export default function CategoryTemplate({
   }
 
   getParents(category)
+  const categoryIds = await getCategoryBranchIds(category.id)
 
   return (
     <div
@@ -52,11 +54,11 @@ export default function CategoryTemplate({
       <div className="w-full">
         <div className="flex flex-row mb-8 text-2xl-semi gap-4">
           {parents &&
-            parents.map((parent) => (
+            [...parents].reverse().map((parent) => (
               <span key={parent.id} className="text-ui-fg-subtle">
                 <LocalizedClientLink
                   className="mr-4 hover:text-black"
-                  href={`/categories/${parent.handle}`}
+                  href={`/categories/${[...parents.slice(parents.indexOf(parent)).reverse().map(p => p.handle)].join("/")}`}
                   data-testid="sort-by-link"
                 >
                   {parent.name}
@@ -72,11 +74,11 @@ export default function CategoryTemplate({
           </div>
         )}
         {category.category_children && (
-          <div className="mb-8 text-base-large">
+          <div className="mb-10"><h2 className="text-xl-semi mb-5">Explore {category.name}</h2>
             <ul className="grid grid-cols-1 gap-2">
               {category.category_children?.map((c) => (
                 <li key={c.id}>
-                  <InteractiveLink href={`/categories/${c.handle}`}>
+                  <InteractiveLink href={`/categories/${[...parents].reverse().map(p => p.handle).concat(category.handle,c.handle).join("/")}`}>
                     {c.name}
                   </InteractiveLink>
                 </li>
@@ -94,7 +96,7 @@ export default function CategoryTemplate({
           <PaginatedProducts
             sortBy={sort}
             page={pageNumber}
-            categoryId={category.id}
+            categoryId={categoryIds}
             countryCode={countryCode}
             optionValueIds={optionValueIds}
           />
@@ -103,3 +105,6 @@ export default function CategoryTemplate({
     </div>
   )
 }
+
+
+

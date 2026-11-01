@@ -1,4 +1,4 @@
-import { listProducts } from "@lib/data/products"
+import { listProductsWithSort } from "@lib/data/products"
 import { HttpTypes } from "@medusajs/types"
 import { Text } from "@modules/common/components/ui"
 
@@ -14,11 +14,12 @@ export default async function ProductRail({
 }) {
   const {
     response: { products: pricedProducts },
-  } = await listProducts({
-    regionId: region.id,
+  } = await listProductsWithSort({
+    countryCode: region.countries?.[0]?.iso_2 || "br",
+    page: 1,
     queryParams: {
       collection_id: collection.id,
-      fields: "*variants.calculated_price",
+
     },
   })
 

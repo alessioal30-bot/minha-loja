@@ -21,7 +21,11 @@ type Props = {
 
 export const PRODUCT_LIMIT = 12
 
+export const dynamic = "force-dynamic"
+
 export async function generateStaticParams() {
+  if (process.env.STOREFRONT_BUILD_ON_DEMAND === "1") return []
+
   const { collections } = await listCollections({
     fields: "*products",
   })

@@ -29,24 +29,24 @@ export default async function StorePage(props: Params) {
       <div className="flex flex-col gap-4">
         <h1 className="text-2xl-semi">Nossa Loja</h1>
         <p className="text-base-regular text-ui-fg-subdued">
-          Encontre suplementos, cosm�ticos, vestu�rio e muito mais.
+          Encontre suplementos, cosméticos, vestuário e muito mais.
         </p>
 
-        {/* Links r�pidos das 4 �reas principais */}
+        {/* Links rápidos das 4 áreas principais */}
         <div className="flex flex-wrap gap-2 mt-6">
           <LocalizedClientLink href="/store" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
             Todos
           </LocalizedClientLink>
-          <LocalizedClientLink href="/store?category=farmaceuticos" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
-            Farmac�uticos
+          <LocalizedClientLink href="/categories/farmaceuticos" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
+            Farmacêuticos
           </LocalizedClientLink>
-          <LocalizedClientLink href="/store?category=cosmeticos" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
-            Cosm�ticos
+          <LocalizedClientLink href="/categories/cosmeticos" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
+            Cosméticos
           </LocalizedClientLink>
-          <LocalizedClientLink href="/store?category=nutricao-alimentar" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
-            Nutri��o Alimentar
+          <LocalizedClientLink href="/categories/nutricao-alimentar" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
+            Nutrição Alimentar
           </LocalizedClientLink>
-          <LocalizedClientLink href="/store?category=ecossistema-moda" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
+          <LocalizedClientLink href="/categories/ecossistema-moda" className={"px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all rounded-full border"}>
             Ecossistema Moda
           </LocalizedClientLink>
         </div>

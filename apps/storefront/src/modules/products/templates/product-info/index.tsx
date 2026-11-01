@@ -1,4 +1,5 @@
 import { HttpTypes } from "@medusajs/types"
+import { isProductSoldOut } from "@lib/util/product-stock"
 import { Heading, Text } from "@modules/common/components/ui"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
@@ -7,6 +8,7 @@ type ProductInfoProps = {
 }
 
 const ProductInfo = ({ product }: ProductInfoProps) => {
+  const soldOut = isProductSoldOut(product)
   return (
     <div id="product-info">
       <div className="flex flex-col gap-y-4 lg:max-w-[500px] mx-auto">
@@ -25,6 +27,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         >
           {product.title}
         </Heading>
+        {soldOut && <Text className="font-semibold text-red-700" data-testid="product-sold-out">ESGOTADO</Text>}
 
         <Text
           className="text-medium text-ui-fg-subtle whitespace-pre-line"

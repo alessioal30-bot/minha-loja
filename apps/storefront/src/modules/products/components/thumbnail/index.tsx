@@ -21,7 +21,10 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   className,
   "data-testid": dataTestid,
 }) => {
-  const initialImage = thumbnail || images?.[0]?.url
+  const sourceImage = thumbnail || images?.[0]?.url
+  const localPhotos = ["look_local_227_3_quadrado_loja", "look_local_238_3_quadrado_loja", "look_local_234_3_quadrado_loja", "look_local_71_3_quadrado_loja", "look_local_48_3_quadrado_loja", "look_local_195_3_quadrado_loja"]
+  const localPhoto = localPhotos.find((name) => sourceImage?.endsWith("/" + name + ".jpg"))
+  const initialImage = localPhoto ? "/images/" + localPhoto + ".webp" : sourceImage
 
   return (
     <Container
@@ -52,7 +55,7 @@ const ImageOrPlaceholder = ({
   return image ? (
     <Image
       src={image}
-      alt="Thumbnail"
+      alt="Imagem do produto"
       className="absolute inset-0 object-cover object-center"
       draggable={false}
       quality={50}
