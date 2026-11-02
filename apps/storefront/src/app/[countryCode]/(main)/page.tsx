@@ -2,6 +2,7 @@ import { Metadata } from "next"
 
 import Hero from "@modules/home/components/hero"
 import ImageCarousel from "@modules/home/components/image-carousel"
+import NovembroAzul from "@modules/home/components/novembro-azul"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
@@ -24,20 +25,7 @@ export default async function Home(props: {
 
   return (
     <>
-      <section className="relative w-full h-[550px] flex items-center justify-start bg-[#0A192F] text-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/banner-dia-dos-pais.webp" fetchPriority="high" decoding="async" 
-            alt="Especial" 
-            className="w-full h-full object-cover opacity-40"
-          />
-        </div>
-        <a
-          href={"/" + countryCode + "/store"}
-          aria-label="Explorar coleção Elegância em Tons de Azul"
-          className="absolute inset-0 z-10"
-        />
-      </section>
+      <NovembroAzul />
 
       <section className="w-full bg-white" data-banner-id="schalk-crosby"><img src="/images/campanha-schalk-crosby-8990-20261026/06-montagem-cinco-modelos.png" alt="SCHALK + CROSBY: 3 camisetas básicas por R$ 149,90. Avulsa R$ 79,90. Combine cores, tamanhos e marcas, masculinas e femininas." loading="lazy" decoding="async" className="block w-full h-auto" /></section>
 
