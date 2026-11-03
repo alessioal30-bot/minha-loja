@@ -9,7 +9,7 @@ import { Fragment } from "react"
 const SideMenuItems = {
   Inicio: "/",
   Loja: "/store",
-  Atacado: "/parceiros",
+  "Cotação p/ empresa ou Atacado": "/parceiros",
   "Minha Conta": "/account",
   Carrinho: "/cart",
 }
@@ -56,7 +56,7 @@ const SideMenu = () => {
                         <li key={name}>
                           <LocalizedClientLink
                             href={href}
-                            className="text-black text-3xl leading-10 hover:text-black"
+                            className={href === "/parceiros" ? "inline-flex min-h-11 items-center rounded-lg bg-[#e8f4ff] px-3 py-2 font-semibold text-[#123b65] hover:bg-[#d9edff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-base" : "text-black text-3xl leading-10 hover:text-black"}
                             onClick={close}
                           >
                             {name}

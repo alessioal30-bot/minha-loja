@@ -112,7 +112,7 @@ export default async function Nav() {
               </div>
             </div>
 
-            <LocalizedClientLink href="/parceiros" className="hover:text-black transition-colors">Atacado</LocalizedClientLink>
+            <LocalizedClientLink href="/parceiros" className="inline-flex min-h-11 items-center rounded-lg bg-[#e8f4ff] px-3 py-2 font-semibold text-[#123b65] hover:bg-[#d9edff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap">Cotação p/ empresa ou Atacado</LocalizedClientLink>
           </div>
 
           <div className="flex items-center gap-x-6 h-full">
