@@ -29,10 +29,10 @@ export default async function Home(props: {
       <section aria-labelledby="chamada-parceiros" className="bg-[#eff7ff]">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-5 px-6 py-8 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
-            <h2 id="chamada-parceiros" className="text-2xl font-bold text-slate-900">Orçamento para empresas (B2B)</h2>
+            <h2 id="chamada-parceiros" className="text-2xl font-bold text-slate-900">Orçamento para empresas</h2>
             <p className="mt-2 max-w-3xl text-slate-700">Vai comprar para uma empresa ou para revenda? Solicite uma cotação por quantidade de Schalk, Crosby ou suplementos. Os preços exibidos na loja são de varejo.</p>
           </div>
-          <a href={`/${countryCode}/parceiros`} className="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-[#b9d8f4] bg-white px-5 py-2 font-semibold text-slate-900 hover:bg-[#dfedfc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Solicitar orçamento B2B</a>
+          <a href={`/${countryCode}/parceiros`} className="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-[#b9d8f4] bg-white px-5 py-2 font-semibold text-slate-900 hover:bg-[#dfedfc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Solicitar orçamento para empresas</a>
         </div>
       </section>
 
