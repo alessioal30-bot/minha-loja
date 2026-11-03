@@ -9,7 +9,7 @@ import { Fragment } from "react"
 const SideMenuItems = {
   Inicio: "/",
   Loja: "/store",
-  "Orçamento para empresas": "/parceiros",
+  "Orçamento p/ empresa": "/parceiros",
   "Minha Conta": "/account",
   Carrinho: "/cart",
 }
