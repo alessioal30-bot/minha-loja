@@ -112,6 +112,7 @@ export default async function Nav() {
               </div>
             </div>
 
+            <LocalizedClientLink href="/parceiros" className="hover:text-black transition-colors">Parceiros</LocalizedClientLink>
           </div>
 
           <div className="flex items-center gap-x-6 h-full">
