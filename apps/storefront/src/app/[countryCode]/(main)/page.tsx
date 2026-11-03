@@ -32,7 +32,7 @@ export default async function Home(props: {
             <h2 id="chamada-parceiros" className="text-2xl font-bold text-slate-900">Compre para você ou peça orçamento para sua empresa</h2>
             <p className="mt-2 max-w-3xl text-slate-700">Conheça as linhas Schalk, Crosby e suplementos da AM e a parceria Mary Kay para compras de uso pessoal.</p>
           </div>
-          <a href={`/${countryCode}/parceiros`} className="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-[#b9d8f4] bg-white px-5 py-2 font-semibold text-slate-900 hover:bg-[#dfedfc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Ver marcas e parceiros</a>
+          <a href={`/${countryCode}/parceiros`} className="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-[#b9d8f4] bg-white px-5 py-2 font-semibold text-slate-900 hover:bg-[#dfedfc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Ver produtos e pedir orçamento</a>
         </div>
       </section>
 

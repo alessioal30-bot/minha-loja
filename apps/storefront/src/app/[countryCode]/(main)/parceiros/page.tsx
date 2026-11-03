@@ -9,12 +9,12 @@ const lines = [
   { name: "Mary Kay", color: "bg-[#fff0f5] border-[#edc4d5] hover:bg-[#fbe2ec]", href: "/products/base-mary-kay-timewise-3d-matte", wholesale: false },
 ]
 
-export const metadata = { title: "Marcas e parceiros | AM" }
+export const metadata = { title: "Compras e orçamentos | AM" }
 
 export default function PartnersPage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-12">
-      <h1 className="text-4xl font-bold">Marcas e parceiros</h1>
+      <h1 className="text-4xl font-bold">Compras e orçamentos</h1>
       <p className="mt-3">Veja produtos para uso próprio. Se você compra para uma empresa, peça um orçamento de Schalk, Crosby ou suplementos pelo WhatsApp da AM.</p>
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
         {lines.map(({ name, href, wholesale, color }) => (
