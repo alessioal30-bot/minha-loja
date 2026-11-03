@@ -15,7 +15,7 @@ export default function PartnersPage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-12">
       <h1 className="text-4xl font-bold">Marcas e parceiros</h1>
-      <p className="mt-3">Compre para uso próprio ou consulte as opções para sua empresa.</p>
+      <p className="mt-3">Veja produtos para uso próprio. Se você compra para uma empresa, peça um orçamento de Schalk, Crosby ou suplementos pelo WhatsApp da AM.</p>
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
         {lines.map(({ name, href, wholesale, color }) => (
           <section key={name} className="rounded-xl border p-6">
