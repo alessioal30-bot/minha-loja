@@ -1,4 +1,5 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import QuoteForm from "./quote-form"
 
 const buttonClass = "inline-flex min-h-11 items-center rounded-lg border px-4 py-2 text-sm font-medium text-slate-900 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
 
@@ -11,11 +12,15 @@ const lines = [
 
 export const metadata = { title: "Produtos e cotações | AM" }
 
-export default function PartnersPage() {
+export default async function PartnersPage({ searchParams }: { searchParams: Promise<{ linha?: string }> }) {
+  const { linha } = await searchParams
+  const wholesaleLine = lines.find((line) => line.wholesale && line.name === linha)?.name
+
   return (
     <main className="mx-auto max-w-7xl px-6 py-12">
       <h1 className="text-4xl font-bold">Produtos e cotações</h1>
-      <p className="mt-3">Para comprar em quantidade ou para revenda, solicite um orçamento com CPF ou CNPJ. Escolha a linha e informe os produtos, as quantidades e a cidade de entrega pelo WhatsApp.</p>
+      <p className="mt-3">Compre pela loja ou preencha a ficha para consultar um produto, pedir uma cotação em quantidade ou comprar para revenda.</p>
+      <QuoteForm key={wholesaleLine ?? "individual"} lines={lines} wholesaleLine={wholesaleLine} />
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
         {lines.map(({ name, href, wholesale, color }) => (
           <section key={name} className="rounded-xl border p-6">
@@ -28,7 +33,7 @@ export default function PartnersPage() {
                 Ver produtos
               </LocalizedClientLink>
               {wholesale && (
-                <a className={`${buttonClass} bg-[#f5efff] border-[#dbc9f0] hover:bg-[#ede3fb]`} href={`https://wa.me/558496130844?text=${encodeURIComponent(`Olá, gostaria de um orçamento no atacado para a linha ${name}.\nTipo de compra (CPF ou CNPJ):\nProdutos e quantidades:\nCidade de entrega:`)}`}>
+                <a className={`${buttonClass} bg-[#f5efff] border-[#dbc9f0] hover:bg-[#ede3fb]`} href={`?linha=${encodeURIComponent(name)}#ficha-cotacao`}>
                   Pedir orçamento no atacado
                 </a>
               )}
