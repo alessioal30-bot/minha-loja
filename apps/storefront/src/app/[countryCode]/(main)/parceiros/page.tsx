@@ -25,7 +25,7 @@ export default function PartnersPage() {
             </p>
             <div className="mt-4 flex flex-wrap gap-4">
               <LocalizedClientLink className={`${buttonClass} ${color}`} href={href}>
-                {name === "Suplementos" ? "Ver suplementos" : "Ver produto em destaque"}
+                Ver produtos
               </LocalizedClientLink>
               {wholesale && (
                 <a className={`${buttonClass} bg-[#f5efff] border-[#dbc9f0] hover:bg-[#ede3fb]`} href={`https://wa.me/558496130844?text=${encodeURIComponent(`Olá, gostaria de um orçamento para empresa de ${name}.`)}`}>
