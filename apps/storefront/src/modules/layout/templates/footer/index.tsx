@@ -30,7 +30,7 @@ export default function Footer() {
             <h2 id="footer-support" className="font-bold text-white mb-4">SUPORTE</h2>
             <ul className="space-y-3">
               {["Atendimento ao Cliente", "Formas de Pagamento", "Perguntas Frequentes", "Termos e Condições de Uso"].map((label) => (
-                <li key={label}><a className="hover:text-amber-400 transition" href={`https://wa.me/558496130844?text=${encodeURIComponent(`Olá! Gostaria de informações sobre: ${label}.`)}`} target="_blank" rel="noopener noreferrer">{label}</a></li>
+                <li key={label}><a className="hover:text-amber-400 transition" href={`https://wa.me/558498388771?text=${encodeURIComponent(`Olá! Gostaria de informações sobre: ${label}.`)}`} target="_blank" rel="noopener noreferrer">{label}</a></li>
               ))}
               <li><LocalizedClientLink href="/privacy-policy" className="hover:text-amber-400 transition">Política de Privacidade</LocalizedClientLink></li>
             </ul>
@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><LocalizedClientLink href="/store" className="hover:text-amber-400 transition">Produtos</LocalizedClientLink></li>
               {["Trocas e Devoluções", "Promoções", "Guia de Medidas"].map((label) => (
-                <li key={label}><a className="hover:text-amber-400 transition" href={`https://wa.me/558496130844?text=${encodeURIComponent(`Olá! Gostaria de informações sobre: ${label}.`)}`} target="_blank" rel="noopener noreferrer">{label}</a></li>
+                <li key={label}><a className="hover:text-amber-400 transition" href={`https://wa.me/558498388771?text=${encodeURIComponent(`Olá! Gostaria de informações sobre: ${label}.`)}`} target="_blank" rel="noopener noreferrer">{label}</a></li>
               ))}
               <li><LocalizedClientLink href="/account" className="hover:text-amber-400 transition">Minha Conta</LocalizedClientLink></li>
             </ul>
@@ -89,8 +89,7 @@ export default function Footer() {
           <p>APCM COMERCIO E SERVICO LTDA — CNPJ: 57.266.092/0001-73</p>
           <p>Rua Joaquim Felix – Jucurutu/RN – CEP 59330-000</p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-1 mt-2">
-            <a href="https://wa.me/558496130844" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">WhatsApp: +55 84 9613-0844</a>
-            <a href="https://wa.me/558498388771" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">WhatsApp — contato alternativo: +55 84 9838-8771</a>
+            <a href="https://wa.me/558498388771" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">WhatsApp: +55 84 9838-8771</a>
             <a href="mailto:apcm@apcmcomercioesrvltda.com.br" className="break-all hover:text-amber-400 transition">apcm@apcmcomercioesrvltda.com.br</a>
           </div>
           <p className="mt-6 text-xs">© {new Date().getFullYear()} APCM COMERCIO E SERVICO LTDA. Todos os direitos reservados.</p>
