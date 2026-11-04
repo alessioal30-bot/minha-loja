@@ -67,7 +67,7 @@ export default function QuoteForm({ lines, wholesaleLine }: { lines: Line[]; who
       "Cidade/UF de entrega: " + read("city"),
       wholesale && "Tipo de documento: " + read("documentType"),
     ].filter(Boolean).join("\n")
-    window.location.assign("https://wa.me/558496130844?text=" + encodeURIComponent(message))
+    window.location.assign("https://wa.me/558498388771?text=" + encodeURIComponent(message))
   }
 
   return (
