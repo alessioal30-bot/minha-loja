@@ -12,7 +12,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       <body>
         <main className="relative">{props.children}</main>
         <a
-          href="https://wa.me/558496130844"
+          href="https://wa.me/558498388771"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar com a loja pelo WhatsApp"
