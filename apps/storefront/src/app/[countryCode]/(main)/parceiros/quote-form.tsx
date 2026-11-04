@@ -2,13 +2,16 @@
 
 import { useRef, useState, type FormEvent } from "react"
 
+type CatalogProduct = { id: string; title: string; variants: { id: string; title: string }[] }
+
 type Line = { name: string; wholesale: boolean }
 
 const fieldClass = "mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900"
 
-export default function QuoteForm({ lines, wholesaleLine }: { lines: Line[]; wholesaleLine?: string }) {
+export default function QuoteForm({ lines, wholesaleLine, catalog }: { lines: Line[]; wholesaleLine?: string; catalog: CatalogProduct[] }) {
   const [wholesale, setWholesale] = useState(Boolean(wholesaleLine))
   const [line, setLine] = useState(wholesaleLine ?? "")
+  const [selectedProducts, setSelectedProducts] = useState<Record<number, string>>({})
   const nextRow = useRef(1)
   const [rows, setRows] = useState([0])
   const lastRequest = useRef<{ body: string; id: string } | null>(null)
@@ -29,11 +32,26 @@ export default function QuoteForm({ lines, wholesaleLine }: { lines: Line[]; who
     const read = (name: string) => String(data.get(name) ?? "").trim()
     if (wholesale) {
       if (sending.current || completed) return
-      const items = rows.map((row) => ({
-        product: [line, read("product-" + row)].join(" · "),
-        quantity: Number(read("quantity-" + row)),
-      }))
-      const fields = { customer: read("customer"), city: read("city"), contact: read("contact"), documentType: read("documentType"), items }
+      const itemsByVariant = new Map<string, { product: string; quantity: number }>()
+      for (const row of rows) {
+        const product = catalog.find((item) => item.id === read("product-" + row))
+        const variant = product?.variants.find((item) => item.id === read("variant-" + row))
+        if (!product || !variant) {
+          setResult("Selecione um produto e uma opção para cada item.")
+          return
+        }
+        const previous = itemsByVariant.get(variant.id)
+        const quantity = (previous?.quantity ?? 0) + Number(read("quantity-" + row))
+        if (!Number.isInteger(quantity) || quantity < 1 || quantity > 9999) {
+          setResult("Confira a quantidade total de cada opção. O limite é 9.999 unidades.")
+          return
+        }
+        itemsByVariant.set(variant.id, {
+          product: [product.title, variant.title].join(" · ").slice(0, 160),
+          quantity,
+        })
+      }
+      const fields = { customer: read("customer"), city: read("city"), contact: read("contact"), documentType: read("documentType"), items: [...itemsByVariant.values()] }
       const body = JSON.stringify(fields)
       sending.current = true
       setPending(true)
@@ -92,19 +110,33 @@ export default function QuoteForm({ lines, wholesaleLine }: { lines: Line[]; who
           <label className="block">Nome ou empresa
             <input className={fieldClass} name="customer" maxLength={100} required />
           </label>
-          <label className="block">Linha de interesse
+          {!wholesale && <label className="block">Linha de interesse
             <select className={fieldClass} name="line" value={line} onChange={(event) => setLine(event.target.value)} required>
               <option value="">Selecione uma linha</option>
               {availableLines.map((item) => <option key={item.name}>{item.name}</option>)}
             </select>
-          </label>
+          </label>}
           {wholesale ? (
             <fieldset className="space-y-3 sm:col-span-2">
               <legend className="font-semibold">Itens da cotação</legend>
+              {!catalog.length && <p role="status">Catálogo indisponível para cotação. Atualize a página e tente novamente.</p>}
               {rows.map((row, index) => (
                 <div key={row} className="flex flex-wrap items-end gap-3">
-                  <label className="min-w-48 flex-1">Produto {index + 1} (inclua cor ou tamanho)
-                    <input className={fieldClass} name={"product-" + row} required maxLength={140} />
+                  <label className="min-w-48 flex-1">Produto {index + 1}
+                    <select className={fieldClass} name={"product-" + row} required
+                      value={selectedProducts[row] ?? ""}
+                      onChange={(event) => setSelectedProducts({ ...selectedProducts, [row]: event.target.value })}>
+                      <option value="">Selecione um produto</option>
+                      {catalog.map((product) => <option key={product.id} value={product.id}>{product.title}</option>)}
+                    </select>
+                  </label>
+                  <label>Opção (sabor, tamanho ou cor)
+                    <select key={selectedProducts[row] ?? ""} className={fieldClass} name={"variant-" + row} required defaultValue="">
+                      <option value="">Selecione uma opção</option>
+                      {catalog.find((product) => product.id === selectedProducts[row])?.variants.map((variant) => (
+                        <option key={variant.id} value={variant.id}>{variant.title}</option>
+                      ))}
+                    </select>
                   </label>
                   <label>Quantidade
                     <input className={fieldClass} name={"quantity-" + row} type="number" min={1} max={9999} defaultValue={1} required />
@@ -141,7 +173,7 @@ export default function QuoteForm({ lines, wholesaleLine }: { lines: Line[]; who
             </label>
           )}
         </div>
-        <button type="submit" disabled={wholesale && (pending || completed)} className="min-h-11 rounded-lg bg-[#123b65] px-5 py-2 font-semibold text-white hover:bg-[#1c507f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">{wholesale ? pending ? "Enviando…" : "Enviar cotação" : "Continuar no WhatsApp"}</button>
+        <button type="submit" disabled={wholesale && (pending || completed || !catalog.length)} className="min-h-11 rounded-lg bg-[#123b65] px-5 py-2 font-semibold text-white hover:bg-[#1c507f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">{wholesale ? pending ? "Enviando…" : "Enviar cotação" : "Continuar no WhatsApp"}</button>
         <p role="status">{result}</p>
       </form>
     </section>
