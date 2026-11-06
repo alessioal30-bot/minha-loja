@@ -25,6 +25,11 @@ export default async function Home(props: {
 
   return (
     <>
+      <section aria-label="Black Friday">
+        <img src="/images/black-friday-am-20261106.jpg"
+          alt="Black Friday. Moda, suplementos e beleza. WhatsApp (84) 9838-8771."
+          width={2172} height={724} fetchPriority="high" className="block h-auto w-full" />
+      </section>
       <NovembroAzul />
       <section aria-labelledby="chamada-parceiros" className="bg-[#eff7ff]">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-5 px-6 py-8 md:flex-row md:items-center md:justify-between md:px-8">
