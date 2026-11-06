@@ -4,16 +4,6 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 const Hero = () => {
   return (
     <div className="flex flex-col">
-      {/* Oferta Mary Kay */}
-      <section className="bg-white px-6 py-12 md:px-8" aria-label="Oferta Mary Kay TimeWise 3D">
-        <img
-          src="/images/mary-kay-timewise-3d-oferta.webp" loading="lazy" decoding="async"
-          alt="Sua base favorita está aqui: Mary Kay TimeWise 3D, 30 variantes disponíveis, R$ 84,90 cada. Atendimento pelo WhatsApp +55 84 99989-3205."
-          width={1122}
-          height={1402}
-          className="block w-full max-w-2xl h-auto mx-auto"
-        />
-      </section>
       {/* Seção das 4 Categorias em Destaque */}
       <section className="py-20 px-6 bg-neutral-900 text-white">
         <div className="container mx-auto max-w-7xl">
