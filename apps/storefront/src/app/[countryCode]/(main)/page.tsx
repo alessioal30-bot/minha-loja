@@ -30,9 +30,20 @@ export default async function Home(props: {
           <img src="/images/black-friday-am-social-20261106.jpg"
             alt="Black Friday. Moda, suplementos e beleza. WhatsApp (84) 9838-8771."
             fetchPriority="high" className="block aspect-[4/5] w-full rounded-lg object-contain" />
-          <img src="/images/creatina-max-camiseta-120-reais.webp"
-            alt="Combo de duas creatinas Max de 300 g por R$ 120,00 com camiseta."
-            className="block aspect-[4/5] w-full rounded-lg object-contain" />
+          {Date.now() < Date.parse("2026-12-01T00:00:00-03:00") && (
+            <div className="grid gap-3">
+              <a href="https://wa.me/558498388771?text=Quero%20o%20combo%20de%20Creatina%20Max%20da%20Black%20Friday">
+                <img src="/images/black-friday-creatina-combo-100.jpg"
+                  alt="Duas creatinas Max de 300 g e uma camiseta por R$ 100,00 até 30 de novembro. Peça pelo WhatsApp."
+                  width={1254} height={1254} className="block h-auto w-full rounded-lg" />
+              </a>
+              <a href={`/${countryCode}/products/creatina-max-titanium-300g`}>
+                <img src="/images/black-friday-creatina-unidade-50.jpg"
+                  alt="Creatina Max de 300 g por R$ 50,00 a unidade até 30 de novembro. Ver produto."
+                  width={1254} height={1254} className="block h-auto w-full rounded-lg" />
+              </a>
+            </div>
+          )}
           <img src="/images/mary-kay-timewise-3d-oferta.webp"
             alt="Base Mary Kay TimeWise 3D por R$ 84,90 cada."
             className="block aspect-[4/5] w-full rounded-lg object-contain" />
