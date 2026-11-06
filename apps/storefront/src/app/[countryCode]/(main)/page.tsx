@@ -25,10 +25,18 @@ export default async function Home(props: {
 
   return (
     <>
-      <section aria-label="Black Friday">
-        <img src="/images/black-friday-am-20261106.jpg"
-          alt="Black Friday. Moda, suplementos e beleza. WhatsApp (84) 9838-8771."
-          width={2172} height={724} fetchPriority="high" className="block h-auto w-full" />
+      <section aria-label="Black Friday" className="bg-[#350b19] px-4 py-5">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-3">
+          <img src="/images/black-friday-am-social-20261106.jpg"
+            alt="Black Friday. Moda, suplementos e beleza. WhatsApp (84) 9838-8771."
+            fetchPriority="high" className="block aspect-[4/5] w-full rounded-lg object-contain" />
+          <img src="/images/creatina-max-camiseta-120-reais.webp"
+            alt="Combo de duas creatinas Max de 300 g por R$ 120,00 com camiseta."
+            className="block aspect-[4/5] w-full rounded-lg object-contain" />
+          <img src="/images/mary-kay-timewise-3d-oferta.webp"
+            alt="Base Mary Kay TimeWise 3D por R$ 84,90 cada."
+            className="block aspect-[4/5] w-full rounded-lg object-contain" />
+        </div>
       </section>
       <NovembroAzul />
       <section aria-labelledby="chamada-parceiros" className="bg-[#eff7ff]">
@@ -59,13 +67,6 @@ export default async function Home(props: {
           </a>
         </div>
         
-        <img
-          src="/images/creatina-max-camiseta-120-reais.webp" loading="lazy" decoding="async"
-          alt="Oferta: 2 creatinas Max de 300 g cada por R$ 120,00 e ganhe uma camiseta. Peça pelo WhatsApp (84) 9613-0844."
-          width={1254}
-          height={1254}
-          className="block w-full max-w-2xl h-auto mx-auto"
-        />
 
         <section className="mt-12" data-campaign-gallery="schalk-crosby-individuais" aria-label="Campanhas individuais de camisetas básicas">
           <h3 className="text-xl md:text-2xl font-bold text-[#0A192F]">Monte seu trio de básicas</h3>
