@@ -9,6 +9,7 @@ type ThumbnailProps = {
   images?: { url?: string }[] | null
   size?: "small" | "medium" | "large" | "full" | "square"
   isFeatured?: boolean
+  fit?: "cover" | "contain"
   className?: string
   "data-testid"?: string
 }
@@ -18,13 +19,25 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   images,
   size = "small",
   isFeatured,
+  fit = "cover",
   className,
   "data-testid": dataTestid,
 }) => {
   const sourceImage = thumbnail || images?.[0]?.url
-  const localPhotos = ["look_local_227_3_quadrado_loja", "look_local_238_3_quadrado_loja", "look_local_234_3_quadrado_loja", "look_local_71_3_quadrado_loja", "look_local_48_3_quadrado_loja", "look_local_195_3_quadrado_loja"]
-  const localPhoto = localPhotos.find((name) => sourceImage?.endsWith("/" + name + ".jpg"))
-  const initialImage = localPhoto ? "/images/" + localPhoto + ".webp" : sourceImage
+  const localPhotos = [
+    "look_local_227_3_quadrado_loja",
+    "look_local_238_3_quadrado_loja",
+    "look_local_234_3_quadrado_loja",
+    "look_local_71_3_quadrado_loja",
+    "look_local_48_3_quadrado_loja",
+    "look_local_195_3_quadrado_loja",
+  ]
+  const localPhoto = localPhotos.find((name) =>
+    sourceImage?.endsWith("/" + name + ".jpg")
+  )
+  const initialImage = localPhoto
+    ? "/images/" + localPhoto + ".webp"
+    : sourceImage
 
   return (
     <Container
@@ -43,7 +56,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
       )}
       data-testid={dataTestid}
     >
-      <ImageOrPlaceholder image={initialImage} size={size} />
+      <ImageOrPlaceholder image={initialImage} size={size} fit={fit} />
     </Container>
   )
 }
@@ -51,12 +64,16 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
 const ImageOrPlaceholder = ({
   image,
   size,
-}: Pick<ThumbnailProps, "size"> & { image?: string }) => {
+  fit,
+}: Pick<ThumbnailProps, "size" | "fit"> & { image?: string }) => {
   return image ? (
     <Image
       src={image}
       alt="Imagem do produto"
-      className="absolute inset-0 object-cover object-center"
+      className={clx("absolute inset-0 object-center", {
+        "object-cover": fit !== "contain",
+        "object-contain bg-white p-4": fit === "contain",
+      })}
       draggable={false}
       quality={50}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"

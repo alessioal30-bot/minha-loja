@@ -9,7 +9,11 @@ import X from "@modules/common/icons/x"
 import { getProductPrice } from "@lib/util/get-product-price"
 import OptionSelect from "./option-select"
 import { HttpTypes } from "@medusajs/types"
-import { isSimpleProduct } from "@lib/util/product"
+import {
+  getProductConsultationUrl,
+  isSimpleProduct,
+  isWatchProduct,
+} from "@lib/util/product"
 
 type MobileActionsProps = {
   product: HttpTypes.StoreProduct
@@ -47,7 +51,10 @@ const MobileActions: React.FC<MobileActionsProps> = ({
     const updateHeight = () => {
       const height = node.getBoundingClientRect().height
       if (height > 0) {
-        root.style.setProperty("--mobile-product-actions-height", `${Math.ceil(height)}px`)
+        root.style.setProperty(
+          "--mobile-product-actions-height",
+          `${Math.ceil(height)}px`
+        )
       } else {
         root.style.removeProperty("--mobile-product-actions-height")
       }
@@ -73,6 +80,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   }, [price])
 
   const isSimple = isSimpleProduct(product)
+  const consultation = isWatchProduct(product)
 
   return (
     <>
@@ -99,7 +107,9 @@ const MobileActions: React.FC<MobileActionsProps> = ({
             <div className="flex items-center gap-x-2">
               <span data-testid="mobile-title">{product.title}</span>
               <span>—</span>
-              {selectedPrice ? (
+              {consultation ? (
+                <span className="text-sm">Preço sob consulta</span>
+              ) : selectedPrice ? (
                 <div className="flex items-end gap-x-2 text-ui-fg-base">
                   {selectedPrice.price_type === "sale" && (
                     <p>
@@ -121,37 +131,53 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 <div></div>
               )}
             </div>
-            <div className={clx("grid grid-cols-2 w-full gap-x-4", {
-              "!grid-cols-1": isSimple
-            })}>
-              {!isSimple && <Button
-                onClick={open}
-                variant="secondary"
-                className="w-full"
-                data-testid="mobile-actions-button"
-              >
-                <div className="flex items-center justify-between w-full">
-                  <span>
-                    {variant
-                      ? Object.values(options).join(" / ")
-                      : "Selecionar opções"}
-                  </span>
-                  <ChevronDown />
-                </div>
-              </Button>}
-              <Button
-                onClick={handleAddToCart}
-                disabled={!inStock || !variant}
-                className="w-full"
-                isLoading={isAdding}
-                data-testid="mobile-cart-button"
-              >
-                {!variant
-                  ? "Selecione uma opção"
-                  : !inStock
-                  ? "Sem estoque"
-                  : "Adicionar ao carrinho"}
-              </Button>
+            <div
+              className={clx("grid grid-cols-2 w-full gap-x-4", {
+                "!grid-cols-1": isSimple || consultation,
+              })}
+            >
+              {!isSimple && !consultation && (
+                <Button
+                  onClick={open}
+                  variant="secondary"
+                  className="w-full"
+                  data-testid="mobile-actions-button"
+                >
+                  <div className="flex items-center justify-between w-full">
+                    <span>
+                      {variant
+                        ? Object.values(options).join(" / ")
+                        : "Selecionar opções"}
+                    </span>
+                    <ChevronDown />
+                  </div>
+                </Button>
+              )}
+              {consultation ? (
+                <a
+                  href={getProductConsultationUrl(product)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-10 w-full items-center justify-center rounded-md bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-800"
+                  data-testid="mobile-consult-attendant-button"
+                >
+                  Consulte o atendente
+                </a>
+              ) : (
+                <Button
+                  onClick={handleAddToCart}
+                  disabled={!inStock || !variant}
+                  className="w-full"
+                  isLoading={isAdding}
+                  data-testid="mobile-cart-button"
+                >
+                  {!variant
+                    ? "Selecione uma opção"
+                    : !inStock
+                    ? "Sem estoque"
+                    : "Adicionar ao carrinho"}
+                </Button>
+              )}
             </div>
           </div>
         </Transition>

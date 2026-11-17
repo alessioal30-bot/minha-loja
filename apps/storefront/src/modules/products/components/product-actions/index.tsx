@@ -10,6 +10,7 @@ import { isEqual } from "lodash"
 import { useParams, usePathname, useSearchParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
 import ProductPrice from "../product-price"
+import { getProductConsultationUrl, isWatchProduct } from "@lib/util/product"
 import MobileActions from "./mobile-actions"
 import { useRouter } from "next/navigation"
 
@@ -162,26 +163,38 @@ export default function ProductActions({
 
         <ProductPrice product={product} variant={selectedVariant} />
 
-        <Button
-          onClick={handleAddToCart}
-          disabled={
-            !inStock ||
-            !selectedVariant ||
-            !!disabled ||
-            isAdding ||
-            !isValidVariant
-          }
-          variant="primary"
-          className="w-full h-10"
-          isLoading={isAdding}
-          data-testid="add-product-button"
-        >
-          {!selectedVariant && !options
-            ? "Selecione uma opção"
-            : !inStock || !isValidVariant
-            ? "Sem estoque"
-            : "Adicionar ao carrinho"}
-        </Button>
+        {isWatchProduct(product) ? (
+          <a
+            href={getProductConsultationUrl(product)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex min-h-10 w-full items-center justify-center rounded-md bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-gray-800"
+            data-testid="consult-attendant-button"
+          >
+            Consulte o atendente
+          </a>
+        ) : (
+          <Button
+            onClick={handleAddToCart}
+            disabled={
+              !inStock ||
+              !selectedVariant ||
+              !!disabled ||
+              isAdding ||
+              !isValidVariant
+            }
+            variant="primary"
+            className="w-full h-10"
+            isLoading={isAdding}
+            data-testid="add-product-button"
+          >
+            {!selectedVariant && !options
+              ? "Selecione uma opção"
+              : !inStock || !isValidVariant
+              ? "Sem estoque"
+              : "Adicionar ao carrinho"}
+          </Button>
+        )}
         <MobileActions
           product={product}
           variant={selectedVariant}

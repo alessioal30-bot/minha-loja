@@ -2,6 +2,7 @@ import { clx } from "@modules/common/components/ui"
 
 import { getProductPrice } from "@lib/util/get-product-price"
 import { HttpTypes } from "@medusajs/types"
+import { isWatchProduct } from "@lib/util/product"
 
 export default function ProductPrice({
   product,
@@ -10,6 +11,17 @@ export default function ProductPrice({
   product: HttpTypes.StoreProduct
   variant?: HttpTypes.StoreProductVariant
 }) {
+  if (isWatchProduct(product)) {
+    return (
+      <p
+        className="text-base font-medium"
+        data-testid="product-consultation-price"
+      >
+        Preço e disponibilidade sob consulta
+      </p>
+    )
+  }
+
   const { cheapestPrice, variantPrice } = getProductPrice({
     product,
     variantId: variant?.id,

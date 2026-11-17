@@ -5,6 +5,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
 import { isProductSoldOut } from "@lib/util/product-stock"
+import { isWatchProduct } from "@lib/util/product"
 
 export default async function ProductPreview({
   product,
@@ -28,7 +29,8 @@ export default async function ProductPreview({
     product,
   })
 
-  const soldOut = isProductSoldOut(product)
+  const consultation = isWatchProduct(product)
+  const soldOut = !consultation && isProductSoldOut(product)
 
   return (
     <LocalizedClientLink href={`/products/${product.handle}`} className="group">
@@ -36,16 +38,31 @@ export default async function ProductPreview({
         <Thumbnail
           thumbnail={product.thumbnail}
           images={product.images}
-          size="full"
+          size={consultation ? "square" : "full"}
+          fit={consultation ? "contain" : "cover"}
           isFeatured={isFeatured}
         />
         <div className="flex txt-compact-medium mt-4 justify-between">
           <Text className="text-ui-fg-subtle" data-testid="product-title">
             {product.title}
-            {soldOut && <span className="block font-semibold text-red-700" data-testid="product-sold-out">ESGOTADO</span>}
+            {soldOut && (
+              <span
+                className="block font-semibold text-red-700"
+                data-testid="product-sold-out"
+              >
+                ESGOTADO
+              </span>
+            )}
           </Text>
           <div className="flex items-center gap-x-2">
-            {!soldOut && cheapestPrice && <PreviewPrice price={cheapestPrice} />}
+            {consultation ? (
+              <span className="text-sm" data-testid="preview-consultation">
+                Consulte o atendente
+              </span>
+            ) : (
+              !soldOut &&
+              cheapestPrice && <PreviewPrice price={cheapestPrice} />
+            )}
           </div>
         </div>
       </div>
