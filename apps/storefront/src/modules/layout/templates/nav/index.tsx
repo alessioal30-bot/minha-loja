@@ -112,6 +112,25 @@ export default async function Nav() {
               </div>
             </div>
 
+            <div className="relative flex h-full items-center group/accessories">
+              <LocalizedClientLink
+                href="/categories/ecossistema-moda/acessorios"
+                className="flex items-center gap-1 whitespace-nowrap py-2 text-black"
+                data-testid="nav-acessorios-link"
+              >
+                Acessórios
+                <ChevronDown className="h-4 w-4 opacity-70" aria-hidden="true" />
+              </LocalizedClientLink>
+              <div className="invisible absolute left-0 top-full w-48 border border-gray-200 bg-white py-2 opacity-0 shadow-2xl group-hover/accessories:visible group-hover/accessories:opacity-100 group-focus-within/accessories:visible group-focus-within/accessories:opacity-100">
+                <LocalizedClientLink
+                  href="/categories/ecossistema-moda/acessorios/relogios"
+                  className={menuItemClass}
+                >
+                  Relógios
+                </LocalizedClientLink>
+              </div>
+            </div>
+
             <LocalizedClientLink href="/parceiros" className="inline-flex min-h-11 items-center rounded-lg bg-[#e8f4ff] px-3 py-2 font-semibold text-[#123b65] hover:bg-[#d9edff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap">Cotação p/ empresa ou Atacado</LocalizedClientLink>
           </div>
 
