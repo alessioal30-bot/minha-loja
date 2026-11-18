@@ -1,7 +1,7 @@
 name: Compilar vitrine com estoque automático
 on:
   push:
-    branches: [codex/estoque-automatico-20261031]
+    branches: [codex/estoque-automatico-20261031, menu-acessorios]
   workflow_dispatch:
 permissions:
   contents: read
