@@ -58,6 +58,7 @@ export const listProducts = async ({
 
   const next = {
     ...(await getCacheOptions("products")),
+    ...(queryParams?.category_id?.length ? { revalidate: 60 } : {}),
   }
 
   return sdk.client
