@@ -26,7 +26,7 @@ export default async function Nav() {
             </LocalizedClientLink>
           </div>
 
-          <div className="hidden lg:flex items-center h-full space-x-8">
+          <div className="hidden lg:flex items-center h-full space-x-4 xl:space-x-6 2xl:space-x-8">
 
             {/* Farmacêuticos */}
             <div className="relative h-full flex items-center group/dropdown cursor-pointer">
@@ -130,6 +130,14 @@ export default async function Nav() {
                 </LocalizedClientLink>
               </div>
             </div>
+
+            <LocalizedClientLink
+              href="/categories/ecossistema-moda/moda-intima"
+              className="whitespace-nowrap py-2 text-black"
+              data-testid="nav-moda-intima-link"
+            >
+              Moda Íntima
+            </LocalizedClientLink>
 
             <LocalizedClientLink href="/parceiros" className="inline-flex min-h-11 items-center rounded-lg bg-[#e8f4ff] px-3 py-2 font-semibold text-[#123b65] hover:bg-[#d9edff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap">Cotação p/ empresa ou Atacado</LocalizedClientLink>
           </div>
