@@ -1,6 +1,7 @@
 "use client"
 
 import { addToCart } from "@lib/data/cart"
+import { isProductSoldOut, SOLD_OUT_LABEL } from "@lib/util/product-stock"
 import { useIntersection } from "@lib/hooks/use-in-view"
 import { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
@@ -116,6 +117,10 @@ export default function ProductActions({
     return false
   }, [selectedVariant])
 
+  const stockLabel = isProductSoldOut(product) || (selectedVariant && !inStock)
+    ? SOLD_OUT_LABEL
+    : "Selecione uma opção"
+
   const actionsRef = useRef<HTMLDivElement>(null)
 
   const inView = useIntersection(actionsRef, "0px")
@@ -176,11 +181,7 @@ export default function ProductActions({
           isLoading={isAdding}
           data-testid="add-product-button"
         >
-          {!selectedVariant && !options
-            ? "Selecione uma opção"
-            : !inStock || !isValidVariant
-            ? "Sem estoque"
-            : "Adicionar ao carrinho"}
+          {inStock && isValidVariant ? "Adicionar ao carrinho" : stockLabel}
         </Button>
         <MobileActions
           product={product}
@@ -188,6 +189,7 @@ export default function ProductActions({
           options={options}
           updateOptions={setOptionValue}
           inStock={inStock}
+          stockLabel={stockLabel}
           handleAddToCart={handleAddToCart}
           isAdding={isAdding}
           show={!inView}
