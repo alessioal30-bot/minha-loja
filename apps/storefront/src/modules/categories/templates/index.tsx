@@ -39,18 +39,24 @@ export default async function CategoryTemplate({
   }
 
   getParents(category)
-  const categoryIds = await getCategoryBranchIds(category.id)
+  const isWatchLanding =
+    category.handle === "relogios" &&
+    parents[0]?.handle === "acessorios" &&
+    parents[1]?.handle === "ecossistema-moda"
+  const categoryIds = isWatchLanding ? [] : await getCategoryBranchIds(category.id)
 
   return (
     <div
       className="flex flex-col small:flex-row small:items-start py-6 content-container"
       data-testid="category-container"
     >
-      <RefinementList
-        sortBy={sort}
-        data-testid="sort-by-container"
-        hideOptionsPicker
-      />
+      {!isWatchLanding && (
+        <RefinementList
+          sortBy={sort}
+          data-testid="sort-by-container"
+          hideOptionsPicker
+        />
+      )}
       <div className="w-full">
         <div className="flex flex-row mb-8 text-2xl-semi gap-4">
           {parents &&
@@ -89,21 +95,23 @@ export default async function CategoryTemplate({
             </ul>
           </div>
         )}
-        <Suspense
-          fallback={
-            <SkeletonProductGrid
-              numberOfProducts={category.products?.length ?? 8}
+        {!isWatchLanding && (
+          <Suspense
+            fallback={
+              <SkeletonProductGrid
+                numberOfProducts={category.products?.length ?? 8}
+              />
+            }
+          >
+            <PaginatedProducts
+              sortBy={sort}
+              page={pageNumber}
+              categoryId={categoryIds}
+              countryCode={countryCode}
+              optionValueIds={optionValueIds}
             />
-          }
-        >
-          <PaginatedProducts
-            sortBy={sort}
-            page={pageNumber}
-            categoryId={categoryIds}
-            countryCode={countryCode}
-            optionValueIds={optionValueIds}
-          />
-        </Suspense>
+          </Suspense>
+        )}
       </div>
     </div>
   )
