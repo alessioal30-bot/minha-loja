@@ -1,3 +1,5 @@
+export const SOLD_OUT_LABEL = "CONSULTA ATENDENTE"
+
 type StockVariant = {
   manage_inventory?: boolean | null
   allow_backorder?: boolean | null
