@@ -1,7 +1,7 @@
 name: Compilar vitrine com estoque automático
 on:
   push:
-    branches: [codex/estoque-automatico-20261031, menu-acessorios, fix/related-products-catalog-scan]
+    branches: [codex/estoque-automatico-20261031, menu-acessorios, fix/related-products-catalog-scan, fix/banner-maria-rica-segundo]
   workflow_dispatch:
 permissions:
   contents: read
@@ -42,6 +42,7 @@ jobs:
         run: |
           test -f apps/storefront/.next/standalone/apps/storefront/server.js
           cp -a apps/storefront/.next/static apps/storefront/.next/standalone/apps/storefront/.next/static
+          install -D apps/storefront/public/images/maria-rica-home.jpg apps/storefront/.next/standalone/apps/storefront/public/images/maria-rica-home.jpg
           mkdir -p build-output
           tar -czf build-output/storefront-linux-x64.tar.gz -C apps/storefront/.next/standalone .
           bytes=$(stat -c%s build-output/storefront-linux-x64.tar.gz)
