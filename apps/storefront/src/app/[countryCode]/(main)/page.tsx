@@ -31,11 +31,6 @@ export default async function Home(props: {
             alt="Black Friday. Moda, suplementos e beleza. WhatsApp (84) 9838-8771."
             fetchPriority="high" className="block aspect-[4/5] w-full rounded-lg object-contain" />
           <div className="grid content-start gap-3">
-            <a href={`/${countryCode}/categories/ecossistema-moda/moda-intima`}>
-              <img src="/images/maria-rica-home.jpg"
-                alt="Maria Rica Lingerie. Conforto, beleza e você! Conheça a moda íntima."
-                width={1080} height={369} className="block h-auto w-full rounded-lg" />
-            </a>
             {Date.now() < Date.parse("2026-12-01T00:00:00-03:00") && (
               <>
                 <a href="https://wa.me/558498388771?text=Quero%20o%20combo%20de%20Creatina%20Max%20da%20Black%20Friday">
@@ -55,6 +50,13 @@ export default async function Home(props: {
             alt="Base Mary Kay TimeWise 3D por R$ 84,90 cada."
             className="block aspect-[4/5] w-full rounded-lg object-contain" />
         </div>
+      </section>
+      <section aria-label="Maria Rica Lingerie" className="w-full">
+        <a href={`/${countryCode}/categories/ecossistema-moda/moda-intima`}>
+          <img src="/images/maria-rica-home.jpg"
+            alt="Maria Rica Lingerie. Conforto, beleza e você! Conheça a moda íntima."
+            width={1080} height={369} className="block h-auto w-full" />
+        </a>
       </section>
       <NovembroAzul />
       <section aria-labelledby="chamada-parceiros" className="bg-[#eff7ff]">
