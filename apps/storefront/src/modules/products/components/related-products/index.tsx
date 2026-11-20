@@ -12,6 +12,12 @@ export default async function RelatedProducts({
   product,
   countryCode,
 }: RelatedProductsProps) {
+  const tagIds = (product.tags ?? []).map((tag) => tag.id).filter(Boolean)
+
+  if (!product.collection_id && tagIds.length === 0) {
+    return null
+  }
+
   const region = await getRegion(countryCode)
 
   if (!region) {
@@ -28,10 +34,8 @@ export default async function RelatedProducts({
   if (product.collection_id) {
     queryParams.collection_id = [product.collection_id]
   }
-  if (product.tags) {
-    queryParams.tag_id = product.tags
-      .map((t) => t.id)
-      .filter(Boolean) as string[]
+  if (tagIds.length > 0) {
+    queryParams.tag_id = tagIds
   }
   queryParams.is_giftcard = false
 
