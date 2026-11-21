@@ -1,3 +1,5 @@
+"use client"
+
 import { Button, Heading } from "@medusajs/ui"
 import { ArrowRight } from "lucide-react"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
