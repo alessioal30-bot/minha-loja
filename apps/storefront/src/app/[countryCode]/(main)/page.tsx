@@ -1,4 +1,6 @@
-﻿import { Metadata } from "next"
+﻿export const runtime = "edge"
+
+import { Metadata } from "next"
 
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
