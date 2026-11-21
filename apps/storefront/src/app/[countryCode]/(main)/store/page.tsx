@@ -1,3 +1,5 @@
+export const runtime = "edge"
+
 import { getCategoriesList } from "@lib/data/categories"
 import { getProductsList } from "@lib/data/products"
 import { Metadata } from "search-params"
