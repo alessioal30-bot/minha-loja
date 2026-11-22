@@ -53,9 +53,9 @@ export default async function Home(props: {
       </section>
       <section aria-label="Maria Rica Lingerie" className="w-full">
         <a href={`/${countryCode}/categories/ecossistema-moda/moda-intima`}>
-          <img src="/images/maria-rica-home.jpg"
-            alt="Maria Rica Lingerie. Conforto, beleza e você! Conheça a moda íntima."
-            width={1080} height={369} className="block h-auto w-full" />
+          <img src="/images/maria-rica-joao-rico-v5-modelos-whatsapp.png"
+            alt="Maria Rica e João Rico. 10% de desconto, cartão em até 18x e frete grátis. WhatsApp (84) 9838-8771."
+            width={2172} height={724} className="block h-auto w-full" />
         </a>
       </section>
       <NovembroAzul />
@@ -106,4 +106,3 @@ export default async function Home(props: {
     </>
   )
 }
-
