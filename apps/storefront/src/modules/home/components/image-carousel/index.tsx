@@ -4,185 +4,17 @@ import { useEffect, useRef, useState } from "react"
 
 const images = [
   {
-    "src": "/images/carousel-misto-20261101/01-roupa.jpg",
-    "alt": "Moda masculina",
-    "href": "/br/categories/ecossistema-moda/masculino",
-    "kind": "roupa"
+    src: "/images/elegancia-tons-de-azul-black-friday-v3-letras-maiores.png",
+    alt: "Elegância em Tons de Azul — Black Friday, frete grátis e cartão em até 18x",
+    href: "/br/store",
+    kind: "roupa",
   },
   {
-    "src": "/images/carousel-misto-20261101/02-suplemento.jpg",
-    "alt": "Creatina Max Titanium 300 g",
-    "href": "/br/products/creatina-max-titanium-300g",
-    "kind": "suplemento"
+    src: "/images/maria-rica-joao-rico-v5-modelos-whatsapp.png",
+    alt: "Maria Rica e João Rico — 10% de desconto, cartão em até 18x, frete grátis e WhatsApp (84) 9838-8771",
+    href: "https://wa.me/558498388771",
+    kind: "moda-intima",
   },
-  {
-    "src": "/images/carousel-misto-20261101/03-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/04-roupa.jpg",
-    "alt": "Moda feminina",
-    "href": "/br/categories/ecossistema-moda/feminino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/05-suplemento.jpg",
-    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
-    "href": "/br/products/meta-68bluu7aj",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/06-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/07-roupa.jpg",
-    "alt": "Moda masculina",
-    "href": "/br/categories/ecossistema-moda/masculino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/08-suplemento.jpg",
-    "alt": "Creatina Max Titanium 300 g",
-    "href": "/br/products/creatina-max-titanium-300g",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/09-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/10-roupa.jpg",
-    "alt": "Moda feminina",
-    "href": "/br/categories/ecossistema-moda/feminino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/11-suplemento.jpg",
-    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
-    "href": "/br/products/meta-68bluu7aj",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/12-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/13-roupa.jpg",
-    "alt": "Moda masculina",
-    "href": "/br/categories/ecossistema-moda/masculino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/14-suplemento.jpg",
-    "alt": "Creatina Max Titanium 300 g",
-    "href": "/br/products/creatina-max-titanium-300g",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/15-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/16-roupa.jpg",
-    "alt": "Moda feminina",
-    "href": "/br/categories/ecossistema-moda/feminino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/17-suplemento.jpg",
-    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
-    "href": "/br/products/meta-68bluu7aj",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/18-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/19-roupa.jpg",
-    "alt": "Moda masculina",
-    "href": "/br/categories/ecossistema-moda/masculino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/20-suplemento.jpg",
-    "alt": "Creatina Max Titanium 300 g",
-    "href": "/br/products/creatina-max-titanium-300g",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/21-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/22-roupa.jpg",
-    "alt": "Moda feminina",
-    "href": "/br/categories/ecossistema-moda/feminino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/23-suplemento.jpg",
-    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
-    "href": "/br/products/meta-68bluu7aj",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/24-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/25-roupa.jpg",
-    "alt": "Moda masculina",
-    "href": "/br/categories/ecossistema-moda/masculino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/26-suplemento.jpg",
-    "alt": "Creatina Max Titanium 300 g",
-    "href": "/br/products/creatina-max-titanium-300g",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/27-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/28-roupa.jpg",
-    "alt": "Moda feminina",
-    "href": "/br/categories/ecossistema-moda/feminino",
-    "kind": "roupa"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/29-suplemento.jpg",
-    "alt": "Pre Treino Overpass 300g Pump Maça Verde Sirius labs",
-    "href": "/br/products/meta-68bluu7aj",
-    "kind": "suplemento"
-  },
-  {
-    "src": "/images/carousel-misto-20261101/30-cosmetico.jpg",
-    "alt": "Base Mary Kay TimeWise 3D Matte",
-    "href": "/br/products/base-mary-kay-timewise-3d-matte",
-    "kind": "cosmetico"
-  }
 ]
 
 export default function ImageCarousel() {
@@ -204,7 +36,7 @@ export default function ImageCarousel() {
 
       if (
         track.scrollLeft + track.clientWidth >=
-        track.scrollWidth - distance
+        track.scrollWidth - 2
       ) {
         track.scrollTo({
           left: 0,
@@ -247,7 +79,7 @@ export default function ImageCarousel() {
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-[#0A192F]">
-              Moda, suplementos e cosméticos
+              Ofertas em destaque
             </h2>
           </div>
 
@@ -288,7 +120,7 @@ export default function ImageCarousel() {
               key={`${index}-${image.src}`}
               data-carousel-card
               data-carousel-kind={image.kind}
-              className="shrink-0 snap-start w-[72vw] sm:w-[42vw] md:w-[28vw] lg:w-[22vw] xl:w-[20vw] aspect-square overflow-hidden rounded-xl bg-neutral-100"
+              className="shrink-0 snap-start w-full aspect-[5/2] overflow-hidden rounded-xl bg-neutral-100"
             >
               <img
                 src={image.src}
