@@ -2,6 +2,7 @@ import { Metadata } from "next"
 
 import Hero from "@modules/home/components/hero"
 import ImageCarousel from "@modules/home/components/image-carousel"
+import AutoScrollGallery from "@modules/home/components/auto-scroll-gallery"
 import NovembroAzul from "@modules/home/components/novembro-azul"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
@@ -125,7 +126,7 @@ export default async function Home(props: {
         <section className="mt-12" data-campaign-gallery="schalk-crosby-individuais" id="carrossel-basicas-e-moda-intima" aria-label="Camisetas básicas e moda íntima">
           <h3 className="text-xl md:text-2xl font-bold text-[#0A192F]">Camisetas básicas e moda íntima</h3>
           <p className="mt-2 mb-5 text-sm text-gray-600">Monte seu trio de básicas por R$ 149,90. Deslize para ver também a seleção Maria Rica e João Rico.</p>
-          <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4">
+          <AutoScrollGallery>
             <a href={"/" + countryCode + "/products/moda-masculina-camiseta-basica"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-20261024/01-basica-vinho-feed.jpg" alt="Básica vinho — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
             <a href={"/" + countryCode + "/products/moda-masculina-camiseta-basica"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-20261024/02-basica-branca-feed.jpg" alt="Básica branca — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
             <a href={"/" + countryCode + "/products/moda-feminina-camiseta-basica"} className="block shrink-0 snap-start w-[82%] sm:w-[45%] lg:w-[31%] rounded-xl overflow-hidden border border-gray-100 bg-white"><img src="/images/campanha-schalk-crosby-20261024/03-basica-amarela-feminina-feed.jpg" alt="Básica amarela feminina — 3 camisetas básicas por R$ 149,90" width={1080} height={1350} loading="lazy" decoding="async" className="block w-full h-auto object-contain" /></a>
@@ -148,7 +149,7 @@ export default async function Home(props: {
                 />
               </a>
             ))}
-          </div>
+          </AutoScrollGallery>
         </section>
       </div>
 
