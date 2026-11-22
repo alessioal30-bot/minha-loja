@@ -25,32 +25,7 @@ export default async function Home(props: {
 
   return (
     <>
-      <section aria-label="Black Friday" className="bg-[#350b19] px-4 py-5">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-3">
-          <img src="/images/black-friday-am-social-20261106.jpg"
-            alt="Black Friday. Moda, suplementos e beleza. WhatsApp (84) 9838-8771."
-            fetchPriority="high" className="block aspect-[4/5] w-full rounded-lg object-contain" />
-          <div className="grid content-start gap-3">
-            {Date.now() < Date.parse("2026-12-01T00:00:00-03:00") && (
-              <>
-                <a href="https://wa.me/558498388771?text=Quero%20o%20combo%20de%20Creatina%20Max%20da%20Black%20Friday">
-                  <img src="/images/black-friday-creatina-combo-100.jpg"
-                    alt="Duas creatinas Max de 300 g e uma camiseta por R$ 100,00 até 30 de novembro. Peça pelo WhatsApp."
-                    width={1254} height={1254} className="block h-auto w-full rounded-lg" />
-                </a>
-                <a href={`/${countryCode}/products/creatina-max-titanium-300g`}>
-                  <img src="/images/black-friday-creatina-unidade-50.jpg"
-                    alt="Creatina Max de 300 g por R$ 50,00 a unidade até 30 de novembro. Ver produto."
-                    width={1254} height={1254} className="block h-auto w-full rounded-lg" />
-                </a>
-              </>
-            )}
-          </div>
-          <img src="/images/mary-kay-timewise-3d-oferta.webp"
-            alt="Base Mary Kay TimeWise 3D por R$ 84,90 cada."
-            className="block aspect-[4/5] w-full rounded-lg object-contain" />
-        </div>
-      </section>
+      <ImageCarousel countryCode={countryCode} showCreatinaOffers={Date.now() < Date.parse("2026-12-01T00:00:00-03:00")} />
       <section aria-label="Maria Rica Lingerie" className="w-full">
         <a href={`/${countryCode}/categories/ecossistema-moda/moda-intima`}>
           <img src="/images/maria-rica-joao-rico-v5-modelos-whatsapp.png"
@@ -102,7 +77,6 @@ export default async function Home(props: {
       </div>
 
       <Hero />
-      <ImageCarousel />
     </>
   )
 }

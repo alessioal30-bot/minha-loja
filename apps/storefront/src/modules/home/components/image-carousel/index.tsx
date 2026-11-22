@@ -17,7 +17,47 @@ const images = [
   },
 ]
 
-export default function ImageCarousel() {
+const blackFriday = {
+  src: "/images/black-friday-am-social-20261106.jpg",
+  alt: "Black Friday. Moda, suplementos e beleza. WhatsApp (84) 9838-8771.",
+  href: undefined,
+  kind: "campanha",
+}
+
+const maryKay = {
+  src: "/images/mary-kay-timewise-3d-oferta.webp",
+  alt: "Base Mary Kay TimeWise 3D por R$ 84,90 cada.",
+  href: undefined,
+  kind: "cosmetico",
+}
+
+export default function ImageCarousel({
+  countryCode,
+  showCreatinaOffers,
+}: {
+  countryCode: string
+  showCreatinaOffers: boolean
+}) {
+  const creatinaOffers = [
+    {
+      src: "/images/black-friday-creatina-combo-100.jpg",
+      alt: "Duas creatinas Max de 300 g e uma camiseta por R$ 100,00 até 30 de novembro. Peça pelo WhatsApp.",
+      href: "https://wa.me/558498388771?text=Quero%20o%20combo%20de%20Creatina%20Max%20da%20Black%20Friday",
+      kind: "suplemento",
+    },
+    {
+      src: "/images/black-friday-creatina-unidade-50.jpg",
+      alt: "Creatina Max de 300 g por R$ 50,00 a unidade até 30 de novembro. Ver produto.",
+      href: "/" + countryCode + "/products/creatina-max-titanium-300g",
+      kind: "suplemento",
+    },
+  ]
+  const slides = [
+    ...images,
+    blackFriday,
+    ...(showCreatinaOffers ? creatinaOffers : []),
+    maryKay,
+  ]
   const trackRef = useRef<HTMLDivElement>(null)
   const [paused, setPaused] = useState(false)
 
@@ -114,18 +154,18 @@ export default function ImageCarousel() {
             msOverflowStyle: "none",
           }}
         >
-          {images.map((image, index) => (
+          {slides.map((image, index) => (
             <a
               href={image.href}
               key={`${index}-${image.src}`}
               data-carousel-card
               data-carousel-kind={image.kind}
-              className="shrink-0 snap-start w-full aspect-[5/2] overflow-hidden rounded-xl bg-neutral-100"
+              className="shrink-0 snap-start flex w-full min-h-[min(90vw,28rem)] items-center justify-center overflow-hidden rounded-xl bg-neutral-100"
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-contain"
+                className="block h-auto max-h-[min(90vw,28rem)] w-full object-contain"
                 loading={index < 4 ? "eager" : "lazy"}
               />
             </a>
