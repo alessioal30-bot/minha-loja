@@ -14,7 +14,7 @@ export default function AutoScrollGallery({ children }: { children: ReactNode })
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
     const interval = window.setInterval(() => {
-      if (reducedMotion.matches || document.hidden || track.matches(":focus-within, :active")) return
+      if (track.matches(":has(:focus-visible), :active")) return
 
       const [first, second] = Array.from(track.children)
       const end = track.scrollWidth - track.clientWidth
@@ -26,7 +26,7 @@ export default function AutoScrollGallery({ children }: { children: ReactNode })
       }
 
       const distance = second.getBoundingClientRect().left - first.getBoundingClientRect().left
-      track.scrollBy({ left: distance, behavior: "smooth" })
+      track.scrollBy({ left: distance, behavior: reducedMotion.matches ? "instant" : "smooth" })
     }, intervalMs)
 
     return () => window.clearInterval(interval)
