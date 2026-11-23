@@ -1,17 +1,20 @@
 "use client"
 
-import { type ReactNode, useEffect, useRef } from "react"
+import { type ReactNode, useEffect, useRef, useState } from "react"
+
+const intervalMs = 2000
 
 export default function AutoScrollGallery({ children }: { children: ReactNode }) {
   const trackRef = useRef<HTMLDivElement>(null)
+  const [paused, setPaused] = useState(false)
 
   useEffect(() => {
     const track = trackRef.current
-    if (!track) return
+    if (!track || paused) return
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
     const interval = window.setInterval(() => {
-      if (reducedMotion.matches || document.hidden || track.matches(":hover, :focus-within")) return
+      if (reducedMotion.matches || document.hidden || track.matches(":focus-within, :active")) return
 
       const [first, second] = Array.from(track.children)
       const end = track.scrollWidth - track.clientWidth
@@ -24,14 +27,25 @@ export default function AutoScrollGallery({ children }: { children: ReactNode })
 
       const distance = second.getBoundingClientRect().left - first.getBoundingClientRect().left
       track.scrollBy({ left: distance, behavior: "smooth" })
-    }, 2000)
+    }, intervalMs)
 
     return () => window.clearInterval(interval)
-  }, [])
+  }, [paused])
 
   return (
-    <div ref={trackRef} className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4" data-auto-scroll-interval-ms="2000">
-      {children}
-    </div>
+    <>
+      <div className="mb-3 flex justify-end">
+        <button
+          type="button"
+          onClick={() => setPaused((value) => !value)}
+          className="rounded border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+        >
+          {paused ? "Retomar carrossel" : "Pausar carrossel"}
+        </button>
+      </div>
+      <div ref={trackRef} className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4" data-auto-scroll-interval-ms={intervalMs}>
+        {children}
+      </div>
+    </>
   )
 }
