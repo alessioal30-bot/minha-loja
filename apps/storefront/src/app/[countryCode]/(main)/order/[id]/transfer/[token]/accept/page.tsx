@@ -1,3 +1,5 @@
+export const runtime = "edge"
+
 import { acceptTransferRequest } from "@lib/data/orders"
 import { Heading, Text } from "@modules/common/components/ui"
 import TransferImage from "@modules/order/components/transfer-image"

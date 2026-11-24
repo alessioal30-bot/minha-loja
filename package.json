@@ -1,1 +1,20 @@
-{"name":"minha-loja","private":true,"workspaces":["apps/*"],"scripts":{"start":"turbo dev"},"devDependencies":{"turbo":"^2.10.8","wrangler":"4.120.0"},"dependencies":{"@opennextjs/cloudflare":"^1.20.2"}}
+{
+  "name": "minha-loja",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "turbo dev",
+    "build": "pnpm --filter @dtc/storefront build",
+    "cf:build": "pnpm exec opennextjs-cloudflare build",
+    "cf:deploy": "pnpm exec opennextjs-cloudflare deploy"
+  },
+  "devDependencies": {
+    "turbo": "^2.10.8",
+    "wrangler": "4.120.0"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.2"
+  }
+}
